@@ -1,0 +1,82 @@
+{
+  "installedVersion": "1.0.0-beta1",
+  "activeCalendarSet": "Default",
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": true,
+  "hasMigratedWeeklyNoteSettings": false,
+  "calendarSets": [
+    {
+      "day": {
+        "enabled": true,
+        "format": "YYYY-MM-DD",
+        "folder": "Y. Journal",
+        "openAtStartup": false,
+        "templatePath": "Ω. Meta/template-journal/default"
+      },
+      "week": {
+        "enabled": true,
+        "format": "gggg-[W]WW",
+        "folder": "Y. Journal/Weekly",
+        "openAtStartup": false,
+        "templatePath": "Ω. Meta/template-journal/weekly.md"
+      },
+      "month": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "quarter": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "year": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "id": "Default",
+      "ctime": "2022-04-19T12:59:14+00:00"
+    },
+    {
+      "day": {},
+      "week": {},
+      "month": {},
+      "quarter": {},
+      "year": {},
+      "id": "Calendar set 1",
+      "ctime": "2022-04-19T12:59:35+00:00"
+    }
+  ],
+  "enableTimelineComplication": true,
+  "daily": {
+    "format": "YYYY-MM-DD",
+    "folder": "Y. Journal",
+    "template": "Ω. Meta/template-journal/default",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "gggg-[W]W",
+    "template": "Ω. Meta/template-journal/weekly.md",
+    "folder": "Y. Journal/Weekly",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}

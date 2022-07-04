@@ -1,0 +1,158 @@
+{
+  "main": {
+    "id": "0da31408a062547b",
+    "type": "split",
+    "children": [
+      {
+        "id": "7e8a12e1a2936ed2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "index/index.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "58712b0797c6e728",
+    "type": "split",
+    "children": [
+      {
+        "id": "94bea9ec8f275810",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d4d2f2fc5827e7cd",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "a0f13d552bd320ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c0896ce5c9772e87",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "934480a0a3157391",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 263.5121879577637
+  },
+  "right": {
+    "id": "01e070b1f91494c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1cb0aa1edd716bcc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b09a26ae2d03244",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "index/index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e36c5bd3863ee801",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d42ce1c9fc0dca3a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "index/index.md"
+              }
+            }
+          },
+          {
+            "id": "b14aaee69ff780c4",
+            "type": "leaf",
+            "state": {
+              "type": "BC-matrix",
+              "state": {}
+            }
+          },
+          {
+            "id": "a3ccfad66e9c8f4a",
+            "type": "leaf",
+            "state": {
+              "type": "BC-tree",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "7e8a12e1a2936ed2",
+  "lastOpenFiles": [
+    "index/index.md",
+    "Ω. Meta/template-notes/Web Clip.md",
+    "Ω. Meta/template-journal/default.md",
+    "Ω. Meta/template-journal/weekly.md",
+    "Z. Zettelkasten/Y. Reading Notes/202203190918 Deep Work Reading.md",
+    "Z. Zettelkasten/Y. Reading Notes/202203190921 The Managers Path Reading.md",
+    "Z. Zettelkasten/Y. Reading Notes/202203191000 Going Paperless With Obsidian Reading.md",
+    "index/Discarted/Discarted.md",
+    "index/Productivity.md",
+    "index/Career/Career.md"
+  ]
+}

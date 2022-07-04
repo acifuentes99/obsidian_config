@@ -1,0 +1,796 @@
+{
+  "workspaces": {
+    "dataview": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "a761601092a34adb",
+            "type": "split",
+            "children": [
+              {
+                "id": "d765313acf61a80c",
+                "type": "leaf",
+                "dimension": 22.389306599832913,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "86c10d272b2dafbb",
+                "type": "split",
+                "dimension": 77.61069340016708,
+                "children": [
+                  {
+                    "id": "3060fb084c9e2e18",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Ω. Meta/template-notes/Resource.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "0a5c241d0817b6f1",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Ω. Meta/template-notes/Project.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  }
+                ],
+                "direction": "vertical"
+              }
+            ],
+            "direction": "horizontal"
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "918cd6702ec6a311",
+        "type": "split",
+        "children": [
+          {
+            "id": "87d7e76e5751215c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f86a9292059a4d01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "177532f9a9796a9c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "dataview",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "9647b5c4b13e9ba8",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "a9be0f8daa14a0e4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2e805002b94cbb44",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "52277c661ac2e270",
+        "type": "split",
+        "children": [
+          {
+            "id": "266a92f0e6070167",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "cd21b26461f6a44b",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Ω. Meta/template-notes/Resource.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "95cc34eb6e848b30",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "a63e9edb85b523bd",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Ω. Meta/template-notes/Resource.md"
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "active": "3060fb084c9e2e18"
+    },
+    "tag system": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "d765313acf61a80c",
+            "type": "leaf",
+            "dimension": 50.28376844494892,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Z. Zettelkasten/Vim VS Code.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c1192aedba31b649",
+            "type": "leaf",
+            "dimension": 49.716231555051074,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "918cd6702ec6a311",
+        "type": "split",
+        "children": [
+          {
+            "id": "87d7e76e5751215c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f86a9292059a4d01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "177532f9a9796a9c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "tag:#topic/notetaking",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "9647b5c4b13e9ba8",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "a9be0f8daa14a0e4",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2e805002b94cbb44",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "52277c661ac2e270",
+        "type": "split",
+        "children": [
+          {
+            "id": "266a92f0e6070167",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "cd21b26461f6a44b",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "95cc34eb6e848b30",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "a63e9edb85b523bd",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md"
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "active": "c1192aedba31b649"
+    },
+    "default": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "eb295126e4751280",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Z. Zettelkasten/202207021252 Desktop Environment.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e383ca608851ce5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "918cd6702ec6a311",
+        "type": "split",
+        "children": [
+          {
+            "id": "87d7e76e5751215c",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f86a9292059a4d01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "177532f9a9796a9c",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "9647b5c4b13e9ba8",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "46df27002dba0679",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "95cc34eb6e848b30",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "2e805002b94cbb44",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 308.5121879577637
+      },
+      "right": {
+        "id": "52277c661ac2e270",
+        "type": "split",
+        "children": [
+          {
+            "id": "266a92f0e6070167",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "cd21b26461f6a44b",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "a63e9edb85b523bd",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md"
+                  }
+                }
+              },
+              {
+                "id": "635b72a0455b5025",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 220.76695251464844
+      },
+      "active": "e383ca608851ce5a"
+    },
+    "journal": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "7e8a12e1a2936ed2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Y. Journal/Weekly/2022-W26.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cfc12c71361ac429",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Z. Zettelkasten/202207012318 Intro a breadcrumbs.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "58712b0797c6e728",
+        "type": "split",
+        "children": [
+          {
+            "id": "94bea9ec8f275810",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d4d2f2fc5827e7cd",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "a0f13d552bd320ea",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c0896ce5c9772e87",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "934480a0a3157391",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "01e070b1f91494c7",
+        "type": "split",
+        "children": [
+          {
+            "id": "1cb0aa1edd716bcc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9b09a26ae2d03244",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W26.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "e36c5bd3863ee801",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "d42ce1c9fc0dca3a",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W26.md"
+                  }
+                }
+              },
+              {
+                "id": "b14aaee69ff780c4",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "a3ccfad66e9c8f4a",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "7e8a12e1a2936ed2"
+    },
+    "Mobile": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "d12a943df90ca7b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index/index.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "d61a607df68ea8b1",
+        "type": "split",
+        "children": [
+          {
+            "id": "ccb6df7f1da255a3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "042f676ea1438e86",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b137771eea32a3b0",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "a746072e22530d3f",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "6302608dd3ba711d",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "right": {
+        "id": "e9a9804fe991686a",
+        "type": "split",
+        "children": [
+          {
+            "id": "4a0b6f46d27dfb24",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "791ded9d1f750207",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "index/index.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "f5edccaef910d94b",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "35aaf024204e4fa2",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "index/index.md"
+                  }
+                }
+              },
+              {
+                "id": "9ae0230af1fa3a99",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c88d55d271200b64",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "d12a943df90ca7b5"
+    }
+  },
+  "active": "journal"
+}

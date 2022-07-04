@@ -1,0 +1,11 @@
+{
+  "outputDirectory": "Z. Zettelkasten",
+  "templateFilename": "{{title}}",
+  "inputFieldList": "title,body",
+  "textReplacementTemplate": "[[{{title}}]]",
+  "templateDirectory": "Ω. Meta/template-notes",
+  "replaceSelection": "always",
+  "createOpen": "create",
+  "inputSplit": "\\s+-\\s+",
+  "config": "[]"
+}

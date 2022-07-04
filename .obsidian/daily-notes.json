@@ -1,0 +1,6 @@
+{
+  "folder": "Y. Journal",
+  "format": "YYYY-MM-DD",
+  "autorun": true,
+  "template": "Ω. Meta/template-journal/default"
+}

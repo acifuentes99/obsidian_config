@@ -1,0 +1,37 @@
+{
+  "statusBarOrder": [],
+  "ribbonBarOrder": [
+    "5274992933601283611512915",
+    "79413945303040001939756568",
+    "44978400762265601371484162",
+    "157646774599680422425161",
+    "58531213014466563295674881",
+    "8425523243909124163528390",
+    "5291863565139968194768578",
+    "3869520720560128349254567",
+    "13979817900769283660900286",
+    "70995981201571844078151274"
+  ],
+  "fileExplorerOrder": {
+    "/": [
+      "#AwesomeWM.md#",
+      "convert.sh",
+      "Entreno_scrapbook.txt",
+      "g:vimwiki_projectfile",
+      "Personales y Reflexiones",
+      "Studying (Personales)",
+      "Studying and Career",
+      "Tech Library and Projects",
+      "Notetaking System",
+      "Discarted",
+      "ToIndex",
+      "J. Journal",
+      "Z. Zettelkasten",
+      "Ω. Meta"
+    ]
+  },
+  "actionBarOrder": {},
+  "autoHide": false,
+  "autoHideDelay": 2000,
+  "dragDelay": 200
+}
