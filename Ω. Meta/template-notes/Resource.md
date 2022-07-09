@@ -1,12 +1,15 @@
 ---
 tags: type/resource {{purpose_tab:text:purpose/}} {{main_topic_tag:text:topic/}}
-template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{title}}"
+emoji: "{{icon}}"
+template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{icon}}{{title}}"
+template-output: Resources
 template-replacement: "* [[{{filename}}]]"
+template-should-replace: "never" 
 template-input: title, now, icon, purpose_tag, main_topic_tag
 zettel-prefix: "{{now:currentDate:yyyyMMddHHmm}}"
 ---
 
-# {{title}}
+# {{icon}}{{title}}
 
 ## 📃 Notes
 ```dataview
