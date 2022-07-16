@@ -1,0 +1,1 @@
+* [ ] replace_me [created::{{date:YYYY-MM-DD}}].

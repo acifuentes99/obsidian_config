@@ -18,7 +18,7 @@ function showLinksAndDataBySection(page) {
 	if (all_tasks.length === 0) { return }
 
 	for (let group of all_tasks.groupBy(t => t.section)) {
-		dv.header(3, group.key.subpath)
+		dv.header(4, group.key.subpath)
 		console.log(group.rows)
 		dv.taskList(group.rows, false)
 	}
@@ -61,7 +61,7 @@ for (let link of links) {
 	}
 }
 for (let page of pages) {
-	dv.header(3, page.file.name);
+	dv.header(4, page.file.name);
 	let outlinks = page.file.outlinks.filter(r => {
 		return !links.includes(r.path)
 	})
