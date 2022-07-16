@@ -101,7 +101,7 @@
   "editor:focus-top": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "K"
     }
@@ -109,7 +109,7 @@
   "editor:focus-bottom": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "J"
     }
@@ -117,7 +117,7 @@
   "editor:focus-left": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "H"
     }
@@ -125,7 +125,7 @@
   "editor:focus-right": [
     {
       "modifiers": [
-        "Alt"
+        "Mod"
       ],
       "key": "L"
     }
@@ -150,7 +150,7 @@
   "editor:insert-link": [
     {
       "modifiers": [
-        "Mod"
+        "Alt"
       ],
       "key": "L"
     }
@@ -177,6 +177,88 @@
         "Alt"
       ],
       "key": "W"
+    }
+  ],
+  "file-explorer:new-file-in-new-pane": [],
+  "editor:open-search-replace": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "R"
+    }
+  ],
+  "workspace:toggle-pin": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ],
+  "app:toggle-left-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "H"
+    }
+  ],
+  "app:toggle-right-sidebar": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "L"
+    }
+  ],
+  "breadcrumbs:jump-to-first-up": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "K"
+    }
+  ],
+  "breadcrumbs:jump-to-first-down": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "J"
+    }
+  ],
+  "metaedit:metaEditRun": [],
+  "outline:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "W"
+    }
+  ],
+  "tag-pane:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:undo-close-pane": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
     }
   ]
 }

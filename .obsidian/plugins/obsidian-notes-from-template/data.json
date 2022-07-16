@@ -1,10 +1,10 @@
 {
-  "outputDirectory": "Z. Zettelkasten",
+  "outputDirectory": "Notes",
   "templateFilename": "{{title}}",
   "inputFieldList": "title,body",
   "textReplacementTemplate": "[[{{title}}]]",
   "templateDirectory": "Ω. Meta/template-notes",
-  "replaceSelection": "always",
+  "replaceSelection": "never",
   "createOpen": "create",
   "inputSplit": "\\s+-\\s+",
   "config": "[]"

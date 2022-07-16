@@ -1,7 +1,7 @@
 ---
 tags: type/resource {{purpose_tab:text:purpose/}} {{main_topic_tag:text:topic/}}
 emoji: "{{icon}}"
-template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{icon}}{{title}}"
+template-filename: "{{title}}"
 template-output: Resources
 template-replacement: "* [[{{filename}}]]"
 template-should-replace: "never" 
@@ -12,8 +12,7 @@ zettel-prefix: "{{now:currentDate:yyyyMMddHHmm}}"
 # {{icon}}{{title}}
 
 ## 📃 Notes
-```dataview
-LIST FROM (#{{main_topic_tag}}) and #type/notes SORT file.name DESC
-```
+* 
 
 ## ️:luc_link: Web Clips
+* 

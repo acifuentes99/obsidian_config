@@ -334,12 +334,149 @@
         "type": "split",
         "children": [
           {
-            "id": "eb295126e4751280",
+            "id": "a72d281d930493d1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "58712b0797c6e728",
+        "type": "split",
+        "children": [
+          {
+            "id": "94bea9ec8f275810",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d4d2f2fc5827e7cd",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "a0f13d552bd320ea",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "c0896ce5c9772e87",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "pass github",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "byModifiedTime"
+                  }
+                }
+              },
+              {
+                "id": "934480a0a3157391",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 263.5121879577637
+      },
+      "right": {
+        "id": "01e070b1f91494c7",
+        "type": "split",
+        "children": [
+          {
+            "id": "1cb0aa1edd716bcc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "9b09a26ae2d03244",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "e36c5bd3863ee801",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "d42ce1c9fc0dca3a",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "b14aaee69ff780c4",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "a3ccfad66e9c8f4a",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300
+      },
+      "active": "a72d281d930493d1"
+    },
+    "journal": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "12c4d01bb4955616",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Z. Zettelkasten/202207021252 Desktop Environment.md",
+                "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -347,12 +484,12 @@
             }
           },
           {
-            "id": "e383ca608851ce5a",
+            "id": "9d891d04662544d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md",
+                "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -363,15 +500,23 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "918cd6702ec6a311",
+        "id": "3534c3895f3f2dc2",
         "type": "split",
         "children": [
           {
-            "id": "87d7e76e5751215c",
+            "id": "d6ec31acb5bdc090",
             "type": "tabs",
             "children": [
               {
-                "id": "f86a9292059a4d01",
+                "id": "2b79911b2436e506",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e58d44cffc3493f1",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -379,7 +524,7 @@
                 }
               },
               {
-                "id": "177532f9a9796a9c",
+                "id": "899d6bcb01ce0373",
                 "type": "leaf",
                 "state": {
                   "type": "search",
@@ -394,21 +539,47 @@
                 }
               },
               {
-                "id": "9647b5c4b13e9ba8",
+                "id": "eb12222b404bb6ba",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
                   "state": {}
                 }
               }
-            ]
-          },
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300.99999809265137
+      },
+      "right": {
+        "id": "78e453684fbac546",
+        "type": "split",
+        "children": [
           {
-            "id": "46df27002dba0679",
+            "id": "ac5e985cb37483c6",
             "type": "tabs",
             "children": [
               {
-                "id": "95cc34eb6e848b30",
+                "id": "f68b93bee6f48d6a",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": true,
+                    "unlinkedCollapsed": false
+                  }
+                }
+              },
+              {
+                "id": "2f0c45b478ee70e9",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -419,35 +590,187 @@
                 }
               },
               {
-                "id": "2e805002b94cbb44",
+                "id": "89c530fa0ece91a5",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Z. Zettelkasten/202206262216 Dataview Practice.md"
+                  }
+                }
+              },
+              {
+                "id": "626322fb333ee708",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "495d7209fd0de3f0",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "floating": {
+        "id": "c3529244b1d580b9",
+        "type": "floating",
+        "children": [
+          {
+            "id": "1dbcdf7cc3862d31",
+            "type": "window",
+            "children": [
+              {
+                "id": "69c6a9637238fecb",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Ω. Meta/template-notes/Resource.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": 121,
+            "y": 95,
+            "width": 1024,
+            "height": 800,
+            "maximize": false,
+            "zoom": -2
+          },
+          {
+            "id": "e1224104ffddda20",
+            "type": "window",
+            "children": [
+              {
+                "id": "ea56ae98dbe0393d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W28.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": 1,
+            "y": 1,
+            "width": 818,
+            "height": 1203,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "12c4d01bb4955616"
+    },
+    "Mobile": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "d12a943df90ca7b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Y. Journal/Weekly/2022-W27.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "af1fec84833be7bc",
+        "type": "split",
+        "children": [
+          {
+            "id": "58627a7f74a31b62",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "085f145e7a2dbb46",
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
                   "state": {}
                 }
+              },
+              {
+                "id": "ab335e4a6548c910",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "6995992da16cf975",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "7941098805db035f",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 308.5121879577637
+        "width": 300
       },
       "right": {
-        "id": "52277c661ac2e270",
+        "id": "8fc934a67ce6df18",
         "type": "split",
         "children": [
           {
-            "id": "266a92f0e6070167",
+            "id": "5606274fc72b435a",
             "type": "tabs",
             "children": [
               {
-                "id": "cd21b26461f6a44b",
+                "id": "4d614733d51043ff",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md",
+                    "file": "Y. Journal/Weekly/2022-W27.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -459,62 +782,128 @@
                 }
               },
               {
-                "id": "a63e9edb85b523bd",
+                "id": "6469f5be44c7c67d",
                 "type": "leaf",
                 "state": {
-                  "type": "outline",
+                  "type": "tag",
                   "state": {
-                    "file": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md"
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
                   }
                 }
               },
               {
-                "id": "635b72a0455b5025",
+                "id": "7d678c2e06d81b3d",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W27.md"
+                  }
+                }
+              },
+              {
+                "id": "8ec277baedd38b71",
                 "type": "leaf",
                 "state": {
                   "type": "BC-matrix",
                   "state": {}
                 }
+              },
+              {
+                "id": "a5293a80f7cf26d4",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
               }
-            ],
-            "currentTab": 2
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 220.76695251464844
+        "width": 300,
+        "collapsed": true
       },
-      "active": "e383ca608851ce5a"
+      "active": "d12a943df90ca7b5"
     },
-    "journal": {
+    "scratchpad": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "7e8a12e1a2936ed2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Y. Journal/Weekly/2022-W26.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "7d63bad85fc9fded",
+            "type": "split",
+            "children": [
+              {
+                "id": "d41c0ec893b65bfb",
+                "type": "split",
+                "children": [
+                  {
+                    "id": "a72d281d930493d1",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Z. Zettelkasten/202207140836 AWS Developer Associate Study Resources.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "e4bde081d3d14ec8",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Projects/Salesforce Platform Dev 2.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  }
+                ],
+                "direction": "vertical"
+              },
+              {
+                "id": "a4557cb28b20b07a",
+                "type": "split",
+                "children": [
+                  {
+                    "id": "c9240113deb872ac",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "d7df991ef4e6982d",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Projects/AWS Developer Associate.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  }
+                ],
+                "direction": "vertical"
               }
-            }
-          },
-          {
-            "id": "cfc12c71361ac429",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Z. Zettelkasten/202207012318 Intro a breadcrumbs.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
+            ],
+            "direction": "horizontal"
           }
         ],
         "direction": "vertical"
@@ -554,7 +943,7 @@
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
-                    "sortOrder": "alphabetical"
+                    "sortOrder": "byModifiedTime"
                   }
                 }
               },
@@ -571,7 +960,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 263.5121879577637
       },
       "right": {
         "id": "01e070b1f91494c7",
@@ -587,7 +976,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Y. Journal/Weekly/2022-W26.md",
+                    "file": "Projects/Salesforce Platform Dev 2.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -615,7 +1004,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Y. Journal/Weekly/2022-W26.md"
+                    "file": "Projects/Salesforce Platform Dev 2.md"
                   }
                 }
               },
@@ -640,23 +1029,37 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
+        "width": 300
       },
-      "active": "7e8a12e1a2936ed2"
+      "active": "e4bde081d3d14ec8"
     },
-    "Mobile": {
+    "AWS Developer Exam": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "d12a943df90ca7b5",
+            "id": "9d891d04662544d0",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Projects/AWS Developer Associate.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "7987509cf6c61200",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index/index.md",
+                "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -667,15 +1070,15 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "d61a607df68ea8b1",
+        "id": "3534c3895f3f2dc2",
         "type": "split",
         "children": [
           {
-            "id": "ccb6df7f1da255a3",
+            "id": "d6ec31acb5bdc090",
             "type": "tabs",
             "children": [
               {
-                "id": "042f676ea1438e86",
+                "id": "2b79911b2436e506",
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
@@ -683,7 +1086,7 @@
                 }
               },
               {
-                "id": "b137771eea32a3b0",
+                "id": "e58d44cffc3493f1",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -691,7 +1094,7 @@
                 }
               },
               {
-                "id": "a746072e22530d3f",
+                "id": "899d6bcb01ce0373",
                 "type": "leaf",
                 "state": {
                   "type": "search",
@@ -706,7 +1109,7 @@
                 }
               },
               {
-                "id": "6302608dd3ba711d",
+                "id": "eb12222b404bb6ba",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
@@ -718,35 +1121,35 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 300.99999809265137
       },
       "right": {
-        "id": "e9a9804fe991686a",
+        "id": "78e453684fbac546",
         "type": "split",
         "children": [
           {
-            "id": "4a0b6f46d27dfb24",
+            "id": "ac5e985cb37483c6",
             "type": "tabs",
             "children": [
               {
-                "id": "791ded9d1f750207",
+                "id": "f68b93bee6f48d6a",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "index/index.md",
+                    "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
                     "showSearch": false,
                     "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
+                    "backlinkCollapsed": true,
+                    "unlinkedCollapsed": false
                   }
                 }
               },
               {
-                "id": "f5edccaef910d94b",
+                "id": "2f0c45b478ee70e9",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -757,17 +1160,17 @@
                 }
               },
               {
-                "id": "35aaf024204e4fa2",
+                "id": "89c530fa0ece91a5",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "index/index.md"
+                    "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md"
                   }
                 }
               },
               {
-                "id": "9ae0230af1fa3a99",
+                "id": "626322fb333ee708",
                 "type": "leaf",
                 "state": {
                   "type": "BC-matrix",
@@ -775,22 +1178,126 @@
                 }
               },
               {
-                "id": "c88d55d271200b64",
+                "id": "495d7209fd0de3f0",
                 "type": "leaf",
                 "state": {
                   "type": "BC-tree",
                   "state": {}
                 }
               }
-            ]
+            ],
+            "currentTab": 2
           }
         ],
         "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
+        "width": 300
       },
-      "active": "d12a943df90ca7b5"
+      "floating": {
+        "id": "c3529244b1d580b9",
+        "type": "floating",
+        "children": [
+          {
+            "id": "1dbcdf7cc3862d31",
+            "type": "window",
+            "children": [
+              {
+                "id": "69c6a9637238fecb",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Ω. Meta/template-notes/Resource.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": 821,
+            "y": 249,
+            "width": 1024,
+            "height": 800,
+            "maximize": false,
+            "zoom": -2
+          },
+          {
+            "id": "e1224104ffddda20",
+            "type": "window",
+            "children": [
+              {
+                "id": "ea56ae98dbe0393d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W28.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": 1101,
+            "y": 1,
+            "width": 818,
+            "height": 1203,
+            "maximize": false,
+            "zoom": 0
+          },
+          {
+            "id": "b4bf9c68efeedecf",
+            "type": "window",
+            "children": [
+              {
+                "id": "9e9238a5234217bb",
+                "type": "split",
+                "children": [
+                  {
+                    "id": "12c4d01bb4955616",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Y. Journal/Weekly/2022-W28.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "21a0888122e45daf",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Ω. Meta/template-notes/Project.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  }
+                ],
+                "direction": "horizontal"
+              }
+            ],
+            "direction": "vertical",
+            "x": 1,
+            "y": 0,
+            "width": 823,
+            "height": 1203,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "7987509cf6c61200"
     }
   },
-  "active": "journal"
+  "active": "default"
 }

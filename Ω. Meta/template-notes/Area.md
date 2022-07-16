@@ -1,7 +1,7 @@
 ---
 tags: type/area {{main_topic_tag:text:topic/}}
 emoji: {{icon}}
-template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{icon}}{{title}}"
+template-filename: "{{title}}"
 template-output: Areas
 template-replacement: "* [[{{filename}}]]"
 template-should-replace: "never" 
@@ -18,9 +18,10 @@ LIST FROM (#{{main_topic_tag}}) and #type/project
 ```
 
 ## 📚 Resources
-```dataview
-LIST FROM (#{{main_topic_tag}}) and #type/resource
-```
+### Resource Links
+* 
+
+### View
 
 ## 🎯 Goals
 

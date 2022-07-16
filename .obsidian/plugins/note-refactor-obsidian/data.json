@@ -3,9 +3,9 @@
   "excludeFirstLineInNote": false,
   "headingFormat": "#",
   "newFileLocation": 2,
-  "customFolder": "Z. Zettelkasten",
+  "customFolder": "Notes",
   "fileNamePrefix": "{{date:YYYYMMDDHHmm}} ",
-  "transcludeByDefault": true,
-  "noteLinkTemplate": "",
+  "transcludeByDefault": false,
+  "noteLinkTemplate": "### {{new_note_title}}\n* {{new_note_link}}",
   "refactoredNoteTemplate": "---\ntags: type/ purpose/ topic/\n---\n\n{{new_note_content}}"
 }

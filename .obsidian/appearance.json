@@ -1,4 +1,5 @@
 {
-  "baseFontSize": 15,
-  "cssTheme": "Obsidian Nord Enhanced"
+  "baseFontSize": 18,
+  "cssTheme": "Obsidian Nord",
+  "theme": "obsidian"
 }

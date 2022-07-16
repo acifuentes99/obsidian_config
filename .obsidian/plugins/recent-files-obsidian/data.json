@@ -5,140 +5,164 @@
       "path": "index/index.md"
     },
     {
-      "basename": "Web Clip",
-      "path": "Ω. Meta/template-notes/Web Clip.md"
+      "basename": "Obsidian Project",
+      "path": "Projects/Obsidian Project.md"
     },
     {
-      "basename": "default",
-      "path": "Ω. Meta/template-journal/default.md"
+      "basename": "202206190028 Plugins interesantes Obsidian",
+      "path": "Notes/202206190028 Plugins interesantes Obsidian.md"
     },
     {
-      "basename": "weekly",
-      "path": "Ω. Meta/template-journal/weekly.md"
+      "basename": "Notetaking System",
+      "path": "Resources/Notetaking System/Notetaking System.md"
     },
     {
-      "basename": "202203190918 Deep Work Reading",
-      "path": "Z. Zettelkasten/Y. Reading Notes/202203190918 Deep Work Reading.md"
+      "basename": "202203102155 Obsidian Project Tasks",
+      "path": "Notes/202203102155 Obsidian Project Tasks.md"
     },
     {
-      "basename": "202203190921 The Managers Path Reading",
-      "path": "Z. Zettelkasten/Y. Reading Notes/202203190921 The Managers Path Reading.md"
-    },
-    {
-      "basename": "202203191000 Going Paperless With Obsidian Reading",
-      "path": "Z. Zettelkasten/Y. Reading Notes/202203191000 Going Paperless With Obsidian Reading.md"
-    },
-    {
-      "basename": "Discarted",
-      "path": "index/Discarted/Discarted.md"
-    },
-    {
-      "basename": "Productivity",
-      "path": "index/Productivity.md"
-    },
-    {
-      "basename": "Career",
-      "path": "index/Career/Career.md"
+      "basename": "Obsidian Resources",
+      "path": "Resources/Obsidian Resources.md"
     },
     {
       "basename": "Area",
       "path": "Ω. Meta/template-notes/Area.md"
     },
     {
-      "basename": "202207020045 Obsidian Project",
-      "path": "Z. Zettelkasten/202207020045 Obsidian Project.md"
-    },
-    {
-      "basename": "Reflexiones",
-      "path": "index/Reflexiones/Reflexiones.md"
-    },
-    {
-      "basename": "Life Knowledge",
-      "path": "index/Life Knowledge/Life Knowledge.md"
-    },
-    {
-      "basename": "202207021354 Escritorio Nomada",
-      "path": "Z. Zettelkasten/202207021354 Escritorio Nomada.md"
-    },
-    {
-      "basename": "Tech",
-      "path": "index/Tech/Tech.md"
-    },
-    {
-      "basename": "202207020106 Obsidian Resources",
-      "path": "Z. Zettelkasten/202207020106 Obsidian Resources.md"
+      "basename": "Resource",
+      "path": "Ω. Meta/template-notes/Resource.md"
     },
     {
       "basename": "Project",
       "path": "Ω. Meta/template-notes/Project.md"
     },
     {
-      "basename": "Goals",
-      "path": "Ω. Meta/template-notes/Goals.md"
-    },
-    {
-      "basename": "Tasks",
-      "path": "Ω. Meta/template-notes/Tasks.md"
-    },
-    {
-      "basename": "Resource",
-      "path": "Ω. Meta/template-notes/Resource.md"
-    },
-    {
-      "basename": "202203102155-PlanOrdenNotas2022Obsidian",
-      "path": "Z. Zettelkasten/202203102155-PlanOrdenNotas2022Obsidian.md"
-    },
-    {
-      "basename": "202207021252 Desktop Environment",
-      "path": "Z. Zettelkasten/202207021252 Desktop Environment.md"
-    },
-    {
-      "basename": "202207021254 Desktop Environment Tasks",
-      "path": "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md"
-    },
-    {
-      "basename": "202206292313 Obsidian Plugins",
-      "path": "Z. Zettelkasten/202206292313 Obsidian Plugins.md"
-    },
-    {
-      "basename": "202207012318 Intro a breadcrumbs",
-      "path": "Z. Zettelkasten/202207012318 Intro a breadcrumbs.md"
-    },
-    {
-      "basename": "2022-W26",
-      "path": "Y. Journal/Weekly/2022-W26.md"
-    },
-    {
       "basename": "202206211608 ToDo no tagged notes",
-      "path": "Z. Zettelkasten/202206211608 ToDo no tagged notes.md"
+      "path": "Notes/202206211608 ToDo no tagged notes.md"
     },
     {
-      "basename": "A Builder's Guide to Note-Taking",
-      "path": "X. Pocket/A Builder's Guide to Note-Taking.md"
+      "basename": "AWS Developer Associate Project",
+      "path": "Projects/AWS Developer Associate Project.md"
     },
     {
-      "basename": "202206190028 Plugins interesantes Obsidian",
-      "path": "Z. Zettelkasten/202206190028 Plugins interesantes Obsidian.md"
+      "basename": "AWS Developer Associate Exam Resources",
+      "path": "Resources/AWS Developer Associate Exam Resources.md"
     },
     {
-      "basename": "202206031730 ToDo Flujo uso PC",
-      "path": "Z. Zettelkasten/202206031730 ToDo Flujo uso PC.md"
+      "basename": "2022-W28",
+      "path": "Y. Journal/Weekly/2022-W28.md"
+    },
+    {
+      "basename": "202207120042 Idea  Template para notas diarias",
+      "path": "Notes/202207120042 Idea  Template para notas diarias.md"
     },
     {
       "basename": "202107301520-ZettelkastenIntegrationInVim",
-      "path": "Z. Zettelkasten/202107301520-ZettelkastenIntegrationInVim.md"
+      "path": "Notes/202107301520-ZettelkastenIntegrationInVim.md"
+    },
+    {
+      "basename": "GTD in Vimwiki",
+      "path": "Notes/GTD in Vimwiki.md"
+    },
+    {
+      "basename": "202203131241 Obsidian Research",
+      "path": "Notes/202203131241 Obsidian Research.md"
+    },
+    {
+      "basename": "202206292313 Obsidian Plugins",
+      "path": "Notes/202206292313 Obsidian Plugins.md"
     },
     {
       "basename": "202206300744 Investigación PocketObsidian Highlight Sync",
-      "path": "Z. Zettelkasten/202206300744 Investigación PocketObsidian Highlight Sync.md"
+      "path": "Notes/202206300744 Investigación PocketObsidian Highlight Sync.md"
     },
     {
-      "basename": "202206302230 Ideas y avances workflow nuevo Obsidian",
-      "path": "Z. Zettelkasten/202206302230 Ideas y avances workflow nuevo Obsidian.md"
+      "basename": "202207130021 Obsidian keybindings",
+      "path": "Notes/202207130021 Obsidian keybindings.md"
     },
     {
-      "basename": "202206300753 Thomas Frank Notion Workflow",
-      "path": "Z. Zettelkasten/202206300753 Thomas Frank Notion Workflow.md"
+      "basename": "Plan estudio Julio 2022",
+      "path": "Projects/Plan estudio Julio 2022.md"
+    },
+    {
+      "basename": "202206262216 Dataview Practice",
+      "path": "Notes/202206262216 Dataview Practice.md"
+    },
+    {
+      "basename": "202207140836 AWS Developer Associate Study Resources",
+      "path": "Notes/202207140836 AWS Developer Associate Study Resources.md"
+    },
+    {
+      "basename": "Y. Journal",
+      "path": "Y. Journal/Y. Journal.md"
+    },
+    {
+      "basename": "202207132209 Salesforce Platform Dev 2 Tasks",
+      "path": "Notes/202207132209 Salesforce Platform Dev 2 Tasks.md"
+    },
+    {
+      "basename": "202207140729 Solicitud Metlife",
+      "path": "Notes/202207140729 Solicitud Metlife.md"
+    },
+    {
+      "basename": "Salesforce Platform Dev 2",
+      "path": "Projects/Salesforce Platform Dev 2.md"
+    },
+    {
+      "basename": "2022-W27 (conflict 2022-07-09-20-31-52)",
+      "path": "Y. Journal/Weekly/2022-W27 (conflict 2022-07-09-20-31-52).md"
+    },
+    {
+      "basename": "202207132230 Salesforce Platform Dev 2 Study Resources",
+      "path": "Notes/202207132230 Salesforce Platform Dev 2 Study Resources.md"
+    },
+    {
+      "basename": "202207140857 AWS Developer Associate Exam",
+      "path": "Resources/202207140857 AWS Developer Associate Exam.md"
+    },
+    {
+      "basename": "202106022252-AWS",
+      "path": "Notes/202106022252-AWS.md"
+    },
+    {
+      "basename": "202207140828 AWS Practictioner Exam",
+      "path": "Resources/202207140828 AWS Practictioner Exam.md"
+    },
+    {
+      "basename": "202207132158 AWS Developer Associate Tasks",
+      "path": "Notes/202207132158 AWS Developer Associate Tasks.md"
+    },
+    {
+      "basename": "202106212141-WhislabsAWSPractitioner",
+      "path": "Notes/202106212141-WhislabsAWSPractitioner.md"
+    },
+    {
+      "basename": "202207120032 Resumen leer libros tecnicos",
+      "path": "Notes/202207120032 Resumen leer libros tecnicos.md"
+    },
+    {
+      "basename": "202207120034 Evaluación plan 3,6,9 meses",
+      "path": "Notes/202207120034 Evaluación plan 3,6,9 meses.md"
+    },
+    {
+      "basename": "2022-W20",
+      "path": "Y. Journal/Weekly/2022-W20.md"
+    },
+    {
+      "basename": "inline-tags",
+      "path": "Ω. Meta/templates/inline-tags.md"
+    },
+    {
+      "basename": "2022-W21",
+      "path": "Y. Journal/Weekly/2022-W21.md"
+    },
+    {
+      "basename": "2022-W22",
+      "path": "Y. Journal/Weekly/2022-W22.md"
+    },
+    {
+      "basename": "2022-W23",
+      "path": "Y. Journal/Weekly/2022-W23.md"
     },
     {
       "basename": "2022-W24",
@@ -149,56 +173,32 @@
       "path": "Y. Journal/Weekly/2022-W25.md"
     },
     {
-      "basename": "Tech Library and Projects",
-      "path": "Z. Zettelkasten/Tech Library and Projects/Tech Library and Projects.md"
-    },
-    {
-      "basename": "Scratchpad",
-      "path": "Z. Zettelkasten/Scratchpad.md"
-    },
-    {
-      "basename": "202203190947 1on1",
-      "path": "index/Career/202203190947 1on1.md"
-    },
-    {
-      "basename": "2022-W28",
-      "path": "Y. Journal/Weekly/2022-W28.md"
-    },
-    {
-      "basename": "202206182216 Tagging notetaking",
-      "path": "Z. Zettelkasten/202206182216 Tagging notetaking.md"
-    },
-    {
-      "basename": "Notetaking System",
-      "path": "Z. Zettelkasten/Notetaking System/Notetaking System.md"
-    },
-    {
-      "basename": "202207021155 Zettelkasten",
-      "path": "Z. Zettelkasten/202207021155 Zettelkasten.md"
-    },
-    {
-      "basename": "202203121528 Studying Zettelkasten As Knowledge Method",
-      "path": "Z. Zettelkasten/202203121528 Studying Zettelkasten As Knowledge Method.md"
-    },
-    {
-      "basename": "202202210105-VimZettelkasten_TechImpl_Avances",
-      "path": "Z. Zettelkasten/202202210105-VimZettelkasten_TechImpl_Avances.md"
-    },
-    {
-      "basename": "202203131241 Obsidian Research",
-      "path": "Z. Zettelkasten/202203131241 Obsidian Research.md"
-    },
-    {
-      "basename": "202206211439 Tagging System study",
-      "path": "Z. Zettelkasten/202206211439 Tagging System study.md"
-    },
-    {
-      "basename": "Learning Sessions Project",
-      "path": "Z. Zettelkasten/Learning Sessions Project/Learning Sessions Project.md"
+      "basename": "2022-W26",
+      "path": "Y. Journal/Weekly/2022-W26.md"
     },
     {
       "basename": "2022-W27",
       "path": "Y. Journal/Weekly/2022-W27.md"
+    },
+    {
+      "basename": "Note",
+      "path": "Ω. Meta/template-notes/Note.md"
+    },
+    {
+      "basename": "Scratchpad",
+      "path": "Notes/Scratchpad.md"
+    },
+    {
+      "basename": "Productivity",
+      "path": "Areas/Productivity.md"
+    },
+    {
+      "basename": "202207041839 Notetaking Knowledge",
+      "path": "Projects/202207041839 Notetaking Knowledge.md"
+    },
+    {
+      "basename": "Tech",
+      "path": "Areas/Tech/Tech.md"
     }
   ],
   "omittedPaths": [],

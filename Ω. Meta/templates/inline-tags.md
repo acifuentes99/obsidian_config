@@ -1,1 +1,1 @@
-tags : #type #purpose #topic
+tags : #type #topic

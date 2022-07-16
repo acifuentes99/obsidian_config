@@ -11,11 +11,12 @@
   "dataview",
   "periodic-notes",
   "recent-files-obsidian",
-  "metaedit",
   "cycle-through-panes",
   "breadcrumbs",
   "tag-wrangler",
   "note-refactor-obsidian",
   "workspaces-plus",
-  "obsidian-notes-from-template"
+  "obsidian-notes-from-template",
+  "buttons",
+  "metaedit"
 ]
