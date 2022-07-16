@@ -22,6 +22,23 @@ LIST FROM (#{{main_topic_tag}}) and #type/project
 * 
 
 ### View
+```dataviewjs 
+let links = dv.current().file.outlinks.path.array();
+let pages = new Set();
+for (let link of links) {
+	let page = dv.page(link);
+	if (page.file.tags.includes('#type/resource')) {
+		pages.add(dv.page(link));
+	}
+}
+for (let page of pages) {
+	dv.header(3, page.file.name);
+	let outlinks = page.file.outlinks.filter(r => {
+		return !links.includes(r.path)
+	})
+	const markdown = dv.list(outlinks);
+}
+```
 
 ## 🎯 Goals
 

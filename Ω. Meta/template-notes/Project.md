@@ -19,6 +19,7 @@ function showLinksAndDataBySection(page) {
 
 	for (let group of all_tasks.groupBy(t => t.section)) {
 		dv.header(3, group.key.subpath)
+		console.log(group.rows)
 		dv.taskList(group.rows, false)
 	}
 }
@@ -35,13 +36,15 @@ for (let link of links) {
 for (let page of pages) {
 	showLinksAndDataBySection(page)
 }
-
+```
+### Show Tasks
+* 
 
 ## 📃 Notes
 * 
 
 ## 🗒️ Journal
-* 
+
 
 ## 📑 Pulled Resources
 ### Resource Links
@@ -50,15 +53,18 @@ for (let page of pages) {
 ### View
 ```dataviewjs 
 let links = dv.current().file.outlinks.path.array();
-let pages = new Set()
+let pages = new Set();
 for (let link of links) {
-	let page = dv.page(link)
-	if (page.file.tags.includes('#type/resource')){
-		pages.add(dv.page(link))
+	let page = dv.page(link);
+	if (page.file.tags.includes('#type/resource')) {
+		pages.add(dv.page(link));
 	}
 }
 for (let page of pages) {
 	dv.header(3, page.file.name);
-	const markdown = dv.list(page.file.outlinks);
+	let outlinks = page.file.outlinks.filter(r => {
+		return !links.includes(r.path)
+	})
+	const markdown = dv.list(outlinks);
 }
 ```
