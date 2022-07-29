@@ -1,0 +1,47 @@
+{
+  "main": {
+    "id": "0da31408a062547b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d12a943df90ca7b5",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Z. Zettelkasten/202207020045 Obsidian Project.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7f8dd2a6c9af2f79",
+    "type": "mobile-drawer",
+    "children": [],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "6f66a47d8e70fede",
+    "type": "mobile-drawer",
+    "children": [],
+    "currentTab": 0
+  },
+  "active": "d12a943df90ca7b5",
+  "lastOpenFiles": [
+    "Z. Zettelkasten/202207020045 Obsidian Project.md",
+    "Z. Zettelkasten/202207020106 Obsidian Resources.md",
+    "index/index.md",
+    "Z. Zettelkasten/202207021252 Desktop Environment.md",
+    "Z. Zettelkasten/202207021354 Escritorio Nomada.md",
+    "Y. Journal/Weekly/2022-W26.md",
+    "Z. Zettelkasten/202207021254 Desktop Environment Tasks.md",
+    "Z. Zettelkasten/202206211608 ToDo no tagged notes.md",
+    "X. Pocket/A Builder's Guide to Note-Taking.md",
+    "Ω. Meta/template-notes/Goals.md"
+  ]
+}

@@ -1,12 +1,13 @@
 ---
-tags: type/todo {{purpose_tab:text:purpose/}} {{main_topic_tag:text:topic/}}
-template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{title}}"
-template-replacement: "* [[{{filename}}]]"
-template-input: title, now, first_task_list,  purpose_tag, main_topic_tag
+tags: type/todo {{main_topic_tag:text:topic/}}
+template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{currentTitle}}{{title:text:aaa}} Tasks"
+template-replacement: "[[{{filename}}]]"
+template-should-replace: "always" 
+template-input: title, now, first_task_list, main_topic_tag
 zettel-prefix: "{{now:currentDate:yyyyMMddHHmm}}"
 up: 
 ---
-# {{title}}
+# {{currentTitle}}{{title}} Tasks
 ```button
 name Add Task
 type line(14) template

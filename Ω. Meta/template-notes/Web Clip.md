@@ -1,5 +1,5 @@
 ---
-tags: type/notes/web purpose/ topic/
+tags: type/note/web purpose/ topic/
 template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{title}}"
 template-replacement: "* [[{{filename}}]]"
 template-input: title, now, icon

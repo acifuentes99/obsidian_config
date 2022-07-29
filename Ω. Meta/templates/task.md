@@ -1,1 +1,1 @@
-* [ ] replace_me [created::{{date:YYYY-MM-DD}}].
+* [ ] [created::{{date:YYYY-MM-DD}}]. [due::{{date:YYYY-MM-DD}}]. [priority::low]
