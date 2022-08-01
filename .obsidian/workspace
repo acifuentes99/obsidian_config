@@ -4,46 +4,61 @@
     "type": "split",
     "children": [
       {
-        "id": "c9ed8b773dd71ae5",
+        "id": "e27b5633aefa1f3a",
         "type": "leaf",
-        "dimension": 54.71698113207547,
+        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "index/index.md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": true,
             "source": false
-          }
+          },
+          "pinned": true
         }
       },
       {
-        "id": "74d24e6dc127dde5",
+        "id": "478215e7ff4273af",
+        "type": "leaf",
+        "pinned": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "index/Note Inbox.md",
+            "mode": "source",
+            "backlinks": true,
+            "source": false
+          },
+          "pinned": true
+        }
+      },
+      {
+        "id": "c29a4980fdb56323",
         "type": "split",
-        "dimension": 45.28301886792453,
         "children": [
           {
-            "id": "12c4d01bb4955616",
+            "id": "9e9c9d51df8d4c2c",
             "type": "leaf",
-            "dimension": 62.12624584717608,
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Resources/Obsidian Resources.md",
+                "file": "Projects/Salesforce Platform Dev 2.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "9be93ef9e49a804c",
+            "id": "e95a3ac88aba0be1",
             "type": "leaf",
-            "dimension": 37.87375415282392,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/AWS Developer Associate Project.md",
+                "file": "Notes/Scratchpad.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -57,46 +72,41 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1242268702d80bca",
+    "id": "7e2c4e43f719cd55",
     "type": "split",
     "children": [
       {
-        "id": "084b80dbdaf5439d",
+        "id": "ff7595f139f828b0",
         "type": "tabs",
         "children": [
           {
-            "id": "98214084eb8647f4",
+            "id": "39d3580e3a3903c9",
             "type": "leaf",
             "state": {
-              "type": "recent-files",
-              "state": {}
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
             }
           },
           {
-            "id": "f67ee8e0d7b09f0b",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "9599af23b3be3c11",
+            "id": "4a5dc01659426ff9",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "scratch",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "8ca24a1930011395",
+            "id": "294b9e320ca392d0",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -104,27 +114,51 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 267.0121879577637
   },
   "right": {
-    "id": "7370b9340f0c9690",
+    "id": "34c070dba2728be0",
     "type": "split",
     "children": [
       {
-        "id": "6d46e9e2647eaea9",
+        "id": "04f1f770dd586fc1",
         "type": "tabs",
+        "dimension": 62.799263351749545,
         "children": [
           {
-            "id": "176797098aeb2669",
+            "id": "dd79980650405629",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "6d8ed5e0a89458b6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "229af8dbfc2117dc",
+        "type": "tabs",
+        "dimension": 37.20073664825046,
+        "children": [
+          {
+            "id": "2602f969178482d0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index/index.md",
+                "file": "Notes/Scratchpad.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -136,60 +170,34 @@
             }
           },
           {
-            "id": "8e4a612948f10d66",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "60766090c2a6d000",
+            "id": "82915cafc3db3f27",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "index/index.md"
+                "file": "Notes/Scratchpad.md"
               }
             }
-          },
-          {
-            "id": "493aa847e850d419",
-            "type": "leaf",
-            "state": {
-              "type": "BC-matrix",
-              "state": {}
-            }
-          },
-          {
-            "id": "0cb99cc6dc30af66",
-            "type": "leaf",
-            "state": {
-              "type": "BC-tree",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 212.8913116455078,
     "collapsed": true
   },
-  "active": "9599af23b3be3c11",
+  "active": "e95a3ac88aba0be1",
   "lastOpenFiles": [
-    "Projects/Obsidian Project.md",
-    "Notes/202206190028 Plugins interesantes Obsidian.md",
-    "Resources/Notetaking System/Notetaking System.md",
-    "Notes/202203102155 Obsidian Project Tasks.md",
-    "Resources/Obsidian Resources.md",
-    "Ω. Meta/template-notes/Area.md",
-    "Ω. Meta/template-notes/Resource.md",
-    "Ω. Meta/template-notes/Project.md",
-    "Notes/202206211608 ToDo no tagged notes.md",
-    "Projects/AWS Developer Associate Project.md"
+    "Notes/202206300744 Investigación PocketObsidian Highlight Sync.md",
+    "Y. Journal/Weekly/2022-W31.md",
+    "Notes/202207310021 LXDM, y temas de inicio Linux.md",
+    "Notes/202207311447 Topicos Examen AWS Developer.md",
+    "index/Note Inbox.md",
+    "Notes/202207312004 Diagrama de Framework Ingesta de información.md",
+    "index/PARA Notes.md",
+    "index/index.md",
+    "Projects/Salesforce Platform Dev 2.md",
+    "Notes/202207132209 Salesforce Platform Dev 2 Tasks.md"
   ]
 }

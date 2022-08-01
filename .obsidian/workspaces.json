@@ -1,22 +1,22 @@
 {
   "workspaces": {
-    "dataview": {
+    "Default": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "a761601092a34adb",
+            "id": "88a3f5ea5285bb50",
             "type": "split",
             "children": [
               {
-                "id": "d765313acf61a80c",
+                "id": "182f1068c8bba182",
                 "type": "leaf",
-                "dimension": 22.389306599832913,
+                "dimension": 74.21731123388582,
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                    "file": "index/Project Overview.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
@@ -24,38 +24,20 @@
                 }
               },
               {
-                "id": "86c10d272b2dafbb",
-                "type": "split",
-                "dimension": 77.61069340016708,
-                "children": [
-                  {
-                    "id": "3060fb084c9e2e18",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Ω. Meta/template-notes/Resource.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
+                "id": "d0ac5388e11211b1",
+                "type": "leaf",
+                "dimension": 25.78268876611418,
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "index/Notes by Size.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
                   },
-                  {
-                    "id": "0a5c241d0817b6f1",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Ω. Meta/template-notes/Project.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
-                  }
-                ],
-                "direction": "vertical"
+                  "pinned": true
+                }
               }
             ],
             "direction": "horizontal"
@@ -64,15 +46,66 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "918cd6702ec6a311",
+        "id": "7e2c4e43f719cd55",
         "type": "split",
         "children": [
           {
-            "id": "87d7e76e5751215c",
+            "id": "ff7595f139f828b0",
             "type": "tabs",
             "children": [
               {
-                "id": "f86a9292059a4d01",
+                "id": "39d3580e3a3903c9",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "4a5dc01659426ff9",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "theme of ongoing",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": true,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "294b9e320ca392d0",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 267.0121879577637,
+        "collapsed": true
+      },
+      "right": {
+        "id": "34c070dba2728be0",
+        "type": "split",
+        "children": [
+          {
+            "id": "04f1f770dd586fc1",
+            "type": "tabs",
+            "dimension": 62.799263351749545,
+            "children": [
+              {
+                "id": "dd79980650405629",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -80,36 +113,7 @@
                 }
               },
               {
-                "id": "177532f9a9796a9c",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "dataview",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "9647b5c4b13e9ba8",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          },
-          {
-            "id": "a9be0f8daa14a0e4",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2e805002b94cbb44",
+                "id": "6d8ed5e0a89458b6",
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
@@ -117,26 +121,19 @@
                 }
               }
             ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "right": {
-        "id": "52277c661ac2e270",
-        "type": "split",
-        "children": [
+          },
           {
-            "id": "266a92f0e6070167",
+            "id": "229af8dbfc2117dc",
             "type": "tabs",
+            "dimension": 37.20073664825046,
             "children": [
               {
-                "id": "cd21b26461f6a44b",
+                "id": "2602f969178482d0",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Ω. Meta/template-notes/Resource.md",
+                    "file": "index/Project Overview.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -148,23 +145,12 @@
                 }
               },
               {
-                "id": "95cc34eb6e848b30",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "a63e9edb85b523bd",
+                "id": "82915cafc3db3f27",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Ω. Meta/template-notes/Resource.md"
+                    "file": "index/Project Overview.md"
                   }
                 }
               }
@@ -173,37 +159,23 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 212.8913116455078,
+        "collapsed": true
       },
-      "active": "3060fb084c9e2e18"
+      "active": "182f1068c8bba182"
     },
-    "tag system": {
+    "Journal": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "d765313acf61a80c",
+            "id": "0610d32719e097bc",
             "type": "leaf",
-            "dimension": 50.28376844494892,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Z. Zettelkasten/Vim VS Code.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c1192aedba31b649",
-            "type": "leaf",
-            "dimension": 49.716231555051074,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                "file": "Y. Journal/Weekly/2022-W30.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -214,15 +186,23 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "918cd6702ec6a311",
+        "id": "7e2c4e43f719cd55",
         "type": "split",
         "children": [
           {
-            "id": "87d7e76e5751215c",
+            "id": "ff7595f139f828b0",
             "type": "tabs",
             "children": [
               {
-                "id": "f86a9292059a4d01",
+                "id": "6d8ed5e0a89458b6",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "dd79980650405629",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -230,22 +210,22 @@
                 }
               },
               {
-                "id": "177532f9a9796a9c",
+                "id": "4a5dc01659426ff9",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#topic/notetaking",
+                    "query": "fortelabs",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
-                    "extraContext": false,
+                    "extraContext": true,
                     "sortOrder": "alphabetical"
                   }
                 }
               },
               {
-                "id": "9647b5c4b13e9ba8",
+                "id": "294b9e320ca392d0",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
@@ -254,40 +234,27 @@
               }
             ],
             "currentTab": 1
-          },
-          {
-            "id": "a9be0f8daa14a0e4",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2e805002b94cbb44",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              }
-            ]
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 267.0121879577637,
+        "collapsed": true
       },
       "right": {
-        "id": "52277c661ac2e270",
+        "id": "34c070dba2728be0",
         "type": "split",
         "children": [
           {
-            "id": "266a92f0e6070167",
+            "id": "564c128e391c1f67",
             "type": "tabs",
             "children": [
               {
-                "id": "cd21b26461f6a44b",
+                "id": "2602f969178482d0",
                 "type": "leaf",
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md",
+                    "file": "Y. Journal/Weekly/2022-W30.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -299,7 +266,7 @@
                 }
               },
               {
-                "id": "95cc34eb6e848b30",
+                "id": "39d3580e3a3903c9",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -310,138 +277,17 @@
                 }
               },
               {
-                "id": "a63e9edb85b523bd",
+                "id": "82915cafc3db3f27",
                 "type": "leaf",
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Z. Zettelkasten/202206182216 Tagging notetaking.md"
-                  }
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "active": "c1192aedba31b649"
-    },
-    "default": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "a72d281d930493d1",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "58712b0797c6e728",
-        "type": "split",
-        "children": [
-          {
-            "id": "94bea9ec8f275810",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d4d2f2fc5827e7cd",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "a0f13d552bd320ea",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "c0896ce5c9772e87",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "pass github",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "byModifiedTime"
+                    "file": "Y. Journal/Weekly/2022-W30.md"
                   }
                 }
               },
               {
-                "id": "934480a0a3157391",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 263.5121879577637
-      },
-      "right": {
-        "id": "01e070b1f91494c7",
-        "type": "split",
-        "children": [
-          {
-            "id": "1cb0aa1edd716bcc",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9b09a26ae2d03244",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "e36c5bd3863ee801",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "d42ce1c9fc0dca3a",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {}
-                }
-              },
-              {
-                "id": "b14aaee69ff780c4",
+                "id": "1ba1d3a8fad7d0c5",
                 "type": "leaf",
                 "state": {
                   "type": "BC-matrix",
@@ -449,636 +295,88 @@
                 }
               },
               {
-                "id": "a3ccfad66e9c8f4a",
+                "id": "94c7003b4df49ccd",
                 "type": "leaf",
                 "state": {
                   "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 3
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "active": "a72d281d930493d1"
-    },
-    "journal": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "12c4d01bb4955616",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9d891d04662544d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "3534c3895f3f2dc2",
-        "type": "split",
-        "children": [
-          {
-            "id": "d6ec31acb5bdc090",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2b79911b2436e506",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "e58d44cffc3493f1",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "899d6bcb01ce0373",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "eb12222b404bb6ba",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
                   "state": {}
                 }
               }
             ],
             "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300.99999809265137
-      },
-      "right": {
-        "id": "78e453684fbac546",
-        "type": "split",
-        "children": [
-          {
-            "id": "ac5e985cb37483c6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f68b93bee6f48d6a",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": true,
-                    "unlinkedCollapsed": false
-                  }
-                }
-              },
-              {
-                "id": "2f0c45b478ee70e9",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "89c530fa0ece91a5",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Z. Zettelkasten/202206262216 Dataview Practice.md"
-                  }
-                }
-              },
-              {
-                "id": "626322fb333ee708",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "495d7209fd0de3f0",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ]
           }
         ],
         "direction": "horizontal",
         "width": 300,
         "collapsed": true
       },
-      "floating": {
-        "id": "c3529244b1d580b9",
-        "type": "floating",
-        "children": [
-          {
-            "id": "1dbcdf7cc3862d31",
-            "type": "window",
-            "children": [
-              {
-                "id": "69c6a9637238fecb",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Ω. Meta/template-notes/Resource.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "vertical",
-            "x": 121,
-            "y": 95,
-            "width": 1024,
-            "height": 800,
-            "maximize": false,
-            "zoom": -2
-          },
-          {
-            "id": "e1224104ffddda20",
-            "type": "window",
-            "children": [
-              {
-                "id": "ea56ae98dbe0393d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W28.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "vertical",
-            "x": 1,
-            "y": 1,
-            "width": 818,
-            "height": 1203,
-            "maximize": false,
-            "zoom": 0
-          }
-        ]
-      },
-      "active": "12c4d01bb4955616"
+      "active": "0610d32719e097bc"
     },
-    "Mobile": {
+    "Graph View": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "d12a943df90ca7b5",
+            "id": "a58b906190ab4dc9",
             "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Y. Journal/Weekly/2022-W27.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "af1fec84833be7bc",
-        "type": "split",
-        "children": [
-          {
-            "id": "58627a7f74a31b62",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "085f145e7a2dbb46",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "ab335e4a6548c910",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "6995992da16cf975",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "7941098805db035f",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "right": {
-        "id": "8fc934a67ce6df18",
-        "type": "split",
-        "children": [
-          {
-            "id": "5606274fc72b435a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4d614733d51043ff",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W27.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "6469f5be44c7c67d",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "7d678c2e06d81b3d",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W27.md"
-                  }
-                }
-              },
-              {
-                "id": "8ec277baedd38b71",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "a5293a80f7cf26d4",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
-      },
-      "active": "d12a943df90ca7b5"
-    },
-    "scratchpad": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "7d63bad85fc9fded",
-            "type": "split",
-            "children": [
-              {
-                "id": "d41c0ec893b65bfb",
-                "type": "split",
-                "children": [
-                  {
-                    "id": "a72d281d930493d1",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Z. Zettelkasten/202207140836 AWS Developer Associate Study Resources.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
-                  },
-                  {
-                    "id": "e4bde081d3d14ec8",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Projects/Salesforce Platform Dev 2.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
-                  }
-                ],
-                "direction": "vertical"
-              },
-              {
-                "id": "a4557cb28b20b07a",
-                "type": "split",
-                "children": [
-                  {
-                    "id": "c9240113deb872ac",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Z. Zettelkasten/202206262216 Dataview Practice.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
-                  },
-                  {
-                    "id": "d7df991ef4e6982d",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Projects/AWS Developer Associate.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
-                  }
-                ],
-                "direction": "vertical"
-              }
-            ],
-            "direction": "horizontal"
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "58712b0797c6e728",
-        "type": "split",
-        "children": [
-          {
-            "id": "94bea9ec8f275810",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d4d2f2fc5827e7cd",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "a0f13d552bd320ea",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "c0896ce5c9772e87",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "byModifiedTime"
-                  }
-                }
-              },
-              {
-                "id": "934480a0a3157391",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 263.5121879577637
-      },
-      "right": {
-        "id": "01e070b1f91494c7",
-        "type": "split",
-        "children": [
-          {
-            "id": "1cb0aa1edd716bcc",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9b09a26ae2d03244",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Projects/Salesforce Platform Dev 2.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "e36c5bd3863ee801",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "d42ce1c9fc0dca3a",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Projects/Salesforce Platform Dev 2.md"
-                  }
-                }
-              },
-              {
-                "id": "b14aaee69ff780c4",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "a3ccfad66e9c8f4a",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "active": "e4bde081d3d14ec8"
-    },
-    "AWS Developer Exam": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "9d891d04662544d0",
-            "type": "leaf",
+            "dimension": 57.18809373020899,
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Projects/AWS Developer Associate.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
+              "type": "graph",
+              "state": {},
               "pinned": true
             }
           },
           {
-            "id": "7987509cf6c61200",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "38ead13dc1879946",
+            "type": "split",
+            "dimension": 42.81190626979101,
+            "children": [
+              {
+                "id": "f8408b23f92b8681",
+                "type": "leaf",
+                "dimension": 62.649494020239196,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Projects/Plan 3,6,9 Meses Project.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "6883b9c50a9d3c65",
+                "type": "leaf",
+                "dimension": 37.35050597976081,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "index/Project Overview.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
+            ],
+            "direction": "horizontal"
           }
         ],
         "direction": "vertical"
       },
       "left": {
-        "id": "3534c3895f3f2dc2",
+        "id": "7e2c4e43f719cd55",
         "type": "split",
         "children": [
           {
-            "id": "d6ec31acb5bdc090",
+            "id": "ff7595f139f828b0",
             "type": "tabs",
             "children": [
               {
-                "id": "2b79911b2436e506",
+                "id": "6d8ed5e0a89458b6",
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
@@ -1086,7 +384,7 @@
                 }
               },
               {
-                "id": "e58d44cffc3493f1",
+                "id": "dd79980650405629",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -1094,94 +392,25 @@
                 }
               },
               {
-                "id": "899d6bcb01ce0373",
+                "id": "4a5dc01659426ff9",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "",
+                    "query": "radiografia",
                     "matchingCase": false,
                     "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
+                    "collapseAll": true,
+                    "extraContext": true,
+                    "sortOrder": "byModifiedTime"
                   }
                 }
               },
               {
-                "id": "eb12222b404bb6ba",
+                "id": "294b9e320ca392d0",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300.99999809265137
-      },
-      "right": {
-        "id": "78e453684fbac546",
-        "type": "split",
-        "children": [
-          {
-            "id": "ac5e985cb37483c6",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f68b93bee6f48d6a",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": true,
-                    "unlinkedCollapsed": false
-                  }
-                }
-              },
-              {
-                "id": "2f0c45b478ee70e9",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "89c530fa0ece91a5",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Z. Zettelkasten/202207132158 AWS Developer Associate Tasks.md"
-                  }
-                }
-              },
-              {
-                "id": "626322fb333ee708",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "495d7209fd0de3f0",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
                   "state": {}
                 }
               }
@@ -1190,114 +419,302 @@
           }
         ],
         "direction": "horizontal",
-        "width": 300
+        "width": 267.0121879577637,
+        "collapsed": true
+      },
+      "right": {
+        "id": "34c070dba2728be0",
+        "type": "split",
+        "children": [
+          {
+            "id": "564c128e391c1f67",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2602f969178482d0",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Projects/Plan 3,6,9 Meses Project.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "39d3580e3a3903c9",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "82915cafc3db3f27",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Projects/Plan 3,6,9 Meses Project.md"
+                  }
+                }
+              },
+              {
+                "id": "1ba1d3a8fad7d0c5",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-matrix",
+                  "state": {}
+                }
+              },
+              {
+                "id": "94c7003b4df49ccd",
+                "type": "leaf",
+                "state": {
+                  "type": "BC-tree",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+      },
+      "active": "f8408b23f92b8681"
+    },
+    "AWS": {
+      "main": {
+        "id": "0da31408a062547b",
+        "type": "split",
+        "children": [
+          {
+            "id": "17d3c20e5e4da736",
+            "type": "split",
+            "children": [
+              {
+                "id": "d184a8977a42075e",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Projects/AWS Developer Associate Project.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  },
+                  "pinned": true
+                }
+              },
+              {
+                "id": "ffe7858e3283234b",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W31.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  },
+                  "pinned": true
+                }
+              }
+            ],
+            "direction": "horizontal"
+          },
+          {
+            "id": "5566613fc286f785",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes/202207132158 AWS Developer Associate Tasks.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "7e2c4e43f719cd55",
+        "type": "split",
+        "children": [
+          {
+            "id": "ff7595f139f828b0",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "39d3580e3a3903c9",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "4a5dc01659426ff9",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "tag:#task/todoist",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": true,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "294b9e320ca392d0",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 267.0121879577637,
+        "collapsed": true
+      },
+      "right": {
+        "id": "34c070dba2728be0",
+        "type": "split",
+        "children": [
+          {
+            "id": "04f1f770dd586fc1",
+            "type": "tabs",
+            "dimension": 62.799263351749545,
+            "children": [
+              {
+                "id": "dd79980650405629",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              },
+              {
+                "id": "6d8ed5e0a89458b6",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "229af8dbfc2117dc",
+            "type": "tabs",
+            "dimension": 37.20073664825046,
+            "children": [
+              {
+                "id": "2602f969178482d0",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Notes/202207132158 AWS Developer Associate Tasks.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "82915cafc3db3f27",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Notes/202207132158 AWS Developer Associate Tasks.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 212.8913116455078
       },
       "floating": {
-        "id": "c3529244b1d580b9",
+        "id": "a03e262f9a147aca",
         "type": "floating",
         "children": [
           {
-            "id": "1dbcdf7cc3862d31",
+            "id": "fd8e0e9329eca16b",
             "type": "window",
             "children": [
               {
-                "id": "69c6a9637238fecb",
+                "id": "18070792f9c84273",
                 "type": "leaf",
+                "pinned": true,
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "Ω. Meta/template-notes/Resource.md",
+                    "file": "Y. Journal/Weekly/2022-W30.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "vertical",
-            "x": 821,
-            "y": 249,
-            "width": 1024,
-            "height": 800,
-            "maximize": false,
-            "zoom": -2
-          },
-          {
-            "id": "e1224104ffddda20",
-            "type": "window",
-            "children": [
-              {
-                "id": "ea56ae98dbe0393d",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W28.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "vertical",
-            "x": 1101,
-            "y": 1,
-            "width": 818,
-            "height": 1203,
-            "maximize": false,
-            "zoom": 0
-          },
-          {
-            "id": "b4bf9c68efeedecf",
-            "type": "window",
-            "children": [
-              {
-                "id": "9e9238a5234217bb",
-                "type": "split",
-                "children": [
-                  {
-                    "id": "12c4d01bb4955616",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Y. Journal/Weekly/2022-W28.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
                   },
-                  {
-                    "id": "21a0888122e45daf",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "Ω. Meta/template-notes/Project.md",
-                        "mode": "source",
-                        "backlinks": true,
-                        "source": false
-                      }
-                    }
+                  "pinned": true
+                }
+              },
+              {
+                "id": "7abfd4a39ee1a7b0",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Y. Journal/Weekly/2022-W31.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
                   }
-                ],
-                "direction": "horizontal"
+                }
               }
             ],
             "direction": "vertical",
-            "x": 1,
-            "y": 0,
-            "width": 823,
-            "height": 1203,
+            "x": 6,
+            "y": 6,
+            "width": 1908,
+            "height": 1038,
             "maximize": false,
-            "zoom": 0
+            "zoom": -1
           }
         ]
       },
-      "active": "7987509cf6c61200"
+      "active": "5566613fc286f785"
     }
   },
-  "active": "default"
+  "active": "Default"
 }

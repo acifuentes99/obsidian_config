@@ -5,5 +5,12 @@
   "autoPairMarkdown": false,
   "autoPairBrackets": true,
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "showFrontmatter": true,
+  "defaultViewMode": "preview",
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "en-US",
+    "es"
+  ]
 }

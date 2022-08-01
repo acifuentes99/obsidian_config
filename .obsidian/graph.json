@@ -1,22 +1,51 @@
 {
   "collapse-filter": true,
-  "search": "",
+  "search": "tag:#type/index OR tag:#type/area OR tag:#type/goal OR tag:#type/project OR tag:#type/resource",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": false,
-  "colorGroups": [],
-  "collapse-display": false,
+  "showOrphans": false,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag:#type/area",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#type/project",
+      "color": {
+        "a": 1,
+        "rgb": 10041267
+      }
+    },
+    {
+      "query": "tag:#type/goal",
+      "color": {
+        "a": 1,
+        "rgb": 9624320
+      }
+    },
+    {
+      "query": "tag:#type/resource",
+      "color": {
+        "a": 1,
+        "rgb": 10384993
+      }
+    }
+  ],
+  "collapse-display": true,
   "showArrow": true,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": -1.2,
+  "nodeSizeMultiplier": 1.05840006342662,
+  "lineSizeMultiplier": 2.74948862284944,
   "collapse-forces": true,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.9728342968982595,
-  "close": true
+  "centerStrength": 0.423927693649409,
+  "repelStrength": 12.0304447791961,
+  "linkStrength": 0.961785459446603,
+  "linkDistance": 158,
+  "scale": 0.3858917431246181,
+  "close": false
 }

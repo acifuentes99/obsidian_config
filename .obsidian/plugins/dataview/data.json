@@ -1,8 +1,6 @@
 {
   "renderNullAs": "\\-",
-  "taskLinkLocation": "end",
-  "taskLinkText": "🔗",
-  "taskCompletionTracking": false,
+  "taskCompletionTracking": true,
   "taskCompletionText": "completion",
   "warnOnEmptyResult": true,
   "refreshEnabled": true,
@@ -12,10 +10,14 @@
   "maxRecursiveRenderDepth": 6,
   "tableIdColumnName": "File",
   "tableGroupColumnName": "Group",
+  "allowHtml": true,
   "inlineQueryPrefix": "=",
   "inlineJsQueryPrefix": "$=",
+  "inlineQueriesInCodeblocks": true,
   "enableDataviewJs": true,
   "enableInlineDataviewJs": true,
   "prettyRenderInlineFields": true,
+  "taskLinkLocation": "end",
+  "taskLinkText": "🔗",
   "schemaVersion": 1
 }

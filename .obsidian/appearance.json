@@ -1,5 +1,11 @@
 {
-  "baseFontSize": 18,
+  "baseFontSize": 17,
   "cssTheme": "Obsidian Nord",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "monospaceFontFamily": "Monaco",
+  "enabledCssSnippets": [
+    "heading"
+  ]
 }
