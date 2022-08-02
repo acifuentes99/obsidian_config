@@ -6,17 +6,29 @@
         "type": "split",
         "children": [
           {
-            "id": "88a3f5ea5285bb50",
+            "id": "e27b5633aefa1f3a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "index/PARA Notes.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b6c2f76c1ab2da82",
             "type": "split",
             "children": [
               {
-                "id": "182f1068c8bba182",
+                "id": "478215e7ff4273af",
                 "type": "leaf",
-                "dimension": 74.21731123388582,
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "index/Project Overview.md",
+                    "file": "index/index.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
@@ -24,19 +36,62 @@
                 }
               },
               {
-                "id": "d0ac5388e11211b1",
+                "id": "6238078ff3e0d4a7",
                 "type": "leaf",
-                "dimension": 25.78268876611418,
-                "pinned": true,
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "index/Notes by Size.md",
+                    "file": "Projects/Projects.md",
                     "mode": "source",
                     "backlinks": true,
                     "source": false
-                  },
-                  "pinned": true
+                  }
+                }
+              },
+              {
+                "id": "af4aff53ca8406be",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Resources/Resources.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "horizontal"
+          },
+          {
+            "id": "c29a4980fdb56323",
+            "type": "split",
+            "children": [
+              {
+                "id": "9e9c9d51df8d4c2c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Goals/Goals.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "e95a3ac88aba0be1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Areas/Areas.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
                 }
               }
             ],
@@ -70,7 +125,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "theme of ongoing",
+                    "query": "scratch",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": true,
@@ -87,13 +142,11 @@
                   "state": {}
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 267.0121879577637,
-        "collapsed": true
+        "width": 267.0121879577637
       },
       "right": {
         "id": "34c070dba2728be0",
@@ -133,7 +186,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "index/Project Overview.md",
+                    "file": "index/index.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -150,7 +203,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "index/Project Overview.md"
+                    "file": "index/index.md"
                   }
                 }
               }
@@ -159,10 +212,9 @@
           }
         ],
         "direction": "horizontal",
-        "width": 212.8913116455078,
-        "collapsed": true
+        "width": 212.8913116455078
       },
-      "active": "182f1068c8bba182"
+      "active": "478215e7ff4273af"
     },
     "Journal": {
       "main": {
@@ -175,7 +227,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Y. Journal/Weekly/2022-W30.md",
+                "file": "Y. Journal/Weekly/2022-W31.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -254,7 +306,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Y. Journal/Weekly/2022-W30.md",
+                    "file": "Y. Journal/Weekly/2022-W31.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
@@ -282,7 +334,7 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Y. Journal/Weekly/2022-W30.md"
+                    "file": "Y. Journal/Weekly/2022-W31.md"
                   }
                 }
               },

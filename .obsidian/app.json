@@ -12,5 +12,6 @@
   "spellcheckLanguages": [
     "en-US",
     "es"
-  ]
+  ],
+  "strictLineBreaks": true
 }

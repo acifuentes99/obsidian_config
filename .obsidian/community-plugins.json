@@ -10,5 +10,7 @@
   "workspaces-plus",
   "obsidian-notes-from-template",
   "buttons",
-  "periodic-notes"
+  "periodic-notes",
+  "alx-folder-note",
+  "folder-note-core"
 ]

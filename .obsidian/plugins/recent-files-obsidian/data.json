@@ -1,16 +1,68 @@
 {
   "recentFiles": [
     {
+      "basename": "Y. Journal",
+      "path": "Y. Journal/Y. Journal.md"
+    },
+    {
+      "basename": "Azure",
+      "path": "Archive/Resources/Azure.md"
+    },
+    {
+      "basename": "Projects",
+      "path": "Projects/Projects.md"
+    },
+    {
+      "basename": "index",
+      "path": "index/index.md"
+    },
+    {
+      "basename": "2022-W31",
+      "path": "Y. Journal/Weekly/2022-W31.md"
+    },
+    {
+      "basename": "Notes",
+      "path": "Notes/Notes.md"
+    },
+    {
+      "basename": "PARA Notes",
+      "path": "index/PARA Notes.md"
+    },
+    {
+      "basename": "Resources",
+      "path": "Resources/Resources.md"
+    },
+    {
+      "basename": "Goals",
+      "path": "Goals/Goals.md"
+    },
+    {
+      "basename": "Note Inbox",
+      "path": "index/Note Inbox.md"
+    },
+    {
+      "basename": "Areas",
+      "path": "Areas/Areas.md"
+    },
+    {
+      "basename": "202207132209 Salesforce Platform Dev 2 Tasks",
+      "path": "Notes/202207132209 Salesforce Platform Dev 2 Tasks.md"
+    },
+    {
+      "basename": "Salesforce Platform Dev 2",
+      "path": "Projects/Salesforce Platform Dev 2.md"
+    },
+    {
+      "basename": "2022-W30",
+      "path": "Y. Journal/Weekly/2022-W30.md"
+    },
+    {
       "basename": "Scratchpad",
       "path": "Notes/Scratchpad.md"
     },
     {
       "basename": "202206300744 Investigación PocketObsidian Highlight Sync",
       "path": "Notes/202206300744 Investigación PocketObsidian Highlight Sync.md"
-    },
-    {
-      "basename": "2022-W31",
-      "path": "Y. Journal/Weekly/2022-W31.md"
     },
     {
       "basename": "202207310021 LXDM, y temas de inicio Linux",
@@ -21,28 +73,8 @@
       "path": "Notes/202207311447 Topicos Examen AWS Developer.md"
     },
     {
-      "basename": "Note Inbox",
-      "path": "index/Note Inbox.md"
-    },
-    {
       "basename": "202207312004 Diagrama de Framework Ingesta de información",
       "path": "Notes/202207312004 Diagrama de Framework Ingesta de información.md"
-    },
-    {
-      "basename": "PARA Notes",
-      "path": "index/PARA Notes.md"
-    },
-    {
-      "basename": "index",
-      "path": "index/index.md"
-    },
-    {
-      "basename": "Salesforce Platform Dev 2",
-      "path": "Projects/Salesforce Platform Dev 2.md"
-    },
-    {
-      "basename": "202207132209 Salesforce Platform Dev 2 Tasks",
-      "path": "Notes/202207132209 Salesforce Platform Dev 2 Tasks.md"
     },
     {
       "basename": "Nuevas Certificaciones",
@@ -79,10 +111,6 @@
     {
       "basename": "202207132158 AWS Developer Associate Tasks",
       "path": "Notes/202207132158 AWS Developer Associate Tasks.md"
-    },
-    {
-      "basename": "2022-W30",
-      "path": "Y. Journal/Weekly/2022-W30.md"
     },
     {
       "basename": "AWS Developer Associate Project",
@@ -171,34 +199,6 @@
     {
       "basename": "2022-W01",
       "path": "Y. Journal/Weekly/2022-W01.md"
-    },
-    {
-      "basename": "Y. Journal",
-      "path": "Y. Journal/Y. Journal.md"
-    },
-    {
-      "basename": "202207301848 Apuntes de JS mientras hago el dataview",
-      "path": "Notes/202207301848 Apuntes de JS mientras hago el dataview.md"
-    },
-    {
-      "basename": "Career",
-      "path": "Areas/Career.md"
-    },
-    {
-      "basename": "Social y Baile",
-      "path": "Goals/Social y Baile.md"
-    },
-    {
-      "basename": "Life Knowledge",
-      "path": "Areas/Life Knowledge.md"
-    },
-    {
-      "basename": "Reflexiones",
-      "path": "Areas/Reflexiones.md"
-    },
-    {
-      "basename": "Notetaking System",
-      "path": "Resources/Notetaking System/Notetaking System.md"
     }
   ],
   "omittedPaths": [
