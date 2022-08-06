@@ -6,12 +6,14 @@
   "autoPairBrackets": true,
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "showFrontmatter": true,
+  "showFrontmatter": false,
   "defaultViewMode": "preview",
   "spellcheck": true,
   "spellcheckLanguages": [
     "en-US",
     "es"
   ],
-  "strictLineBreaks": true
+  "strictLineBreaks": false,
+  "newFileLocation": "root",
+  "attachmentFolderPath": "Ω. Meta/img"
 }

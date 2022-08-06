@@ -1,221 +1,5 @@
 {
   "workspaces": {
-    "Default": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "e27b5633aefa1f3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index/PARA Notes.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6c2f76c1ab2da82",
-            "type": "split",
-            "children": [
-              {
-                "id": "478215e7ff4273af",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "index/index.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "6238078ff3e0d4a7",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Projects/Projects.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "af4aff53ca8406be",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Resources/Resources.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "horizontal"
-          },
-          {
-            "id": "c29a4980fdb56323",
-            "type": "split",
-            "children": [
-              {
-                "id": "9e9c9d51df8d4c2c",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Goals/Goals.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "e95a3ac88aba0be1",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Areas/Areas.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "horizontal"
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "7e2c4e43f719cd55",
-        "type": "split",
-        "children": [
-          {
-            "id": "ff7595f139f828b0",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "39d3580e3a3903c9",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "4a5dc01659426ff9",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "scratch",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": true,
-                    "extraContext": true,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "294b9e320ca392d0",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 267.0121879577637
-      },
-      "right": {
-        "id": "34c070dba2728be0",
-        "type": "split",
-        "children": [
-          {
-            "id": "04f1f770dd586fc1",
-            "type": "tabs",
-            "dimension": 62.799263351749545,
-            "children": [
-              {
-                "id": "dd79980650405629",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "6d8ed5e0a89458b6",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              }
-            ]
-          },
-          {
-            "id": "229af8dbfc2117dc",
-            "type": "tabs",
-            "dimension": 37.20073664825046,
-            "children": [
-              {
-                "id": "2602f969178482d0",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "index/index.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "82915cafc3db3f27",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "index/index.md"
-                  }
-                }
-              }
-            ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 212.8913116455078
-      },
-      "active": "478215e7ff4273af"
-    },
     "Journal": {
       "main": {
         "id": "0da31408a062547b",
@@ -284,13 +68,11 @@
                   "state": {}
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 267.0121879577637,
-        "collapsed": true
+        "width": 267.0121879577637
       },
       "right": {
         "id": "34c070dba2728be0",
@@ -362,238 +144,20 @@
         "width": 300,
         "collapsed": true
       },
-      "active": "0610d32719e097bc"
+      "active": "6d8ed5e0a89458b6"
     },
-    "Graph View": {
+    "Default": {
       "main": {
         "id": "0da31408a062547b",
         "type": "split",
         "children": [
           {
-            "id": "a58b906190ab4dc9",
-            "type": "leaf",
-            "dimension": 57.18809373020899,
-            "pinned": true,
-            "state": {
-              "type": "graph",
-              "state": {},
-              "pinned": true
-            }
-          },
-          {
-            "id": "38ead13dc1879946",
-            "type": "split",
-            "dimension": 42.81190626979101,
-            "children": [
-              {
-                "id": "f8408b23f92b8681",
-                "type": "leaf",
-                "dimension": 62.649494020239196,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Projects/Plan 3,6,9 Meses Project.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "6883b9c50a9d3c65",
-                "type": "leaf",
-                "dimension": 37.35050597976081,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "index/Project Overview.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              }
-            ],
-            "direction": "horizontal"
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "7e2c4e43f719cd55",
-        "type": "split",
-        "children": [
-          {
-            "id": "ff7595f139f828b0",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "6d8ed5e0a89458b6",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              },
-              {
-                "id": "dd79980650405629",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "4a5dc01659426ff9",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "radiografia",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": true,
-                    "extraContext": true,
-                    "sortOrder": "byModifiedTime"
-                  }
-                }
-              },
-              {
-                "id": "294b9e320ca392d0",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 2
-          }
-        ],
-        "direction": "horizontal",
-        "width": 267.0121879577637,
-        "collapsed": true
-      },
-      "right": {
-        "id": "34c070dba2728be0",
-        "type": "split",
-        "children": [
-          {
-            "id": "564c128e391c1f67",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "2602f969178482d0",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Projects/Plan 3,6,9 Meses Project.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "39d3580e3a3903c9",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "alphabetical",
-                    "useHierarchy": true
-                  }
-                }
-              },
-              {
-                "id": "82915cafc3db3f27",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Projects/Plan 3,6,9 Meses Project.md"
-                  }
-                }
-              },
-              {
-                "id": "1ba1d3a8fad7d0c5",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-matrix",
-                  "state": {}
-                }
-              },
-              {
-                "id": "94c7003b4df49ccd",
-                "type": "leaf",
-                "state": {
-                  "type": "BC-tree",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
-      },
-      "active": "f8408b23f92b8681"
-    },
-    "AWS": {
-      "main": {
-        "id": "0da31408a062547b",
-        "type": "split",
-        "children": [
-          {
-            "id": "17d3c20e5e4da736",
-            "type": "split",
-            "children": [
-              {
-                "id": "d184a8977a42075e",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Projects/AWS Developer Associate Project.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  },
-                  "pinned": true
-                }
-              },
-              {
-                "id": "ffe7858e3283234b",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W31.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  },
-                  "pinned": true
-                }
-              }
-            ],
-            "direction": "horizontal"
-          },
-          {
-            "id": "5566613fc286f785",
+            "id": "aa12a6187e1fea24",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes/202207132158 AWS Developer Associate Tasks.md",
+                "file": "index/Note Inbox.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -612,6 +176,21 @@
             "type": "tabs",
             "children": [
               {
+                "id": "f77876b0e0c82885",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "index/index.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": false
+                  },
+                  "pinned": true
+                }
+              },
+              {
                 "id": "39d3580e3a3903c9",
                 "type": "leaf",
                 "state": {
@@ -623,15 +202,46 @@
                 }
               },
               {
+                "id": "dd79980650405629",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 212
+      },
+      "right": {
+        "id": "34c070dba2728be0",
+        "type": "split",
+        "children": [
+          {
+            "id": "f0d3e7c60cd7ae46",
+            "type": "tabs",
+            "dimension": 69.1462383770076,
+            "children": [
+              {
+                "id": "6d8ed5e0a89458b6",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
                 "id": "4a5dc01659426ff9",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#task/todoist",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
-                    "collapseAll": true,
+                    "collapseAll": false,
                     "extraContext": true,
                     "sortOrder": "alphabetical"
                   }
@@ -646,44 +256,12 @@
                 }
               }
             ],
-            "currentTab": 1
-          }
-        ],
-        "direction": "horizontal",
-        "width": 267.0121879577637,
-        "collapsed": true
-      },
-      "right": {
-        "id": "34c070dba2728be0",
-        "type": "split",
-        "children": [
-          {
-            "id": "04f1f770dd586fc1",
-            "type": "tabs",
-            "dimension": 62.799263351749545,
-            "children": [
-              {
-                "id": "dd79980650405629",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "6d8ed5e0a89458b6",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {}
-                }
-              }
-            ]
+            "currentTab": 2
           },
           {
-            "id": "229af8dbfc2117dc",
+            "id": "12056edabafef2d6",
             "type": "tabs",
-            "dimension": 37.20073664825046,
+            "dimension": 30.853761622992394,
             "children": [
               {
                 "id": "2602f969178482d0",
@@ -691,14 +269,14 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "Notes/202207132158 AWS Developer Associate Tasks.md",
+                    "file": "index/Note Inbox.md",
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical",
                     "showSearch": false,
                     "searchQuery": "",
                     "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
+                    "unlinkedCollapsed": false
                   }
                 }
               },
@@ -708,64 +286,26 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "Notes/202207132158 AWS Developer Associate Tasks.md"
+                    "file": "index/Note Inbox.md"
                   }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 212.8913116455078
-      },
-      "floating": {
-        "id": "a03e262f9a147aca",
-        "type": "floating",
-        "children": [
-          {
-            "id": "fd8e0e9329eca16b",
-            "type": "window",
-            "children": [
-              {
-                "id": "18070792f9c84273",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W30.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  },
-                  "pinned": true
                 }
               },
               {
-                "id": "7abfd4a39ee1a7b0",
+                "id": "76546ec2991f9a5b",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Y. Journal/Weekly/2022-W31.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
+                  "type": "calendar",
+                  "state": {}
                 }
               }
             ],
-            "direction": "vertical",
-            "x": 6,
-            "y": 6,
-            "width": 1908,
-            "height": 1038,
-            "maximize": false,
-            "zoom": -1
+            "currentTab": 2
           }
-        ]
+        ],
+        "direction": "horizontal",
+        "width": 276.24578857421875
       },
-      "active": "5566613fc286f785"
+      "active": "aa12a6187e1fea24"
     }
   },
   "active": "Default"

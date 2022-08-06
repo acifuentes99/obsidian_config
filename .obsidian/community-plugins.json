@@ -12,5 +12,10 @@
   "buttons",
   "periodic-notes",
   "alx-folder-note",
-  "folder-note-core"
+  "folder-note-core",
+  "media-extended",
+  "templater-obsidian",
+  "obsidian-minimal-settings",
+  "obsidian-hider",
+  "calendar"
 ]

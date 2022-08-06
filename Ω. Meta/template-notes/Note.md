@@ -1,5 +1,5 @@
 ---
-tags: {{main_topic_tag:text:type/note/ topic/}}
+tags: {{main_topic_tag:text:type/note/default topic/default purpose/default}}
 template-filename: "{{now:currentDate:yyyyMMddHHmm}} {{title}}"
 template-output: Notes
 template-replacement: "[[{{filename}}]]"

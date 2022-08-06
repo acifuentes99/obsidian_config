@@ -1,9 +1,8 @@
 ---
-tags: dashboard
+tags: type/dashboard
 last-days: 200 days
 number-results: 20
 ---
-
 ## Notes by Size
 * Notas candidatas a necesitar de un Merge
 * Link para last-days: https://blacksmithgu.github.io/obsidian-dataview/query/literals/

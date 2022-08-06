@@ -260,5 +260,23 @@
       ],
       "key": "R"
     }
+  ],
+  "media-extended:take-rec-timestamp": [],
+  "media-extended:get-timestamp": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "open-with-default-app:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
+    }
   ]
 }

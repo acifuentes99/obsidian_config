@@ -1,11 +1,10 @@
 ---
-tags: dashboard
+tags: type/dashboard
 emoji: 
 zettel-prefix: 202207232208
 show-archive: false
+cssClass: row-highlight
 ---
-
-
 # Goals
 * Links esperados : Areas
 ```dataviewjs

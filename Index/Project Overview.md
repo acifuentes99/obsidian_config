@@ -1,10 +1,9 @@
 ---
-tags: dashboard
+tags: type/dashboard
 emoji: 
 zettel-prefix: 202207232208
 show-archive: false
 ---
-
 # Project Overview
 
 * Idea: Mostrar una vista resumida, de proyectos, progresos, tasks, etc... de los activos

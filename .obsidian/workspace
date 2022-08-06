@@ -4,96 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e27b5633aefa1f3a",
+        "id": "4d8e6902325abfb5",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "index/PARA Notes.md",
+            "file": "Ω. Meta/template-journal/weekly.md",
             "mode": "preview",
             "backlinks": true,
             "source": false
           }
         }
-      },
-      {
-        "id": "b6c2f76c1ab2da82",
-        "type": "split",
-        "children": [
-          {
-            "id": "478215e7ff4273af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index/index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6238078ff3e0d4a7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Y. Journal/Y. Journal.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "af4aff53ca8406be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resources/Resources.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "direction": "horizontal"
-      },
-      {
-        "id": "c29a4980fdb56323",
-        "type": "split",
-        "children": [
-          {
-            "id": "9e9c9d51df8d4c2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Goals/Goals.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e95a3ac88aba0be1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Areas/Areas.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ],
-        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -107,14 +28,61 @@
         "type": "tabs",
         "children": [
           {
+            "id": "f77876b0e0c82885",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Index/Index.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
             "id": "39d3580e3a3903c9",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "useHierarchy": true
               }
+            }
+          },
+          {
+            "id": "dd79980650405629",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 212
+  },
+  "right": {
+    "id": "34c070dba2728be0",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0d3e7c60cd7ae46",
+        "type": "tabs",
+        "dimension": 69.1462383770076,
+        "children": [
+          {
+            "id": "6d8ed5e0a89458b6",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
             }
           },
           {
@@ -123,10 +91,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "scratch",
+                "query": "tag:#topic/career",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical"
               }
@@ -140,43 +108,13 @@
               "state": {}
             }
           }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 267.0121879577637
-  },
-  "right": {
-    "id": "34c070dba2728be0",
-    "type": "split",
-    "children": [
-      {
-        "id": "04f1f770dd586fc1",
-        "type": "tabs",
-        "dimension": 62.799263351749545,
-        "children": [
-          {
-            "id": "dd79980650405629",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "6d8ed5e0a89458b6",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          }
-        ]
+        ],
+        "currentTab": 1
       },
       {
-        "id": "229af8dbfc2117dc",
+        "id": "12056edabafef2d6",
         "type": "tabs",
-        "dimension": 37.20073664825046,
+        "dimension": 30.853761622992394,
         "children": [
           {
             "id": "2602f969178482d0",
@@ -184,14 +122,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Y. Journal/Y. Journal.md",
+                "file": "Ω. Meta/template-journal/weekly.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -201,28 +139,36 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Y. Journal/Y. Journal.md"
+                "file": "Ω. Meta/template-journal/weekly.md"
               }
             }
+          },
+          {
+            "id": "76546ec2991f9a5b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 212.8913116455078
+    "width": 276.24578857421875,
+    "collapsed": true
   },
-  "active": "6238078ff3e0d4a7",
+  "active": "4d8e6902325abfb5",
   "lastOpenFiles": [
-    "Archive/Resources/Azure.md",
-    "Projects/Projects.md",
-    "index/index.md",
-    "Y. Journal/Weekly/2022-W31.md",
-    "Notes/Notes.md",
-    "index/PARA Notes.md",
-    "Resources/Resources.md",
-    "Goals/Goals.md",
-    "index/Note Inbox.md",
-    "Areas/Areas.md"
+    "Ω. Meta/img/Pasted image 20220806110456.png",
+    "Index/Index.md",
+    "Y. Journal/Weekly/2022-W27 (conflict 2022-07-09-20-31-52).md",
+    "Y. Journal/Weekly/2022-W27.md",
+    "Areas/Productivity.md",
+    "Notes/202207221741 Useful Dataview Tasks.md",
+    "Areas/Tech.md",
+    "Areas/Reflexiones.md",
+    "Areas/Life Knowledge.md",
+    "Index/Discarted/Discarted.md"
   ]
 }
