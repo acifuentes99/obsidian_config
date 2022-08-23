@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "nvim",
+      "code": "cd $HOME/gdrive/Notes && neovide",
+      "arguments": "",
+      "showInMenu": false
+    }
+  ],
+  "sysexpInFileMenu": true
+}

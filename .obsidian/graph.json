@@ -1,11 +1,11 @@
 {
-  "collapse-filter": true,
-  "search": "tag:#type/index OR tag:#type/area OR tag:#type/goal OR tag:#type/project OR tag:#type/resource",
+  "collapse-filter": false,
+  "search": "",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
-  "showOrphans": false,
-  "collapse-color-groups": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#type/area",
@@ -46,6 +46,6 @@
   "repelStrength": 12.0304447791961,
   "linkStrength": 0.961785459446603,
   "linkDistance": 158,
-  "scale": 0.3858917431246181,
+  "scale": 0.030839256908611508,
   "close": false
 }

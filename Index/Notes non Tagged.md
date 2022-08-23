@@ -3,17 +3,17 @@ tags: type/dashboard
 last-days: 50 days
 number-results: 10
 ---
-## To be tagged
+## Notes non tagged (or with default)
 
 * Crear dataview aquí
 * Link para last-days: https://blacksmithgu.github.io/obsidian-dataview/query/literals/
 
 ##### Vista de non tagged notes
 ```dataview
-TABLE file.cday, file.mday, file.size
+TABLE file.cday
 From "" 
 WHERE    
-	contains(file.tags, "type/note/default") 
+(contains(file.tags, "type/note/default") OR contains(file.tags, "topic/default"))
 AND !contains(file.tags, "journal")
 AND !contains(file.tags, "archive")
 AND !contains(file.tags, "dashboard")

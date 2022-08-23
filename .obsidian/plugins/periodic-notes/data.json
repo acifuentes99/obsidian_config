@@ -1,30 +1,32 @@
 {
-  "installedVersion": "1.0.0-beta1",
-  "activeCalendarSet": "Default",
-  "showGettingStartedBanner": true,
+  "showGettingStartedBanner": false,
   "hasMigratedDailyNoteSettings": false,
   "hasMigratedWeeklyNoteSettings": false,
-  "calendarSets": [
-    {
-      "day": {
-        "enabled": true,
-        "openAtStartup": false,
-        "format": "YYYY-MM-DD",
-        "templatePath": "Ω. Meta/templates/dailyjournal.md",
-        "folder": "Y. Journal/Daily"
-      },
-      "week": {
-        "enabled": true,
-        "format": "gggg-[W]WW",
-        "templatePath": "Ω. Meta/template-journal/weekly.md",
-        "folder": "Y. Journal/Weekly"
-      },
-      "month": {},
-      "quarter": {},
-      "year": {},
-      "id": "Default",
-      "ctime": "2022-07-28T23:35:27-04:00"
-    }
-  ],
-  "enableTimelineComplication": false
+  "daily": {
+    "format": "",
+    "template": "Ω. Meta/template-journal/daily.md",
+    "folder": "Y. Journal/Daily",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "",
+    "template": "Ω. Meta/template-journal/weekly.md",
+    "folder": "Y. Journal/Weekly",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
 }

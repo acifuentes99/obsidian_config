@@ -1,3 +1,3 @@
 ---
-tags: type purpose topic
+tags: type/default purpose/default topic/default
 ---

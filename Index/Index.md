@@ -14,17 +14,9 @@ tags: type/dashboard
 * [[PARA Notes]]
 
 ## 😱 [[Areas]]
-* [[Tech]]
-* [[Reflexiones]]
-* [[Life Knowledge]]
-* [[Career]]
-* [[Productivity]]
-```button
-name New Area
-type command
-action From Template: Area
+```dataview
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name" FROM #type/area AND !#archive WHERE !contains(file.folder, "template") LIMIT 10
 ```
-
 ## 📔 [[Projects]]
 ```dataviewjs
 let currentFile = dv.current().file;
@@ -47,15 +39,12 @@ for (let page of projectPages) {
 	showLinksAndDataBySection(page)
 }
 
+const fileLink = (p) => p.file.frontmatter.emoji + " " + p.file.link;
+
 let headers = ["Project", "Mdate"];
-let results = projectPages.sort(k => data[k.file.name][0].file.mtime, 'desc').map(page => [page.file.link, data[page.file.name][0].file.mtime ]);
+let results = projectPages.sort(k => data[k.file.name][0].file.mtime, 'desc').map(page => [fileLink(page), data[page.file.name][0].file.mtime ]);
 ;
 dv.table(headers, results);
-```
-```button
-name New Project
-type command
-action From Template: Project
 ```
 
 ## 📆 Weekly Notes
@@ -75,20 +64,10 @@ action Periodic Notes: Open today's daily note
 ```
 ## 🌱 [[Goals]]
 ```dataview
-TABLE filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/goal WHERE !contains(file.folder, "template") LIMIT 10
-```
-```button
-name New Goal
-type command
-action From Template: Goal
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/goal WHERE !contains(file.folder, "template") LIMIT 10
 ```
 
 ## 💾 [[Resources]]
 ```dataview
-TABLE filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/resource WHERE !contains(file.folder, "template") LIMIT 10
-```
-```button
-name New Resource
-type command
-action From Template: Resource
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/resource AND !#archive WHERE !contains(file.folder, "template") LIMIT 20
 ```
