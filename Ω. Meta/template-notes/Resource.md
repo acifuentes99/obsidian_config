@@ -11,6 +11,10 @@ zettel-prefix: "{{now:currentDate:yyyyMMddHHmm}}"
 
 # {{icon}}{{title}}
 
+```dataviewjs
+dv.view("Ω. Meta/dv-scripts/linkReferences");
+```
+
 ## 📃 Notes
 ```button
 name Add Note

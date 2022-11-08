@@ -18,9 +18,6 @@ name Add Project
 type command
 action From Template: Project
 ```
-```dataview
-LIST FROM (#{{main_topic_tag}}) and #type/project 
-```
 
 ## 📚 Resources
 ### Resource Links
@@ -64,7 +61,7 @@ action From Template: Note
 ```
 * 
 
-### View
-```dataview
-LIST FROM (#{{main_topic_tag}}) and #type/notes SORT file.name DESC
+## View
+```dataviewjs
+dv.view("Ω. Meta/dv-scripts/linkReferences");
 ```
