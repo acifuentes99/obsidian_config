@@ -1,7 +1,7 @@
 ---
 tags: type/dashboard
-last-days: 200 days
-number-results: 20
+last-days: 500 days
+number-results: 80
 ---
 ## Notes by Size
 * Notas candidatas a necesitar de un Merge

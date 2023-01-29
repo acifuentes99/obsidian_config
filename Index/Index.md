@@ -1,53 +1,25 @@
 ---
 icon: teddy_bear
 tags: type/dashboard
+obsidianUIMode: preview
 ---
 # 🧸 [[Index]]
 
-**Notes to Order**
+## **Notes to Order**
+
 * [[Note Inbox]]
+* [[Notes and Tags by Recent]]
 * [[Notes non Tagged]]
 * [[Notes by Size]]
 
-**Overviews**
-* [[Project Overview]]
-* [[PARA Notes]]
-
-## 😱 [[Areas]]
-```dataview
-TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name" FROM #type/area AND !#archive WHERE !contains(file.folder, "template") LIMIT 10
-```
 ## 📔 [[Projects]]
-```dataviewjs
-let currentFile = dv.current().file;
-let showArchive = currentFile.frontmatter["show-archive"] ? '' : 'and -#archive';
-let projectPages = dv.pages('#type/project and -"Ω. Meta/template-notes"' + showArchive);
-let data = {};
 
-function showLinksAndDataBySection(page) {
-
-    let pages = new Set();
-    for (let outlink of page.file.outlinks.array()) {
-        pages.add(outlink.path);
-    }
-    let key = page.file.name;
-
-    data[key] = dv.array(Array.from(pages)).map(p => dv.page(p)).sort(k => k.file.mtime, 'desc');
-}
-
-for (let page of projectPages) {
-	showLinksAndDataBySection(page)
-}
-
-const fileLink = (p) => p.file.frontmatter.emoji + " " + p.file.link;
-
-let headers = ["Project", "Mdate"];
-let results = projectPages.sort(k => data[k.file.name][0].file.mtime, 'desc').map(page => [fileLink(page), data[page.file.name][0].file.mtime ]);
-;
-dv.table(headers, results);
+```dataview
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/project AND !#archive AND !#done WHERE !contains(file.folder, "template") 
 ```
 
 ## 📆 Weekly Notes
+
 ```dataview
 TABLE last-one as "Last One" FROM #journal/weekly WHERE !contains(file.folder, "template-journal") SORT file.name DESC LIMIT 4
 ```
@@ -62,12 +34,81 @@ name Current Daily Note
 type command
 action Periodic Notes: Open today's daily note
 ```
+
 ## 🌱 [[Goals]]
+
 ```dataview
-TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/goal WHERE !contains(file.folder, "template") LIMIT 10
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/goal AND !#archive AND !#done WHERE !contains(file.folder, "template") LIMIT 10
 ```
 
 ## 💾 [[Resources]]
+
+```dataviewjs
+let checkIfPARANoteIsArchived = (file) => {
+    let isArchived = true;
+    let inlinks = [];
+    if (file.inlinks.values.length > 0) {
+        for (let link of file.inlinks.values) {
+            let p = dv.page(link.path);
+            if (!p.tags) {
+                continue;
+            }
+            if (p.tags.contains("archive") || p.tags.contains("resource")) {
+                isArchived = isArchived && true;
+            }
+            else {
+                isArchived = isArchived && false;
+            }
+            inlinks.push('[[' + p.file.path + ']]');
+        }
+    }
+    if (inlinks.length === 0) {
+        isArchived = true;
+    }
+    let object = {
+        link : '[[' + file.path + '|' + file.name + ']]',
+        file : file,
+        inlinks : inlinks,
+        archived : isArchived
+    };
+    return object;
+}
+
+let drawList = (resources, showArchive) => {
+    let text = [];
+    let title = showArchive ? 'Archived Resources' : 'Active Resources';
+    for (let p of resources) {
+        let displayText = '';
+        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
+        displayText = displayText + emoji + ' ' + p.link + '<ul>';
+        if (!(p.inlinks)) {
+            continue;
+        }
+        if (p.inlinks.length > 0) {
+            for (let link of p.inlinks) {
+                displayText = displayText + '<li\>' + link + '</li>';
+            }
+        }
+        displayText = displayText + '</ul>';
+        p.displayText = displayText;
+        text.push(p);
+        console.log(p);
+    }
+    dv.table(['name','notes'], text.map(p => [p.displayText, p.file.outlinks.length]));
+}
+let resources = [];
+let queryAsd = '-"Ω. Meta" and #type/resource';
+let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
+
+for (let result of resultsResources) {
+    resources.push(checkIfPARANoteIsArchived(result.file));
+}
+
+drawList(resources.filter(p => { return !p.archived}), false);
+```
+
+## 😱 [[Areas]]
+
 ```dataview
-TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#topic")) AS "Tags" FROM #type/resource AND !#archive WHERE !contains(file.folder, "template") LIMIT 20
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name" FROM #type/area AND !#archive WHERE !contains(file.folder, "template") LIMIT 10
 ```

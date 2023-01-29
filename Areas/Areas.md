@@ -1,5 +1,6 @@
 ---
-tags: type/dashboard
+tags: type/dashboard graphstart
+obsidianUIMode: preview
 ---
 # Areas
 
@@ -19,3 +20,13 @@ WITHOUT ID link(file.link, Title) AS “Title”
 ```dataview
 TABLE filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/area AND #archive WHERE !contains(file.folder, "template") 
 ```
+
+## Internal links (for graph)
+* [[Tech]]
+* [[Social]]
+* [[Reflexiones]]
+* [[Productivity]]
+* [[Life Knowledge]]
+* [[Fitness]]
+* [[Finanzas]]
+* [[Career]]
