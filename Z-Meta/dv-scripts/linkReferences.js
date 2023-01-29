@@ -70,10 +70,10 @@ let formatPagesDepth = (pages, depth) => {
 
 let isNormalNoteType = (p) => {
     if (p === undefined) return false;
-    if (p.tags === undefined) return true;
+    if (p.tags === undefined || p.tags === null) return true;
     let count = 0;
     for (let tag of p.tags.split(' ')) {
-        if ( tag === 'type/note/default' || tag === 'type' ) { return true; }
+        if ( tag.includes('type/note/') || tag === 'type' ) { return true; }
     }
     return false;
 }
