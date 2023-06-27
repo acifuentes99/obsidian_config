@@ -41,3 +41,24 @@ function insertCharacter(character) {
   cursor['ch']++;
   editor.setCursor(cursor);
 }
+
+function jumpToDayHeading() {
+	const editor = view.editor;
+  let dayBreaks = view.editor.searchCursor('-----').findAll();
+  //let currentWeek = moment(moment().toDate(), "MM-DD-YYYY").isoWeek();
+  let currentWeek = moment().day();
+  let cursor;
+  if (currentWeek === 5) { //Sabado
+    cursor = editor.getCursor();
+    cursor['line'] = view.editor.lineCount();
+  }
+  else if (currentWeek === 6) { //Domingo
+    cursor = dayBreaks[1].from; //Saltar a breakline correspondiente
+    cursor['line'] = cursor['line'] - 2;
+  }
+  else { //Resto de semana
+    cursor = cursor = dayBreaks[currentWeek + 1].from; //Saltar a breakline correspondiente
+    cursor['line'] = cursor['line'] - 2;
+  }
+  editor.setCursor(cursor);
+}

@@ -2,7 +2,7 @@
 tags: journal/weekly note/type/fitness
 ---
 
-[[Y. Journal/Fitness/<% tp.date.weekday("[fit]-gggg-[W]WW[|][fit]-gggg-[W]WW", -2, tp.file.title, "[fit]-gggg-[W]WW") %>]] | This Week | [[Y. Journal/Fitness/<% tp.date.weekday("[fit]-gggg-[W]WW[|][fit]-gggg-[W]WW", 14, tp.file.title, "[fit]-gggg-[W]WW") %>]]
+[[Y-Journal/Fitness/<% tp.date.weekday("[fit]-gggg-[W]WW[|][fit]-gggg-[W]WW", -2, tp.file.title, "[fit]-gggg-[W]WW") %>]] | This Week | [[Y-Journal/Fitness/<% tp.date.weekday("[fit]-gggg-[W]WW[|][fit]-gggg-[W]WW", 14, tp.file.title, "[fit]-gggg-[W]WW") %>]]
 
 * [[#Domingo (<% tp.date.weekday("YYYY-MM-DD", 0, tp.file.title, "[fit]-gggg-[W]WW") %>)]]
 * [[#Lunes (<% tp.date.weekday("YYYY-MM-DD", 1, tp.file.title, "[fit]-gggg-[W]WW") %>)]]

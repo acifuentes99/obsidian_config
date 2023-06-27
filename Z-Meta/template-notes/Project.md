@@ -15,12 +15,12 @@ hide-subtasks: true
 
 # {{icon}}{{title}}
 
-## :luc_check: Tasks
+## ✅ Tasks
  ```dataviewjs
-dv.view("Ω. Meta/dv-scripts/coldTasks");
+dv.view("Z-Meta/dv-scripts/coldTasks");
 ```
 ```dataviewjs
-dv.view("Ω. Meta/dv-scripts/linkReferences");
+dv.view("Z-Meta/dv-scripts/linkReferences");
 ```
 ```dataviewjs
 

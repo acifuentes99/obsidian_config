@@ -9,7 +9,7 @@ let tbl;
 
 
 let loadDv = async (event) => {
-    //let asdfqewrt = await dv.view("Ω. Meta/dv-scripts/noteTagByRecent", { resultSize : event.target.value });
+    //let asdfqewrt = await dv.view("Z-Meta/dv-scripts/noteTagByRecent", { resultSize : event.target.value });
     //result_limit = event.target.value;
     //var allInputs = document.querySelectorAll(".dataview");
     //for (var element of allInputs) {

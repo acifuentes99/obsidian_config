@@ -1,6 +1,7 @@
 ---
 tags: type/dashboard graphstart
 obsidianUIMode: preview
+sticker: 1f631
 ---
 # Areas
 

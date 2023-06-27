@@ -4,7 +4,6 @@ function showLinksAndDataBySection(page) {
 
 	for (let group of all_tasks.groupBy(t => t.section)) {
 		dv.header(4, group.key.subpath)
-		console.log(group.rows)
 		dv.taskList(group.rows, false)
 	}
 }

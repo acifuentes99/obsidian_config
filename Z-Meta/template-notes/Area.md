@@ -63,5 +63,5 @@ action From Template: Note
 
 ## View
 ```dataviewjs
-dv.view("Ω. Meta/dv-scripts/linkReferences");
+dv.view("Z-Meta/dv-scripts/linkReferences");
 ```

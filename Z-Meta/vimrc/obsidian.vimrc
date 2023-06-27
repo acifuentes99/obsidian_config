@@ -30,6 +30,8 @@ exmap accentUUpper jsfile Z-Meta/vimrc/mdHelpers.js {insertCharacter('Ú')}
 exmap tildedNSpanish jsfile Z-Meta/vimrc/mdHelpers.js {insertCharacter('ñ')}
 exmap tildedNSpanishUpper jsfile Z-Meta/vimrc/mdHelpers.js {insertCharacter('Ñ')}
 
+exmap jumpWeekHeader jsfile Z-Meta/vimrc/mdHelpers.js {jumpToDayHeading()}
+
 imap [a :accentA
 imap [e :accentE
 imap [i :accentI
@@ -42,3 +44,5 @@ imap [O :accentOUpper
 imap [U :accentUUpper
 imap [; :tildedNSpanish
 imap [: :tildedNSpanishUpper
+
+nmap [w :jumpWeekHeader

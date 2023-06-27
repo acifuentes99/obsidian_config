@@ -1,6 +1,7 @@
 ---
 tags: type/dashboard
 obsidianUIMode: preview
+sticker: 1f331
 ---
 ```button
 name New Goal
@@ -42,7 +43,6 @@ let drawList = (resources, title) => {
     let text = [];
     dv.header(1, title + ' (' + resources.length + ')');
     for (let p of resources) {
-        console.log(p);
         let asd = '';
         let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
         asd = asd + emoji + ' ' + p.link + '<ul>';
@@ -61,7 +61,7 @@ let drawList = (resources, title) => {
 }
 
 let resources = [];
-let queryAsd = '-"Ω. Meta" and #type/goal';
+let queryAsd = '-"Z-Meta" and #type/goal';
 let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
 
 for (let result of resultsResources) {

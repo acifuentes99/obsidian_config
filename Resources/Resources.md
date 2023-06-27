@@ -1,6 +1,7 @@
 ---
 tags: type/dashboard
 obsidianUIMode: preview
+sticker: 1f4be
 ---
 
 ```button
@@ -10,25 +11,31 @@ action From Template: Resource
 ```
 
 ```dataviewjs
-let checkIfPARANoteIsArchived = (file) => {
+let getFileInfo = (file) => {
     //if (file == undefined || file.inlinks.values[0]) {
     //    return {};
     //}
     let isArchived = true;
     let inlinks = [];
+    let parents = [];
     if (file.inlinks.values.length > 0) {
         for (let link of file.inlinks.values) {
             let p = dv.page(link.path);
             if (!p.tags) {
                 continue;
             }
-            if (p.tags.contains("archive") || p.tags.contains("resource")) {
+            //if (p.tags.contains("archive") || p.tags.contains("resource")) {
+            if (p.tags.contains("archive")) {
                 isArchived = isArchived && true;
             }
             else {
                 isArchived = isArchived && false;
             }
             inlinks.push('[[' + p.file.path + ']]');
+
+            if (p.tags.contains("resource")) {
+                parents.push(p.file.name);
+            }
         }
     }
     if (inlinks.length === 0) {
@@ -38,7 +45,8 @@ let checkIfPARANoteIsArchived = (file) => {
         link : '[[' + file.path + '|' + file.name + ']]',
         file : file,
         inlinks : inlinks,
-        archived : isArchived
+        archived : isArchived,
+        parents : parents
         //archivedInlinks
         //activeInlinks
     };
@@ -66,18 +74,60 @@ let drawList = (resources, showArchive) => {
         displayText = displayText + '</ul>';
         p.displayText = displayText;
         text.push(p);
-        console.log(p);
     }
     dv.table(['name','notes'], text.map(p => [p.displayText, p.file.outlinks.length]));
 }
+
 let resources = [];
-let queryAsd = '-"Ω. Meta" and #type/resource';
+let familyTree = {};
+let queryAsd = '-"Z-Meta" and #type/resource';
 let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
 
 for (let result of resultsResources) {
-    resources.push(checkIfPARANoteIsArchived(result.file));
+    let fileInfo = getFileInfo(result.file);
+    resources.push(fileInfo);
+    familyTree[fileInfo.file.name] = fileInfo.parents;
+}
+
+let getFinalGraph = (familyTree) => {
+    let finalGraph = {};
+    let currentChildren = new Set();
+    for (element in familyTree) {
+        if (finalGraph[element] == null) {
+            finalGraph[element] = []; 
+        }
+        familyTree[element].forEach( (subelement) => {
+            currentChildren.add(element);
+            if (finalGraph[subelement] == null) {
+                finalGraph[subelement] = [element];
+            }
+            else {
+                finalGraph[subelement].push(element);
+            }
+        });
+    }
+    currentChildren.forEach((element) => {
+        delete finalGraph[element];
+    });
+    return finalGraph;
 }
 
 drawList(resources.filter(p => { return !p.archived}), false);
 drawList(resources.filter(p => { return p.archived}), true);
+
+dv.header(1, 'List of resources, and their subresources (needs imporvement)');
+dv.span(getFinalGraph(familyTree));
+
+//console.log(resultsResources); 
+
+let mindmap = `
+\`\`\`markmap
+- asdfsdaf
+    - aaa
+\`\`\`
+`;
+dv.span(mindmap);
 ```
+
+# How to Use
+* In the list inside of every entry, it's the note that references the following resource

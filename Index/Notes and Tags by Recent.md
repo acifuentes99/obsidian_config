@@ -1,14 +1,13 @@
 ---
-tags : type/dashboard
-show_references : true
-show_unlinked_notes : true
-cssclass : testclass
+tags: type/dashboard
+show_unlinked_notes: true
+show_references: true
+cssclass: testclass
 obsidianUIMode: preview
 ---
 
 ```dataviewjs
-console.log('asdf');
-let query = '-"Ω. Meta" and -#journal and -#archive and -#dashboard and -#type/resource and -#type/goals and -#type/area and -#type/project and -#template';
+let query = '-"Z-Meta" and -#journal and -#archive and -#dashboard and -#type/resource and -#type/goals and -#type/area and -#type/project and -#template';
 let headers = ["File", "Linked Section"];
 let tableValues = [];
 let currentPage = dv.current();

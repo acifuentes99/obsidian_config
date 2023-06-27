@@ -2,6 +2,7 @@
 icon: teddy_bear
 tags: type/dashboard
 obsidianUIMode: preview
+sticker: 1f9f8
 ---
 # 🧸 [[Index]]
 
@@ -11,11 +12,17 @@ obsidianUIMode: preview
 * [[Notes and Tags by Recent]]
 * [[Notes non Tagged]]
 * [[Notes by Size]]
+* [[Ideas Rápidas]]
 
 ## 📔 [[Projects]]
 
 ```dataview
 TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/project AND !#archive AND !#done WHERE !contains(file.folder, "template") 
+```
+## 📔 [[Projects|Project Journals]]
+
+```dataview
+TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name" FROM #journal/related WHERE !contains(file.folder, "template") AND all(file.inlinks, (x) => !contains(meta(x).tags, "#archived"))
 ```
 
 ## 📆 Weekly Notes
@@ -92,12 +99,11 @@ let drawList = (resources, showArchive) => {
         displayText = displayText + '</ul>';
         p.displayText = displayText;
         text.push(p);
-        console.log(p);
     }
     dv.table(['name','notes'], text.map(p => [p.displayText, p.file.outlinks.length]));
 }
 let resources = [];
-let queryAsd = '-"Ω. Meta" and #type/resource';
+let queryAsd = '-"Z-Meta" and #type/resource';
 let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
 
 for (let result of resultsResources) {
