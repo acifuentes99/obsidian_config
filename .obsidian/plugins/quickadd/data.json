@@ -1,52 +1,192 @@
 {
-  "choices": [],
+  "choices": [
+    {
+      "id": "28dd65fb-ca31-4e1c-8901-ea871214c763",
+      "name": "Pinned Next Weekly Note",
+      "type": "Macro",
+      "command": true,
+      "macroId": "363bd5e5-f22c-48b8-b6a9-05d4485643fe"
+    },
+    {
+      "id": "e03617ae-4b61-4703-bdd3-c961c90a665d",
+      "name": "Pinned Previous Weekly Note",
+      "type": "Macro",
+      "command": true,
+      "macroId": "90f5295d-5869-4ded-a8ad-c5fcf6221681"
+    },
+    {
+      "id": "ab549d32-f30d-4d4f-a958-7e8f853b8f5b",
+      "name": "Current Weekly Note",
+      "type": "Macro",
+      "command": true,
+      "macroId": "0041bbbb-b08b-4f82-b085-1ab8e9c0235c"
+    },
+    {
+      "id": "695e4f19-38ae-49f1-a50d-420b74afb8c1",
+      "name": "Add Inbox Note",
+      "type": "Template",
+      "command": true,
+      "templatePath": "Z-Meta/templates-templater/newInboxNote.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "New Note"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "Inbox"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": true
+    }
+  ],
   "macros": [
     {
-      "name": "aaaaa",
-      "id": "47b59d9d-32cc-40b4-8b51-50020018d6de",
+      "name": "Previous Weekly note",
+      "id": "90f5295d-5869-4ded-a8ad-c5fcf6221681",
       "commands": [
         {
-          "name": "Untitled Capture Choice",
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "37f682d3-0410-4b98-8016-7e8204a39b32",
+          "commandId": "workspace:toggle-pin"
+        },
+        {
+          "name": "Periodic Notes: Open previous weekly note",
+          "type": "Obsidian",
+          "id": "cb9dc4f0-e7c7-4ecb-aa77-5b47e80308bc",
+          "commandId": "periodic-notes:prev-weekly-note"
+        },
+        {
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "d497de13-16e4-4695-a726-b8739e9e989b",
+          "commandId": "workspace:toggle-pin"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Next Weekly Note",
+      "id": "363bd5e5-f22c-48b8-b6a9-05d4485643fe",
+      "commands": [
+        {
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "f4aa3965-649a-4530-8a02-dcf334a5758d",
+          "commandId": "workspace:toggle-pin"
+        },
+        {
+          "name": "Periodic Notes: Open next weekly note",
+          "type": "Obsidian",
+          "id": "30226a3b-880b-41c9-beaf-c32116cfb329",
+          "commandId": "periodic-notes:next-weekly-note"
+        },
+        {
+          "name": "Toggle pin",
+          "type": "Obsidian",
+          "id": "b3334ebf-7d7d-41b9-a77e-6c372d7c7bde",
+          "commandId": "workspace:toggle-pin"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Open current day weeky note",
+      "id": "0041bbbb-b08b-4f82-b085-1ab8e9c0235c",
+      "commands": [
+        {
+          "name": "Periodic Notes: Open this week's note",
+          "type": "Obsidian",
+          "id": "528169cd-61b9-4051-a29f-d7c965fcd18f",
+          "commandId": "periodic-notes:open-weekly-note"
+        },
+        {
+          "name": "weeklyNote",
+          "type": "UserScript",
+          "id": "aacffaad-44b5-423b-876c-ac3ddd4ab4ed",
+          "path": "Z-Meta/js-scripts/weeklyNote.js",
+          "settings": {}
+        },
+        {
+          "name": "Untitled Template Choice",
           "type": "NestedChoice",
-          "id": "b018c50b-0869-4b74-a6c4-ad322b859411",
+          "id": "9dd4499d-2b79-4a67-916e-531eb82f773e",
           "choice": {
-            "id": "b51c76e1-64b1-4949-bfbd-9be83ec2bd73",
-            "name": "Untitled Capture Choice",
-            "type": "Capture",
+            "id": "9593f8bc-4d90-42f6-9590-a2991c00c968",
+            "name": "Untitled Template Choice",
+            "type": "Template",
             "command": false,
-            "appendLink": false,
-            "captureTo": "",
-            "captureToActiveFile": false,
-            "createFileIfItDoesntExist": {
-              "enabled": false,
-              "createWithTemplate": false,
-              "template": ""
-            },
-            "format": {
+            "templatePath": "",
+            "fileNameFormat": {
               "enabled": false,
               "format": ""
             },
-            "insertAfter": {
+            "folder": {
               "enabled": false,
-              "after": "",
-              "insertAtEnd": false,
-              "createIfNotFound": false,
-              "createIfNotFoundLocation": "top"
+              "folders": [],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
             },
-            "prepend": false,
-            "task": false,
+            "appendLink": false,
             "openFileInNewTab": {
               "enabled": false,
               "direction": "vertical",
               "focus": true
             },
             "openFile": false,
-            "openFileInMode": "default"
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
           }
         }
       ],
-      "runOnStartup": true
+      "runOnStartup": false
+    },
+    {
+      "name": "Open Index Note",
+      "id": "3d9cda64-586f-491d-b0c5-28aef11736b6",
+      "commands": [],
+      "runOnStartup": false
+    },
+    {
+      "name": "AddNewNote",
+      "id": "bdb664bb-305f-4d95-8080-7d4559f841ed",
+      "commands": [],
+      "runOnStartup": false
     }
   ],
-  "inputPrompt": "single-line"
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": true,
+  "version": "1.0.2",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "OpenAIApiKey": "",
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true
+  }
 }

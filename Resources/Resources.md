@@ -94,7 +94,7 @@ let getFinalGraph = (familyTree) => {
     let currentChildren = new Set();
     for (element in familyTree) {
         if (finalGraph[element] == null) {
-            finalGraph[element] = []; 
+            finalGraph[element] = [];
         }
         familyTree[element].forEach( (subelement) => {
             currentChildren.add(element);
@@ -112,22 +112,82 @@ let getFinalGraph = (familyTree) => {
     return finalGraph;
 }
 
+let returnLink = (noteName) => {
+    return `<a data-href="${noteName}" href="${noteName}" class="internal-link data-link-icon data-link-icon-after data-link-text" target="_blank" rel="noopener" data-link-tags="#type/resource" data-link-path="Resources/${noteName}.md">${noteName}</a>`;
+};
+
+let getNewGraphBySearchWord = (graph, searchTerm) => {
+    let newGraph = {};
+    if (!!searchTerm) {
+        Object.keys(graph).forEach(key => {
+
+            if (key.toLowerCase().includes(searchTerm.toLowerCase())) {
+                newGraph[key] = graph[key];
+                return;
+            }
+
+            let elementArray = graph[key].filter(word => word.toLowerCase().includes(searchTerm.toLowerCase())).sort();
+            if (elementArray.length > 0) {
+                newGraph[key] = elementArray;
+            }
+        });
+        return newGraph;
+    }
+    return graph;
+}
+
+let getParentResources = (graph, searchTerm) => {
+    if (!!searchTerm) {
+        return Object.keys(graph).filter(word => word.toLowerCase()).sort();
+    }
+    return Object.keys(graph).sort();
+}
+
+
+let graphToLinks = (graph, searchTerm) => {
+    const newGraph = getNewGraphBySearchWord(graph, searchTerm);
+    const parentResources = getParentResources(newGraph);
+    let text = '<ul>';
+    parentResources.forEach(keyString => {
+        text += '<li>' + returnLink(keyString);
+        if (newGraph[keyString].length > 0) {
+            text += '<ul>';
+            newGraph[keyString].sort().forEach(sublink => {
+                text += '<li>' + returnLink(sublink) + '</li>';
+            });
+            text += '</ul>';
+        }
+        text += '</li>';
+    });
+    return text + '</ul>';
+}
+
+dv.header(1, 'List of resources, and their subresources (needs imporvement)');
+
+//let filterElement = this.container.createEl('input', {id : "asd", cls: ["navbar","card"]});
+let filterElement = this.container.createEl('input', {id : "asd", value: localStorage.getItem("searchWord"), cls: []});
+let textContainer = this.container.createEl('div', {innerHTML : graphToLinks(getFinalGraph(familyTree), '') });
+
+textContainer.innerHTML = graphToLinks(getFinalGraph(familyTree), localStorage.getItem("searchWord"));
+filterElement.addEventListener("input", (event) => {
+    localStorage.setItem("searchWord", event.target.value);
+    textContainer.innerHTML = graphToLinks(getFinalGraph(familyTree), event.target.value);
+});
+
+
 drawList(resources.filter(p => { return !p.archived}), false);
 drawList(resources.filter(p => { return p.archived}), true);
 
-dv.header(1, 'List of resources, and their subresources (needs imporvement)');
-dv.span(getFinalGraph(familyTree));
 
-//console.log(resultsResources); 
-
-let mindmap = `
-\`\`\`markmap
-- asdfsdaf
-    - aaa
-\`\`\`
-`;
-dv.span(mindmap);
+//let mindmap = `
+//\`\`\`markmap
+//- asdfsdaf
+//    - aaa
+//\`\`\`
+//`;
+//dv.span(mindmap);
 ```
 
 # How to Use
 * In the list inside of every entry, it's the note that references the following resource
+

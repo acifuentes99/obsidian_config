@@ -13,7 +13,6 @@ cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/vimrc" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-buttons" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-notes" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/templates" "$REPO_FOLDER/Z-Meta/"
-cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-zettelkasten" "$REPO_FOLDER/Z-Meta/"
 
 # Sync PARA Notes
 \cp "$LOCAL_NOTES_FOLDER/Areas/Areas.md" "$REPO_FOLDER/Areas/"
@@ -23,3 +22,5 @@ cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-zettelkasten" "$REPO_FOLDER/Z-Meta/"
 rm -rf "$REPO_FOLDER/Index/.*"
 cp -r "$LOCAL_NOTES_FOLDER/Index" "$REPO_FOLDER/"
 
+# Sync plugin config
+\cp "$LOCAL_NOTES_FOLDER/.obsidian/plugins/quickadd/data.json" "$REPO_FOLDER/.obsidian/plugins/quickadd/data.json"

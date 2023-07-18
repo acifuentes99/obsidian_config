@@ -25,7 +25,7 @@ TABLE filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type
 ## Internal links (for graph)
 * [[Tech]]
 * [[Social]]
-* [[Reflexiones]]
+* [[Areas/Reflexiones]]
 * [[Productivity]]
 * [[Life Knowledge]]
 * [[Fitness]]
