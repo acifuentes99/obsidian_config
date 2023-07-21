@@ -1,0 +1,50 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "Z-Meta/templater-scripts",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Y-Journal/DailyPlanning",
+      "template": "Z-Meta/templates-templater/daily-planning.md"
+    },
+    {
+      "folder": "Y-Journal/Fitness",
+      "template": "Z-Meta/templates-templater/weekly-fit-journal.md"
+    },
+    {
+      "folder": "Y-Journal/Weekly",
+      "template": "Z-Meta/templates-templater/weekly.md"
+    },
+    {
+      "folder": "Y-Journal/RelatedJournal",
+      "template": "Z-Meta/templates-templater/related-journal.md"
+    },
+    {
+      "folder": "Test",
+      "template": "Z-Meta/templates-templater/weekly_v2.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "enabled_templates_hotkeys": [
+    "Z-Meta/templates-templater/RelatedJournalLink.md",
+    "Z-Meta/templates-templater/DailyParagraph.md",
+    "Z-Meta/templates-templater/FleetingNote.md",
+    "Z-Meta/templates-templater/FleetingNoteToNote.md",
+    "Z-Meta/templates-templater/newInboxNote.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}

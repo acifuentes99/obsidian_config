@@ -1,0 +1,92 @@
+{
+  "installedVersion": "1.0.0-beta1",
+  "activeCalendarSet": "Default",
+  "showGettingStartedBanner": false,
+  "hasMigratedDailyNoteSettings": false,
+  "hasMigratedWeeklyNoteSettings": false,
+  "calendarSets": [
+    {
+      "day": {
+        "enabled": true,
+        "format": "",
+        "folder": "Y-Journal/Daily",
+        "openAtStartup": false,
+        "templatePath": "Z-Meta/template-journal/daily.md"
+      },
+      "week": {
+        "enabled": true,
+        "format": "",
+        "folder": "Y-Journal/Weekly",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "month": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "quarter": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "year": {
+        "format": "",
+        "folder": "",
+        "openAtStartup": false,
+        "templatePath": ""
+      },
+      "id": "Default",
+      "ctime": "2023-01-01T10:58:22-03:00"
+    },
+    {
+      "day": {
+        "enabled": true,
+        "folder": "Y-Journal/FitnessDaily",
+        "format": "fit-YYYY-MM-DD",
+        "templatePath": "Z-Meta/templates-templater/fit-daily-journal.md"
+      },
+      "week": {
+        "enabled": true,
+        "templatePath": "",
+        "folder": "Y-Journal/Fitness",
+        "format": "fit-gggg-[W]ww"
+      },
+      "month": {},
+      "quarter": {},
+      "year": {},
+      "id": "Fitness",
+      "ctime": "2023-01-01T10:58:35-03:00"
+    }
+  ],
+  "enableTimelineComplication": true,
+  "daily": {
+    "format": "",
+    "template": "Z-Meta/template-journal/daily.md",
+    "folder": "Y-Journal/Daily",
+    "enabled": true
+  },
+  "weekly": {
+    "format": "",
+    "template": "Z-Meta/template-journal/weekly.md",
+    "folder": "Y-Journal/Weekly",
+    "enabled": true
+  },
+  "monthly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "quarterly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  },
+  "yearly": {
+    "format": "",
+    "template": "",
+    "folder": ""
+  }
+}
