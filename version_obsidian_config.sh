@@ -6,6 +6,7 @@ LOCAL_NOTES_FOLDER='/home/acifuentes/gdrive/Notes'
 rm -rf "$REPO_FOLDER/Z-Meta/.*"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/dv-scripts" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/js-scripts" "$REPO_FOLDER/Z-Meta/"
+cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/custom-js" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-journal" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/template-pocket" "$REPO_FOLDER/Z-Meta/"
 cp -r "$LOCAL_NOTES_FOLDER/Z-Meta/templates-templater" "$REPO_FOLDER/Z-Meta/"
