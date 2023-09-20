@@ -1,16 +1,59 @@
 ---
-tags: type/dashboard
+tags:
+  - type/dashboard
 obsidianUIMode: preview
 sticker: 1f4d4
+show-level-1: true
+show-level-2: true
+show-level-3: true
+show-done: true
 ---
+
+* Docu : [[Obsidian Proyects Docs]]
 
 ```button
 name New Project
 type command
 action From Template: Project
 ```
+> [!NOTE]- Task List
+>
+> ```dataviewjs
+> const { testClass } = customJS;
+> const activeProjects = testClass.getState('activeProjects');
+>
+> await dv.view("Z-Meta/dv-views/project-tasks", { activeProjects: activeProjects });
+> ```
+
+> [!NOTE]- Backlog Tasks
+>
+> ```dataviewjs
+> const { testClass } = customJS;
+> const resources = testClass.getState('projectResources');
+> await dv.view("Z-Meta/dv-views/project-tasks", { activeProjects: resources.filter(p => { return p.backlog}) });
+> ```
+
+## Active
 
 ```dataviewjs
+const currentPage = dv.current().file;
+const { testClass } = customJS;
+
+testClass.printSomething("this");
+
+const getDateFormatted = (dateInteger) => {
+    if (!dateInteger) {
+        return null;
+    }
+    let dateString = dateInteger.toString();
+    let year = dateString.slice(0,4);
+    let month = parseInt(dateString.slice(4,6)) - 1;
+    let day = dateString.slice(6,8);
+    let minutes = dateString.slice(8,10);
+    let seconds = dateString.slice(10,12);
+    return new Date(year, month, day, minutes, seconds);
+}
+
 let checkIfPARANoteIsArchived = (file) => {
     let isArchived = false;
     let isDone = false;
@@ -41,7 +84,9 @@ let checkIfPARANoteIsArchived = (file) => {
         inlinks : inlinks,
         archived : isArchived,
         done : isDone,
-        journals : journals
+        journals : journals,
+        date : getDateFormatted(file.frontmatter.timestamp),
+        backlog : file.tags.values.includes("#backlog")
         //archivedInlinks
         //activeInlinks
     };
@@ -49,43 +94,21 @@ let checkIfPARANoteIsArchived = (file) => {
 }
 
 
-let drawList = (resources, title) => {
-    let text = [];
-    dv.header(1, title + ' (' + resources.length + ')');
-    for (let p of resources) {
-        let asd = '';
-        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
-        asd = asd + emoji + ' ' + p.link + '<ul>';
-        if (!(p.inlinks)) {
-            continue;
-        }
-        if (p.inlinks.length > 0) {
-            for (let link of p.inlinks) {
-                asd = asd + '<li\>' + link + '</li>';
-            }
-        }
-        asd = asd + '</ul>';
-        text.push(asd);
-    }
-    dv.table(['name','extra'], text.map(b => [b, '']));
-}
-
-let drawJournals = (resources, title) => {
-    let text = [];
-    dv.header(1, title + ' (' + resources.length + ')');
-    for (let p of resources) {
-        let asd = '';
-        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
-        console.log(p.journals);
-        for (let journalLink of p.journals) {
-            asd = asd + emoji + ' ' + journalLink + '<ul>';
-
-        }
-        asd = asd + '</ul>';
-        text.push(asd);
-    }
-    dv.table(['name','extra'], text.map(b => [b, '']));
-}
+//let drawJournals = (resources, title) => {
+//    let text = [];
+//    dv.header(1, title + ' (' + resources.length + ')');
+//    for (let p of resources) {
+//        let asd = '';
+//        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
+//        for (let journalLink of p.journals) {
+//            asd = asd + emoji + ' ' + journalLink + '<ul>';
+//
+//        }
+//        asd = asd + '</ul>';
+//        text.push(asd);
+//    }
+//    dv.table(['name','extra'], text.map(b => [b, '']));
+//}
 
 let resources = [];
 let queryProjects = '-"Z-Meta" and #type/project';
@@ -94,9 +117,33 @@ let resultsResources = dv.pages(queryProjects).sort(p => p.file.mday, 'desc');
 for (let result of resultsResources) {
     resources.push(checkIfPARANoteIsArchived(result.file));
 }
+resources.sort((a, b) => {return b.date - a.date}); //from recent to not recent
 
-drawList(resources.filter(p => { return (!p.archived && !p.done)}), 'Active');
-drawJournals(resources.filter(p => { return (!p.archived && p.journals.length > 0)}), 'Journals');
-drawList(resources.filter(p => { return p.archived}), 'Archived');
-drawList(resources.filter(p => { return p.done}), 'Done');
+const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog)});
+testClass.setState('activeProjects', activeProjects);
+testClass.setState('projectResources', resources);
+
+testClass.drawProjectList(activeProjects, 'Active', dv, app, this);
+//drawJournals(resources.filter(p => { return (!p.archived && p.journals.length > 0)}), 'Journals');
+```
+
+## Backlog
+```dataviewjs
+const { testClass } = customJS;
+const resources = testClass.getState('projectResources');
+testClass.drawProjectList(resources.filter(p => { return p.backlog}), 'Backlog', dv, app, this);
+```
+
+## Archived
+```dataviewjs
+const { testClass } = customJS;
+const resources = testClass.getState('projectResources');
+testClass.drawProjectList(resources.filter(p => { return p.archived}), 'Archived', dv, app, this);
+```
+
+## Done
+```dataviewjs
+const { testClass } = customJS;
+const resources = testClass.getState('projectResources');
+testClass.drawProjectList(resources.filter(p => { return p.done}), 'Done', dv, app, this);
 ```

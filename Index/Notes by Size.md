@@ -2,6 +2,7 @@
 tags: type/dashboard
 last-days: 500 days
 number-results: 80
+obsidianUIMode: preview
 ---
 ## Notes by Size
 * Notas candidatas a necesitar de un Merge

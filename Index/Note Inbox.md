@@ -1,8 +1,11 @@
 ---
-tags: type/dashboard
-last-days: 200 days
+tags:
+  - type/dashboard
+last-days: 100 days
 number-results: 200
 show-archive: false
+obsidianUIMode: preview
+sticker: emoji//1f4e5
 ---
 
 ## Notes not linked
@@ -23,6 +26,7 @@ AND !contains(file.tags, "type/goals")
 AND !contains(file.tags, "type/area")
 AND !contains(file.tags, "type/project")
 AND !contains(file.folder, "template")
+AND !contains(file.folder, "X-Plugins")
 AND file.ctime > (date(today) - dur(this.file.frontmatter.last-days))
 SORT file.mtime desc
 LIMIT this.file.frontmatter.number-results
