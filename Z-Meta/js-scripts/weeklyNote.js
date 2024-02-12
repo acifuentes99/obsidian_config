@@ -1,7 +1,7 @@
 module.exports = (params) => {
     // obsidian is the API
   const {quickAddApi: {inputPrompt}} = params;
-    
+
 	const ed = app.workspace.activeEditor.editor;
   let dayBreaks = ed.searchCursor('-----').findAll();
   let currentWeek = moment().day();
@@ -26,4 +26,3 @@ module.exports = (params) => {
   // y = charCoords.bottom - height / 2;
   // ed.scrollTo(null, y);
 }
-

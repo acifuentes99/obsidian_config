@@ -1,98 +1,122 @@
 ---
-tags: type/dashboard
+tags:
+  - type/dashboard
+last-days: 100 days
+number-results: 2000
+startdate: 2023-01-11
+enddate: 2023-09-15
+show-archive: false
+null-date: false
+obsidianUIMode: preview
 show_unlinked_notes: true
 show_references: true
-cssclass: testclass
-obsidianUIMode: preview
+weekly-group: false
+cssclasses:
+  - testclass
+sticker: emoji//1f4e5
 ---
 
+```button
+name Refresh
+type command
+action Dataview: Force Refresh All Views and Blocks
+```
+^button-q0fh
+
 ```dataviewjs
-let query = '-"Z-Meta" and -#journal and -#archive and -#dashboard and -#type/resource and -#type/goals and -#type/area and -#type/project and -#template';
-let headers = ["File", "Linked Section"];
-let tableValues = [];
-let currentPage = dv.current();
-let result_limit = 0;
-let tbl;
+const currentPage = dv.current().file;
+const { tableDrawer } = customJS;
+const startDate = tableDrawer.parseDate(currentPage.frontmatter["startdate"], dv);
+const endDate = tableDrawer.parseDate(currentPage.frontmatter["enddate"], dv);
+const dummyFiles = ["Trailhead Enterprise Patterns", "Ideas cambio de mindset", "El Cuerpo - Una celula de trabajo"];
 
-let isUndefined = (value) => {
-    return typeof value === 'undefined';
+const filterValuesForInbox = (p) => {
+    const hasAtLeastOneTypeTag = p.file.inlinks.values.reduce((accum, curr) => 
+        accum && !hasTypeTag(curr.path)
+    , true);
+    return hasAtLeastOneTypeTag;
 }
 
-let filterTypeInlinks = (p) => {
-    if (currentPage.show_unlinked_notes) {
-        return true;
-    }
-    if (p.file.inlinks.length === 0) {
-        return false;
-    }
-    for (let link of p.file.inlinks.values) {
-        let p = dv.page(link.path);
-        if (!isUndefined(p.tags) && !p.tags.contains("dashboard") && p.tags.contains("type/")) {
-            return true;
-        }
-    }
-    return false;
-};
 
-let getLinkedResources = (p) => {
-    let linkedResources = [];
-    for (let link of p.file.inlinks.values) {
-        let p = dv.page(link.path);
-        if (isUndefined(p.tags))  return linkedResources;
-        for (let tag of p.tags.split(' ')) {
-            if (tag.contains("type")) {
-                linkedResources.push(tag + ': ' + '[[' + p.file.path + ']]');
-            }
-        }
-    }
-    return linkedResources;
+const filterByDate = (p) => {
+    const fileDate = tableDrawer.parseDate(p.file.frontmatter.timestamp, dv);
+    return fileDate != '' &&
+        (endDate == null || fileDate < endDate) &&
+        (startDate == null || fileDate > startDate);
 }
 
-let addResultToDict = (page, linkedResources, dict) => {
-    let result = {
-        page : page,
-        linkedResources : linkedResources,
-        isLinked : linkedResources.length === 0 ? '❌' : '✅'
-    };
-    let dateKey = page.file.mday.toFormat("ccc dd LLL yyyy");
-    if (isUndefined(dict[dateKey])) {
-        dict[dateKey] = [ result ];
+const filterByNullDate = (p) => {
+    const fileDate = tableDrawer.parseDate(p.file.frontmatter.timestamp, dv);
+    return fileDate == null;
+}
+
+const dateFilter = currentPage.frontmatter["null-date"] ? filterByNullDate : filterByDate;
+const linkedResourcesFilter = (p) => currentPage.frontmatter["show_unlinked_notes"] ? true : p.file.inlinks.length !== 0 ;
+const whereClause = (p) => {
+    return dateFilter(p) && linkedResourcesFilter(p);
+}
+
+const filterGroupBy = (p) => {
+    if (Object.hasOwn(p.file.frontmatter, "timestamp")) {
+        const dvDate = tableDrawer.parseDate(p.file.frontmatter.timestamp, dv);
+        
+        if (currentPage.frontmatter["weekly-group"]) {
+            return dvDate ? dvDate.toFormat('y-WW') : null;
+        }
+        else{
+            return dvDate ? dvDate.toISODate() : null;
+        }
+    }
+    return null;
+}
+
+let query = '-#journal \
+and -#dashboard \
+and -"template" \
+and -"X-Plugins" \
+and -"Z-Meta"'
+if (!currentPage.frontmatter["show-archive"]) {
+    query = query + ' and -#archive';
+}
+let queryResults = dv.pages(query)
+    .where(p => whereClause(p))
+    .sort(p => p.file.frontmatter.timestamp, 'desc')
+    .limit(currentPage.frontmatter["number-results"])
+    .groupBy(p => filterGroupBy(p))
+    .sort(p => p.key, 'desc');
+
+const getType = (tags) => {
+    if (tags.values) {
+        return tags.filter(x => x.includes("type/"));
+    }
+    return null;
+}
+
+const getFileNameAndLinkedStatus = (p) => {
+    const l = p.file.inlinks.length === 0 ? '❌' : '✅';
+    return l + ' ' + '[[' + p.file.path + '|' + p.file.name + ']]';
+}
+
+let NOTE_INBOX_TABLE = [
+    { name : 'File', type : 'text', code : (f) => getFileNameAndLinkedStatus(f) },
+    { name : 'Type', type : 'text', code : (f) => getType(f.file.tags.values) },
+];
+if (currentPage.frontmatter["weekly-group"]) {
+    NOTE_INBOX_TABLE.push({ name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp });
+    }
+
+for (const value of queryResults) {
+    if (value.key != null) {
+        if (currentPage.frontmatter["weekly-group"]) {
+            dv.header(3, tableDrawer.parseDate(value.rows[0].file.frontmatter.timestamp, dv).toFormat("y-WW"));
+        }
+        else{
+            dv.header(3, tableDrawer.parseDate(value.rows[0].file.frontmatter.timestamp, dv).toFormat("ccc dd LLL yyyy"));
+        }
     }
     else {
-        dict[dateKey].push(result);
+        dv.header(3, 'null');
     }
-    return dict;
+    await tableDrawer.drawTable(NOTE_INBOX_TABLE, value.rows, {dv:dv,app:this.app,instance:this});
 }
-
-
-let dateDict = {};
-for (let page of dv.pages(query).filter(p => filterTypeInlinks(p)).sort(p => p.file.mday, 'desc')) {
-    let linkedResources = getLinkedResources(page);
-    dateDict = addResultToDict(page, linkedResources, dateDict);
-}
-
-let drawDataview = () => {
-    //dv.el("span", result_limit);
-    for (let dateKey of Object.keys(dateDict).sort(a => a, 'desc')) {
-        let text = [];
-        dv.header(1, dateKey);
-        for (let p of dateDict[dateKey]) {
-            let asd = '';
-            asd = asd + p.isLinked + '[['+p.page.file.name+']] <ul>';
-            if (dv.current().show_references) {
-                for (let linkedResource of p.linkedResources) {
-                    asd = asd + '<li\>'+linkedResource+'</li>';
-                }
-            }
-            asd = asd + '</ul>';
-            text.push(asd);
-        }
-        //root.createEl("div", { "text" : text, cls : "sdaf"});
-        dv.list(text);
-    }
-}
-
-drawDataview();
-
-
 ```

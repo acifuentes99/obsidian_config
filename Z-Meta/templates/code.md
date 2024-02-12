@@ -1,5 +1,3 @@
-
-> [!EXAMPLE]- Codeblock
->  ```javascript
->  sadfasdfdas
-> ```
+ ```javascript
+sadfasdfdas
+```

@@ -12,10 +12,19 @@ show-done: true
 * Docu : [[Obsidian Proyects Docs]]
 
 ```button
-name New Project
+name Refresh
 type command
-action From Template: Project
+action Dataview: Force Refresh All Views and Blocks
 ```
+^button-q0fh
+
+> [!info]- new project?
+> ```button
+> name New Project
+> type command
+> action From Template: Project
+> ```
+
 > [!NOTE]- Task List
 >
 > ```dataviewjs
@@ -30,16 +39,14 @@ action From Template: Project
 > ```dataviewjs
 > const { testClass } = customJS;
 > const resources = testClass.getState('projectResources');
-> await dv.view("Z-Meta/dv-views/project-tasks", { activeProjects: resources.filter(p => { return p.backlog}) });
+    > await dv.view("Z-Meta/dv-views/project-tasks", { activeProjects: resources.filter(p => { return p.backlog}) });
 > ```
 
 ## Active
 
 ```dataviewjs
 const currentPage = dv.current().file;
-const { testClass } = customJS;
-
-testClass.printSomething("this");
+const { tableDrawer } = customJS;
 
 const getDateFormatted = (dateInteger) => {
     if (!dateInteger) {
@@ -59,91 +66,106 @@ let checkIfPARANoteIsArchived = (file) => {
     let isDone = false;
     let inlinks = [];
     let journals = [];
-    if (file.inlinks.values.length > 0) {
-        for (let link of file.inlinks.values) {
+    const fileData = file.file;
+    if (fileData.inlinks.values.length > 0) {
+        for (let link of fileData.inlinks.values) {
             let p = dv.page(link.path);
             inlinks.push('[[' + p.file.path + ']]');
         }
     }
-    if (file.outlinks.values.length > 0) {
-        for (let link of file.outlinks.values) {
+    if (fileData.outlinks.values.length > 0) {
+        for (let link of fileData.outlinks.values) {
             if (link.path.includes("Y-Journal/RelatedJournal")) {
                 journals.push('[[' + link.path + ']]');
             }
         }
     }
-    if (file.tags.values.includes("#done")) {
+    if (fileData.tags.values.includes("#done") || fileData.frontmatter.status === 'done') {
         isDone = true;
     }
-    else if (file.tags.values.includes("#archive")) {
+    else if (fileData.tags.values.includes("#archive") || fileData.frontmatter.status === 'archive') {
         isArchived = true;
     }
-    let object = {
-        link : '[[' + file.path + '|' + file.name + ']]',
-        file : file,
-        inlinks : inlinks,
-        archived : isArchived,
-        done : isDone,
-        journals : journals,
-        date : getDateFormatted(file.frontmatter.timestamp),
-        backlog : file.tags.values.includes("#backlog")
-        //archivedInlinks
-        //activeInlinks
-    };
-    return object;
+    file.inlinks = inlinks;
+    file.archived = isArchived;
+    file.done = isDone;
+    file.backlog = !isArchived && !isDone && isBacklog(fileData);
+    return file;
 }
 
-
-//let drawJournals = (resources, title) => {
-//    let text = [];
-//    dv.header(1, title + ' (' + resources.length + ')');
-//    for (let p of resources) {
-//        let asd = '';
-//        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
-//        for (let journalLink of p.journals) {
-//            asd = asd + emoji + ' ' + journalLink + '<ul>';
-//
-//        }
-//        asd = asd + '</ul>';
-//        text.push(asd);
-//    }
-//    dv.table(['name','extra'], text.map(b => [b, '']));
-//}
+const isBacklog = (file) => {
+    if (!file.frontmatter.hasOwnProperty('status')) {
+        return true;
+    }
+    return file.frontmatter.status === 'backlog';
+}
 
 let resources = [];
 let queryProjects = '-"Z-Meta" and #type/project';
 let resultsResources = dv.pages(queryProjects).sort(p => p.file.mday, 'desc');
 
+
 for (let result of resultsResources) {
-    resources.push(checkIfPARANoteIsArchived(result.file));
+    resources.push(checkIfPARANoteIsArchived(result));
 }
 resources.sort((a, b) => {return b.date - a.date}); //from recent to not recent
 
 const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog)});
-testClass.setState('activeProjects', activeProjects);
-testClass.setState('projectResources', resources);
+tableDrawer.setState('activeProjects', activeProjects);
+tableDrawer.setState('projectResources', resources);
 
-testClass.drawProjectList(activeProjects, 'Active', dv, app, this);
-//drawJournals(resources.filter(p => { return (!p.archived && p.journals.length > 0)}), 'Journals');
+const ACTIVE_PROJECTS_TABLE = [
+    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
+    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
+    { name : 'Type', type : 'select', args : { fieldName : 'projectType' } },
+    { name : 'Action', type : 'button', args : { name : 'To Backlog', click : null, params  : (f) => ['status', 'active', f, this.app] }  },
+];
+
+console.log(activeProjects);
+tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, activeProjects, { dv, app: this.app, instance : this });
 ```
 
 ## Backlog
 ```dataviewjs
-const { testClass } = customJS;
-const resources = testClass.getState('projectResources');
-testClass.drawProjectList(resources.filter(p => { return p.backlog}), 'Backlog', dv, app, this);
+const { tableDrawer } = customJS;
+
+const BACKLOG_PROJECTS_TABLE = [
+    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
+    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
+    { name : 'Type', type : 'select', args : { fieldName : 'projectType' } },
+    { name : 'Action', type : 'button', args : { name : 'To Active', click : null, params  : (f) => ['status', 'active', f, this.app] }  },
+];
+
+const backlogProjects = tableDrawer.getState('projectResources').filter(p => { return p.backlog });
+tableDrawer.drawTable(BACKLOG_PROJECTS_TABLE, backlogProjects, {dv:dv,app:this.app,instance:this});
 ```
 
 ## Archived
 ```dataviewjs
-const { testClass } = customJS;
-const resources = testClass.getState('projectResources');
-testClass.drawProjectList(resources.filter(p => { return p.archived}), 'Archived', dv, app, this);
+const { tableDrawer } = customJS;
+
+const TABLE = [
+    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
+    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
+];
+
+const resources = tableDrawer.getState('projectResources').filter(p => { return p.archived});
+tableDrawer.drawTable(TABLE, resources, {dv:dv,app:this.app,instance:this});
 ```
 
 ## Done
 ```dataviewjs
-const { testClass } = customJS;
-const resources = testClass.getState('projectResources');
-testClass.drawProjectList(resources.filter(p => { return p.done}), 'Done', dv, app, this);
+const { tableDrawer } = customJS;
+
+const TABLE = [
+    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
+    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
+];
+
+const resources = tableDrawer.getState('projectResources').filter(p => { return p.done});
+tableDrawer.drawTable(TABLE, resources, {dv:dv,app:app,instance:this});
 ```

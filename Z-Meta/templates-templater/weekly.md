@@ -1,5 +1,7 @@
 ---
 tags: journal/weekly
+obsidianUIMode: preview
+sticker: emoji//1f5d3-fe0f
 ---
 
 [[Y-Journal/Weekly/<% tp.date.weekday("gggg-[W]WW[|]gggg-[W]WW", -2, tp.file.title, "gggg-[W]WW") %>]] | This Week | [[Y-Journal/Weekly/<% tp.date.weekday("gggg-[W]WW[|]gggg-[W]WW", 14, tp.file.title, "gggg-[W]WW") %>]]

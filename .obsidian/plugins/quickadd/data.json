@@ -29,7 +29,7 @@
       "templatePath": "Z-Meta/templates-templater/newInboxNote.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "New Note"
+        "format": "{{NAME}}"
       },
       "folder": {
         "enabled": true,
@@ -49,7 +49,50 @@
       "openFile": true,
       "openFileInMode": "default",
       "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": true
+      "setFileExistsBehavior": true,
+      "incrementFileName": true
+    },
+    {
+      "id": "531e1430-b67b-49fb-864b-9e82f57180c7",
+      "name": "New Project from selection",
+      "type": "Macro",
+      "command": true,
+      "macroId": "403af0fe-b3e3-41b4-8cd4-9fd2908d9b6b"
+    },
+    {
+      "id": "771d0de7-a9e5-4333-a5c6-b411b34a1dcb",
+      "name": "Add fast note",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Y-Journal/Daily/{{DATE:YYYY-MM-DD}}.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": false,
+        "format": ""
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": true,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "source"
     }
   ],
   "macros": [
@@ -167,13 +210,67 @@
       "id": "bdb664bb-305f-4d95-8080-7d4559f841ed",
       "commands": [],
       "runOnStartup": false
+    },
+    {
+      "name": "NewProjectFromSelection",
+      "id": "403af0fe-b3e3-41b4-8cd4-9fd2908d9b6b",
+      "commands": [
+        {
+          "name": "Cut",
+          "type": "EditorCommand",
+          "id": "d7973f24-e866-424f-a641-2ae01976ecc2",
+          "editorCommandType": "Cut"
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "aea931f7-093c-46d5-814d-57306c8489b5",
+          "choice": {
+            "id": "7d45bad9-f661-4c3d-b67c-59e9a5ae7699",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Z-Meta/templates-templater-archive/project.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{NAME}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "Projects"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": true,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "source",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        },
+        {
+          "name": "Paste",
+          "type": "EditorCommand",
+          "id": "b17d9dc0-ace9-4c94-af99-f090655efea8",
+          "editorCommandType": "Paste"
+        }
+      ],
+      "runOnStartup": false
     }
   ],
   "inputPrompt": "single-line",
   "devMode": false,
   "templateFolderPath": "",
   "announceUpdates": true,
-  "version": "1.0.2",
+  "version": "1.6.1",
   "disableOnlineFeatures": true,
   "ai": {
     "OpenAIApiKey": "",
