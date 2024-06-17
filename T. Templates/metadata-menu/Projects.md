@@ -1,0 +1,12 @@
+book
+career
+dev
+finanzas
+learning
+life
+multiple
+nvim
+obsidian
+orden
+research
+action
