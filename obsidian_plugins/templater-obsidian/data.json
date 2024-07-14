@@ -1,0 +1,40 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Y. Journal/Weekly",
+      "template": "T. Templates/journal/weekly.md"
+    },
+    {
+      "folder": "Y. Journal/Daily",
+      "template": "T. Templates/journal/daily.md"
+    },
+    {
+      "folder": "B. Note Box/Notes/projectTasks",
+      "template": "T. Templates/file/projectTask.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "T. Templates/forms/gymExcercise.md",
+    ""
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "enable_ribbon_icon": true
+}

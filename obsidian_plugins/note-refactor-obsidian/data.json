@@ -1,0 +1,13 @@
+{
+  "includeFirstLineAsNoteHeading": true,
+  "excludeFirstLineInNote": false,
+  "openNewNote": true,
+  "headingFormat": "#",
+  "newFileLocation": 2,
+  "customFolder": "B. Note Box/Inbox",
+  "fileNamePrefix": "",
+  "transcludeByDefault": false,
+  "noteLinkTemplate": "* {{new_note_link}}",
+  "refactoredNoteTemplate": "---\ntags: type/note/default purpose/ topic/\ntimestamp: {{date}}\n---\n\n{{new_note_content}}",
+  "normalizeHeaderLevels": false
+}
