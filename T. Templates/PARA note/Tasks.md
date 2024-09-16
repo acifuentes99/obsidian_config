@@ -14,7 +14,7 @@ type line(14) template
 action task
 color blue
 ```
-
+<% tp.file.content %>
 
 ### {{first_task_list}}}
 * [ ] 
