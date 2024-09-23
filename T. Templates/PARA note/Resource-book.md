@@ -2,10 +2,10 @@
 tags:
   - book
   - type/resource
+timestamp: {{timeStamp}}
 ---
 # Idea Lectura
 * 
-{{fileContent}}
 
 # Notes
 * 
@@ -16,15 +16,6 @@ tags:
 
 ### Chapter 1
 
-<%*
-var file = app.workspace.getActiveFile();
-var oldContent = await app.vault.read(file);
-oldContent = oldContent.replace(/---[\s\S]*?---\n/, '');
+{{fileContent}}
 
-tp.hooks.on_all_templates_executed(async () => {
-	var file = app.workspace.getActiveFile();
-	const newText = tR.replace("{{fileContent}}", oldContent);
-	app.vault.modify(file, '');
-	app.vault.modify(file, newText);
-});
-%>
+<%*  tp.hooks.on_all_templates_executed(async () => { tp.user.replace_file_content(tp, tR) }); %>

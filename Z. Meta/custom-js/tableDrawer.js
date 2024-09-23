@@ -9,7 +9,6 @@ class tableDrawer {
     }
 
     buttonMaker(args) {
-        console.log(JSON.stringify(Object.keys(args)));
         return '';
     //    console.log('sdfdsaf');
     //    const { params, file, app, instance, dv } = args;
