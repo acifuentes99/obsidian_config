@@ -95,4 +95,5 @@ class projectUtils {
       const seconds = dateString.slice(10,12);
       return new Date(year, month, day, minutes, seconds);
   }
+
 }
