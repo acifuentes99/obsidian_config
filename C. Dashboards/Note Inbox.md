@@ -2,7 +2,7 @@
 tags:
   - type/dashboard
 last-days: 100 days
-number-results: 200
+number-results: 50
 filter-grade: 1
 startdate: ""
 enddate: ""
@@ -108,7 +108,7 @@ let queryResults = dv.pages(query)
     .limit(currentPage.frontmatter["number-results"]);
 
 let NOTE_INBOX_TABLE = [
-    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'File', type : 'linkandtags', code : (f) => f.file.path },
     { name : 'Size', type : 'text', code : (f) => f.file.size },
     { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
 ];

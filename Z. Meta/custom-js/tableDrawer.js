@@ -51,8 +51,7 @@ class tableDrawer {
      * If date is not present, returns empty string (compatible for showing on tables)
      */
     parseDate(dateString, dv) {
-        //if (dateString === '') {
-        if (dateString == null) {
+        if (dateString == '' || dateString == null) {
             return null;
         }
 
@@ -62,6 +61,7 @@ class tableDrawer {
             return possibleDate;
         }
 
+        console.log(dateString);
         dateString = dateString.substring(0,4) + '-' + dateString.substring(4,6) + '-' + dateString.substring(6,8);
         //+'T'+dateString.substring(8,10)+':'+dateString.substring(10,12)+':'+dateString.substring(12,14);
         return dv.date(dateString);
@@ -90,10 +90,14 @@ class tableDrawer {
         else if (func.type === 'link') {
             return '[[' + file.file.path + '|' + file.file.name + ']]';
         }
+        else if (func.type === 'linkandtags') {
+            return '[[' + file.file.path + '|' + file.file.name + ']]' + '\n' + this.eTagsToString(file.file.etags.values);
+        }
         else if (func.type === 'date') {
             // let dateString = func.code(file) ?? '';
             let dateString = func.code(file);
-            return this.parseDate(dateString, dv) ?? '';
+            const parsedDate = this.parseDate(dateString, dv) ?? '';
+            return parsedDate !== '' ? parsedDate.toFormat('DDD') : '';
         }
         else if (func.type === 'select') {
             const { fieldModifier : f } = instance.app.plugins.plugins["metadata-menu"].api;
@@ -112,6 +116,15 @@ class tableDrawer {
                 clickOverride: {click: this.updateTag, params: func.args.params(file)}}
             );
         }
+    }
+
+    eTagsToString(etags) {
+      const notDisplayedTags = ['purpose', 'type', 'toReview', 'topic/default'];
+      const outputArray = etags.filter(element => !notDisplayedTags.some(string => element.includes(string)));
+      if (outputArray.length === 0) {return '';}
+      let outputString = '';
+      outputArray.forEach(a => outputString += '`' + a + '`' + '  ');
+      return outputString;
     }
 
     async executeArrayFunction(args) {
