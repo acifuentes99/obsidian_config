@@ -1,9 +1,8 @@
 ---
 tags:
   - type/dashboard
-last-days: 100 days
-number-results: 50
-startdate: 2023-01-11
+number-results: 100
+startdate: 2023-07-04
 enddate: ""
 show-archive: false
 null-date: false
@@ -24,9 +23,6 @@ action Dataview: Force Refresh All Views and Blocks
 
 ```dataviewjs
 const currentPage = dv.current().file;
-console.log(dv);
-console.log(dv.current());
-console.log(dv.current().file);
 const { tableDrawer } = customJS;
 const startDate = tableDrawer.parseDate(currentPage.frontmatter["startdate"], dv);
 const endDate = tableDrawer.parseDate(currentPage.frontmatter["enddate"], dv);
@@ -76,16 +72,20 @@ let query = '-#journal \
 and -#dashboard \
 and -"template" \
 and -"X-Plugins" \
+and -"A. PARA Notes/Projects" \
 and -"Z. Meta"'
 if (!currentPage.frontmatter["show-archive"]) {
     query = query + ' and -#archive';
 }
-let queryResults = dv.pages(query)
+
+const queryResults = dv.pages(query)
     .where(p => whereClause(p))
     .sort(p => p.file.frontmatter.timestamp, 'desc')
-    .limit(currentPage.frontmatter["number-results"])
     .groupBy(p => filterGroupBy(p))
-    .sort(p => p.key, 'desc');
+    .limit(currentPage.frontmatter["number-results"])
+    .sort(p => p.key, 'desc')
+    ;
+
 
 const getType = (tags) => {
     if (tags.values) {
@@ -95,7 +95,22 @@ const getType = (tags) => {
 }
 
 const getFileNameAndLinkedStatus = (p) => {
-    const l = p.file.inlinks.length === 0 ? '❌' : '✅';
+    let hasLinks = false;
+    if (p.file.inlinks.length > 0) {
+        for (let value of p.file.inlinks.values) {
+            hasLinks |= !value.path.includes("Y. Journal");
+        }
+    }
+    let l = '';
+    if (p.file.tags.includes('#type/project')) {
+        l = '✍️';
+    }
+    else if (p.file.tags.includes('#type/resource')) {
+        l = '📚';
+    }
+    else {
+        l = hasLinks ? '✅' : '❌';
+    }
     return l + ' ' + '[[' + p.file.path + '|' + p.file.name + ']]';
 }
 
@@ -106,6 +121,7 @@ let NOTE_INBOX_TABLE = [
 if (currentPage.frontmatter["weekly-group"]) {
     NOTE_INBOX_TABLE.push({ name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp });
     }
+
 
 for (const value of queryResults) {
     if (value.key != null) {
