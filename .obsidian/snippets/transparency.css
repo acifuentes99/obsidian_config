@@ -1,0 +1,39 @@
+.workspace-leaf,
+.workspace-tab-header-container {
+background: transparent;
+}
+
+.workspace-split.mod-root,
+.workspace-split.mod-root .view-content,
+.workspace-split.mod-root .view-header {
+background: transparent;
+}
+
+.view-header-title-container:not(.mod-at-end):after {
+background: transparent;
+}
+
+
+/* Make the left sidebar overlay the content */
+.workspace-split.mod-left-split {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    height: 100%;
+    z-index: 10; /* Ensure it overlays other panes */
+}
+
+/* Set a fixed width for the left sidebar */
+.workspace-split.mod-left-split > .workspace-leaf {
+    width: 300px; /* Adjust the width as desired */
+}
+
+/* Prevent the left sidebar from resizing the main editor */
+.workspace-split {
+    flex-grow: 1; /* Ensure the main area doesn't shrink */
+}
+
+/* Add padding to the editor to avoid overlap (optional) */
+.workspace-split.mod-root {
+    padding-left: 0px; /* Match the sidebar width */
+}

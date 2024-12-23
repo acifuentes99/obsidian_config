@@ -2,22 +2,24 @@
 tags:
   - type/dashboard
 obsidianUIMode: preview
-sticker: 1f4d4
-show-level-1: true
-show-level-2: true
-show-level-3: true
-show-done: true
 typeToHide:
   - obsidian
   - nvim
+cssclasses:
+  - dashboard
 ---
-## Periodic Notes
- `button-daily` `button-weeklynote`
-* [[Fast Notes]]
-* [[Notes from Daily Notes]]
-* [[Journal]]
-## Commands
-`button-fastnote` `button-inboxnote`
+`button-daily` `button-weeklynote`
+`button-inboxnotenotitle` `button-fastnote` `button-inboxnote`
+## Dashboards
+* Journal
+	* [[Fast Notes]]
+	* [[Notes from Daily Notes]]
+	* [[Journal]]
+* Dataview
+	* [[Note Inbox]]
+	* [[Collection Inbox]]
+	* [[Notes and Tags by Recent]]
+	* [[Notes by Size]]
 ## PARA Notes
 ````tabs
 tab: ✍🏼 Projects
@@ -39,9 +41,7 @@ tableDrawer.setState('projectResources', resources);
 const ACTIVE_PROJECTS_TABLE = [
     { name : 'File', type : 'link', code : (f) => f.file.path },
     { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
-    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
-    { name : 'Type', type : 'select', args : { fieldName : 'projectType' } },
-    { name : 'Action', type : 'button', args : { name : 'To Backlog', click : null, params  : (f) => ['status', 'active', f, this.app] }  },
+    { name : 'Type', type : 'select', args : { fieldName : 'projectType' } }
 ];
 
 const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog)});
@@ -60,7 +60,6 @@ const { tableDrawer } = customJS;
 
 // Sort the pages by the "timestamp" property in ascending order
 pages = pages.sort(p => tableDrawer.getTimestamp(p, dv), 'desc').limit(20);
-console.log(pages);
 
 // Render the table
 dv.table(
@@ -76,8 +75,11 @@ tab: 😅 Areas
 TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/area AND !#archive WHERE !contains(file.folder, "template")
 ```
 ````
-## Dashboards (more heavyweight)
-* [[Note Inbox]]
-* [[Collection Inbox]]
-* [[Notes and Tags by Recent]]
-* [[Notes by Size]]
+## Vault Info
+- 🗄️ Recent file updates
+ `$=dv.list(dv.pages('').sort(f=>f.file.mtime.ts,"desc").limit(4).file.link)`
+- 🔖 Tagged:  favorite
+ `$=dv.list(dv.pages('#favorite').sort(f=>f.file.name,"desc").limit(4).file.link)`
+- 〽️ Stats
+	-  File Count: `$=dv.pages().length`
+	-  Personal recipes: `$=dv.pages('"Family/Recipes"').length`

@@ -1,6 +1,6 @@
 #!/bin/bash
 REPO_FOLDER='/home/acifuentes/Projects/obsidian_config'
-LOCAL_NOTES_FOLDER='/home/acifuentes/gdrive/Notes'
+LOCAL_NOTES_FOLDER='/home/acifuentes/Documents/GoogleDrive/Notes'
 
 # Sync Meta folder contents
 rm -rf "$REPO_FOLDER/Z-Meta/.*"

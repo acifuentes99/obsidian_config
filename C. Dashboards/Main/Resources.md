@@ -1,15 +1,12 @@
 ---
-tags: type/dashboard
+tags:
+  - type/dashboard
 obsidianUIMode: preview
 sticker: 1f4be
+cssclasses:
+  - dashboard
 ---
-
-```button
-name New Resource
-type command
-action From Template: Resource
-```
-
+`button-lqz2`
 # Recent Resources
 
 ```dataviewjs
@@ -19,7 +16,6 @@ const { tableDrawer } = customJS;
 
 // Sort the pages by the "timestamp" property in ascending order
 pages = pages.sort(p => tableDrawer.getTimestamp(p, dv), 'desc').limit(20);
-console.log(pages);
 
 // Render the table
 dv.table(
@@ -29,20 +25,24 @@ dv.table(
 ```
 
 ```dataviewjs
-let getFileInfo = (file) => {
+let prefixMap = {};
+let graphs = {}; // Idea : { seccion: notas }
+
+const getFileInfo = (file) => {
     //if (file == undefined || file.inlinks.values[0]) {
     //    return {};
     //}
     let isArchived = true;
     let inlinks = [];
     let parents = [];
+    let category = 'Otros';
+
     if (file.inlinks.values.length > 0) {
         for (let link of file.inlinks.values) {
             let p = dv.page(link.path);
             if (!p.tags) {
                 continue;
             }
-            //if (p.tags.contains("archive") || p.tags.contains("resource")) {
             if (p.tags.contains("archive")) {
                 isArchived = isArchived && true;
             }
@@ -51,7 +51,7 @@ let getFileInfo = (file) => {
             }
             inlinks.push('[[' + p.file.path + ']]');
 
-            if (p.tags.contains("resource")) {
+            if (p.tags.contains("type/resource")) {
                 parents.push(p.file.name);
             }
         }
@@ -59,9 +59,16 @@ let getFileInfo = (file) => {
     if (inlinks.length === 0) {
         isArchived = true;
     }
+    if (file.tags.values.includes("#archive")) {
+        prefixMap[file.name] = '📁';
+    }
+    if ('category' in file.frontmatter) {
+        category = file.frontmatter.category;
+    }
     let object = {
         link : '[[' + file.path + '|' + file.name + ']]',
         file : file,
+        category : category,
         inlinks : inlinks,
         archived : isArchived,
         parents : parents
@@ -72,7 +79,7 @@ let getFileInfo = (file) => {
 }
 
 
-let drawList = (resources, showArchive) => {
+const drawList = (resources, showArchive) => {
     let text = [];
     let title = showArchive ? 'Archived Resources' : 'Active Resources';
     //let emoji = showArchive ? '📁' : '✅';
@@ -96,25 +103,97 @@ let drawList = (resources, showArchive) => {
     dv.table(['name','notes'], text.map(p => [p.displayText, p.file.outlinks.length]));
 }
 
+//dv.list(['Asd<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>','<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>','<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>'])
+
+
 let resources = [];
-let familyTree = {};
+let parentByChildNoteTree = {};
 let queryAsd = '-"Z. Meta" and #type/resource';
 let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
+
+let temportalParentGraph = {};
+let categoryByNoteName = {};
 
 for (let result of resultsResources) {
     let fileInfo = getFileInfo(result.file);
     resources.push(fileInfo);
-    familyTree[fileInfo.file.name] = fileInfo.parents;
+    parentByChildNoteTree[fileInfo.file.name] = fileInfo.parents;
+
+    categoryByNoteName[fileInfo.file.name] = fileInfo.category;
+    if (!(fileInfo.category in temportalParentGraph)) {
+        temportalParentGraph[fileInfo.category] = {};
+    }
 }
 
-let getFinalGraph = (familyTree) => {
+
+/*
+    * Crear el objeto de categorias de padre
+    * Actualmente lo hace HORRIBLE (Usa un Object.keys o Entries, para simplemente utilizar
+    * un array, para filtar a padres
+*/
+for (const [key, value] of Object.entries(parentByChildNoteTree)) {
+    /* el siguiente if... FILTRA A TODOS LOS PADRES (no tienen links dentro) */
+    if (value.length > 0) {
+        continue;
+    }
+    temportalParentGraph[categoryByNoteName[key]][key] = value;
+}
+
+
+const graphToLinks = (graph, searchTerm) => {
+    /*
+     * Dependiendo del termino de busqueda, filtra los links a mostrar
+     * graph : TODO
+     * searchTerm : <String> Valor a filtrar en graph
+    */
+
+    const newGraph = getNewGraphBySearchWord(graph, searchTerm);
+    const parentResources = getParentResources(newGraph);
+
+    let text = '';
+    for (const [key, value] of Object.entries(temportalParentGraph)) {
+        //for (const [key2, value2] of Object.entries(value)) {
+        //}
+        text += getHtmlText(Object.keys(value), newGraph, key);
+    }
+    return text;
+    <!-- return getHtmlText(parentResources, newGraph, 'Otros'); -->
+}
+
+const getHtmlText = (parentResources, newGraph, section) => {
+    /*
+     * Obtiene el HTML a mostrar, dependiendo de los recursos Padre, y que tiene de
+     * valores en newGraph
+     * parentResources: [] de String, de recursos Padre
+     * newGraph: {<recurso padre> : [<recursos hijos>]}
+     * section: <String> El titulo de la sección (categoria cuando este implmentado)
+    */
+
+    let text = '<h2>' + section + '</h2><ul>';
+    parentResources.forEach(keyString => {
+        text += '<li>' + returnLink(keyString);
+        if (newGraph[keyString] && newGraph[keyString].length > 0) {
+            text += '<ul>';
+            newGraph[keyString].sort().forEach(sublink => {
+                text += '<li>' + returnLink(sublink) + '</li>';
+            });
+            text += '</ul>';
+        }
+        text += '</li>';
+    });
+    return text + '</ul>';
+}
+
+
+// No se que hace... pero al final limpia el grafo
+const getFinalGraph = (parentByChildNoteTree) => {
     let finalGraph = {};
     let currentChildren = new Set();
-    for (element in familyTree) {
+    for (element in parentByChildNoteTree) {
         if (finalGraph[element] == null) {
             finalGraph[element] = [];
         }
-        familyTree[element].forEach( (subelement) => {
+        parentByChildNoteTree[element].forEach( (subelement) => {
             currentChildren.add(element);
             if (finalGraph[subelement] == null) {
                 finalGraph[subelement] = [element];
@@ -130,8 +209,12 @@ let getFinalGraph = (familyTree) => {
     return finalGraph;
 }
 
-let returnLink = (noteName) => {
-    return `<a data-href="${noteName}" href="${noteName}" class="internal-link data-link-icon data-link-icon-after data-link-text" target="_blank" rel="noopener" data-link-tags="#type/resource" data-link-path="Resources/${noteName}.md">${noteName}</a>`;
+const returnLink = (noteName) => {
+    let prefix = '';
+    if (noteName in prefixMap) {
+        prefix = prefixMap[noteName];
+    }
+    return `<a data-href="${noteName}" href="${noteName}" class="internal-link data-link-icon data-link-icon-after data-link-text" target="_blank" rel="noopener" data-link-tags="#type/resource" data-link-path="Resources/${noteName}.md">${prefix}${noteName}</a>`;
 };
 
 let getNewGraphBySearchWord = (graph, searchTerm) => {
@@ -162,34 +245,15 @@ let getParentResources = (graph, searchTerm) => {
 }
 
 
-let graphToLinks = (graph, searchTerm) => {
-    const newGraph = getNewGraphBySearchWord(graph, searchTerm);
-    const parentResources = getParentResources(newGraph);
-    let text = '<ul>';
-    parentResources.forEach(keyString => {
-        text += '<li>' + returnLink(keyString);
-        if (newGraph[keyString].length > 0) {
-            text += '<ul>';
-            newGraph[keyString].sort().forEach(sublink => {
-                text += '<li>' + returnLink(sublink) + '</li>';
-            });
-            text += '</ul>';
-        }
-        text += '</li>';
-    });
-    return text + '</ul>';
-}
-
 dv.header(1, 'List of resources, and their subresources (needs imporvement)');
 
-//let filterElement = this.container.createEl('input', {id : "asd", cls: ["navbar","card"]});
 let filterElement = this.container.createEl('input', {id : "asd", value: localStorage.getItem("searchWord"), cls: []});
-let textContainer = this.container.createEl('div', {innerHTML : graphToLinks(getFinalGraph(familyTree), '') });
+let textContainer = this.container.createEl('div', {innerHTML : graphToLinks(getFinalGraph(parentByChildNoteTree), '') });
 
-textContainer.innerHTML = graphToLinks(getFinalGraph(familyTree), localStorage.getItem("searchWord"));
+textContainer.innerHTML = graphToLinks(getFinalGraph(parentByChildNoteTree), localStorage.getItem("searchWord"));
 filterElement.addEventListener("input", (event) => {
     localStorage.setItem("searchWord", event.target.value);
-    textContainer.innerHTML = graphToLinks(getFinalGraph(familyTree), event.target.value);
+    textContainer.innerHTML = graphToLinks(getFinalGraph(parentByChildNoteTree), event.target.value);
 });
 
 

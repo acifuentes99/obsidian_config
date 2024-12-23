@@ -1,5 +1,4 @@
-
-# Weekly notes
+## Weekly notes
 
 ```button
 name Previous
@@ -54,8 +53,32 @@ action QuickAdd: Add fast note
 ^button-fastnote
 
 ```button
-name Add Inbox Note
+name Add Inbox Note (with Title)
 type command
 action QuickAdd: Add Inbox Note
 ```
 ^button-inboxnote
+
+```button
+name Add Inbox Note
+type command
+action QuickAdd: Add Inbox Note No Title
+```
+^button-inboxnotenotitle
+
+```button
+name Refresh
+type command
+action Dataview: Rebuild current view
+```
+^button-kwka
+
+```button
+name Refresh view
+type command
+action Dataview: Rebuild current view
+```
+^button-lqz2
+
+## PARA Notes
+
