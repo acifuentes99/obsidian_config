@@ -10,7 +10,6 @@ class tableDrawer {
 
     buttonMaker(args) {
         return '';
-    //    console.log('sdfdsaf');
     //    const { params, file, app, instance, dv } = args;
     //    const btn = instance.container.createEl('button', {"text": "Done!"});
     //    const file = app.vault.getAbstractFileByPath(fpath)
@@ -61,7 +60,6 @@ class tableDrawer {
             return possibleDate;
         }
 
-        console.log(dateString);
         dateString = dateString.substring(0,4) + '-' + dateString.substring(4,6) + '-' + dateString.substring(6,8);
         //+'T'+dateString.substring(8,10)+':'+dateString.substring(10,12)+':'+dateString.substring(12,14);
         return dv.date(dateString);
@@ -80,9 +78,6 @@ class tableDrawer {
     async returnFormattedFunctionWithType(args) {
         const { file, func, functionArray, that, dv, app, instance } = args;
         //if (that.debug) {
-        //    console.log(func);
-        //    console.log(file);
-        //    console.log(that);
         //}
         if (func.type === 'text') {
             return func.code(file) ?? '';
@@ -146,11 +141,6 @@ class tableDrawer {
 
 // const consoleame = (a, b) => {
 //     if (dummyFiles.some(x => a.file.name === x) ){
-//         console.log("cosa " + a.file.path);
-//         console.log("inlinks de la cosa " + a.file.inlinks);
-//         console.log(currentPage.frontmatter["para-note-parent"]);
-//         console.log(dv.page(a.file.inlinks[0].path).file.tags.values);
-//         console.log("valor de la cosa " + b);
 //     }
 // }
 }

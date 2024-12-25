@@ -26,6 +26,7 @@ class projectUtils {
   checkIfPARANoteIsArchived(file) {
       let isArchived = false;
       let isDone = false;
+      let isColdTask = false;
       let inlinks = [];
       let journals = [];
       const fileData = file.file;
@@ -42,6 +43,9 @@ class projectUtils {
               }
           }
       }
+      if (fileData.frontmatter.status === 'coldtask') {
+          isColdTask = true;
+      }
       if (fileData.tags.values.includes("#done") || fileData.frontmatter.status === 'done') {
           isDone = true;
       }
@@ -52,6 +56,7 @@ class projectUtils {
       file.archived = isArchived;
       file.done = isDone;
       file.backlog = !isArchived && !isDone && this.isBacklog(fileData);
+      file.coldtask = isColdTask;
       return file;
   }
 

@@ -6,12 +6,12 @@ startdate: 2023-07-04
 enddate: ""
 show-archive: false
 null-date: false
-obsidianUIMode: preview
 show_unlinked_notes: true
 show_references: true
 weekly-group: true
 cssclasses:
   - testclass
+obsidianUIMode: preview
 sticker: emoji//1f4e5
 ---
 ```button

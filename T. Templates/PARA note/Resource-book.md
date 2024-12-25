@@ -3,12 +3,13 @@ tags:
   - book
   - type/resource
 timestamp: {{timeStamp}}
+bookStatus: toRead
 ---
 # Idea Lectura
-* 
+*
 
 # Notes
-* 
+*
 
 # Chatpers
 

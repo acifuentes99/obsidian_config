@@ -44,9 +44,13 @@ const ACTIVE_PROJECTS_TABLE = [
     { name : 'Type', type : 'select', args : { fieldName : 'projectType' } }
 ];
 
-const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog)});
+const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog && !p.coldtask)});
+const coldtaskProjects = resources.filter(p => { return (p.coldtask)});
 tableDrawer.setState('activeProjects', activeProjects);
-tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, activeProjects, { dv, app: this.app, instance : this });
+dv.header(3, 'Active');
+await tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, activeProjects, { dv, app: this.app, instance : this });
+dv.header(3, 'Cold');
+await tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, coldtaskProjects, { dv, app: this.app, instance : this });
 ```
 
 

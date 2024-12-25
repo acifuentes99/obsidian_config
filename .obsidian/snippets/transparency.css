@@ -37,3 +37,27 @@ background: transparent;
 .workspace-split.mod-root {
     padding-left: 0px; /* Match the sidebar width */
 }
+
+.mod-sidedock .workspace-tab-header-container {
+    display: flex;
+    height: 10px;
+    position: relative;
+
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.mod-top-right-space .workspace-tab-header-container {
+    height: var(--header-height);
+}
+
+.mod-sidedock .workspace-tab-header-container:hover {
+    display: flex;
+    background-color: var(--tab-container-background);
+    height: var(--header-height);
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+    flex: 0 0 auto;
+    padding-left: var(--size-4-2);
+    padding-right: var(--size-4-2);
+    position: relative;
+}
