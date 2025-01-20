@@ -12,13 +12,7 @@ typeToHide:
   - nvim
 ---
 
-* Docu : [[Obsidian Proyects Docs]]
-
-```button
-name Refresh
-type command
-action Dataview: Force Refresh All Views and Blocks
-```
+`button-lqz2`
 
 > [!info]- new project?
 > ```button
@@ -27,6 +21,7 @@ action Dataview: Force Refresh All Views and Blocks
 > action From Template: Project
 > ```
 > ProjectType values : [[T. Templates/metadata-menu/Projects|Projects]]
+> * Docu : [[Obsidian Proyects Docs]]
 
 > [!NOTE]- Task List
 >
@@ -48,6 +43,7 @@ action Dataview: Force Refresh All Views and Blocks
 ### Alt Projects
 * [[Nvim Projects]]
 * [[Obsidian Projects (Post 11 Feb 2024)]]
+* [[Book and Self development action plans]]
 
 ## Active
 
@@ -72,9 +68,25 @@ const ACTIVE_PROJECTS_TABLE = [
     { name : 'Action', type : 'button', args : { name : 'To Backlog', click : null, params  : (f) => ['status', 'active', f, this.app] }  },
 ];
 
-const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog)});
+const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog && !p.coldtask)});
 tableDrawer.setState('activeProjects', activeProjects);
 tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, activeProjects, { dv, app: this.app, instance : this });
+```
+
+## Cold Tasks
+```dataviewjs
+const { tableDrawer } = customJS;
+
+const COLD_TASKS_PROJECTS_TABLE = [
+    { name : 'File', type : 'link', code : (f) => f.file.path },
+    { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
+    { name : 'Status', type : 'select', args : { fieldName : 'status' } },
+    { name : 'Type', type : 'select', args : { fieldName : 'projectType' } },
+    { name : 'Action', type : 'button', args : { name : 'To Active', click : null, params  : (f) => ['status', 'active', f, this.app] }  },
+];
+
+const coldTaskProjects = tableDrawer.getState('projectResources').filter(p => { return p.coldtask });
+tableDrawer.drawTable(COLD_TASKS_PROJECTS_TABLE, coldTaskProjects, {dv:dv,app:this.app,instance:this});
 ```
 
 ## Backlog

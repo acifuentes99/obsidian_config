@@ -11,7 +11,7 @@ cssclasses:
 
 ```dataviewjs
 // Get all notes with the tag "resource"
-let pages = dv.pages("#type/resource");
+let pages = dv.pages('-"T. Templates" and #type/resource');
 const { tableDrawer } = customJS;
 
 // Sort the pages by the "timestamp" property in ascending order
@@ -29,9 +29,6 @@ let prefixMap = {};
 let graphs = {}; // Idea : { seccion: notas }
 
 const getFileInfo = (file) => {
-    //if (file == undefined || file.inlinks.values[0]) {
-    //    return {};
-    //}
     let isArchived = true;
     let inlinks = [];
     let parents = [];
@@ -108,7 +105,7 @@ const drawList = (resources, showArchive) => {
 
 let resources = [];
 let parentByChildNoteTree = {};
-let queryAsd = '-"Z. Meta" and #type/resource';
+let queryAsd = '-"T. Templates" and #type/resource';
 let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
 
 let temportalParentGraph = {};

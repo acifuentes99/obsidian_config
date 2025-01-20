@@ -58,7 +58,7 @@ type command
 action QuickAdd: Add Inbox Note
 ```
 ^button-inboxnote
-
+[[Algunas notas y reflexiones obsidian en la tablet 29 dic 2024]]
 ```button
 name Add Inbox Note
 type command

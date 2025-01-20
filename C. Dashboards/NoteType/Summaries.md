@@ -1,7 +1,7 @@
 ---
 tags:
   - type/dashboard
-last-days: 100 days
+filter-tag: "#type/note/summary"
 number-results: 50
 filter-grade: 1
 startdate: ""
@@ -11,20 +11,6 @@ null-date: false
 obsidianUIMode: preview
 sticker: emoji//1f4e5
 ---
-
-> [!NOTE]- Uso de dashboard
-> * `filter-grade`
-> 	* 0 : Notas sin un type/ incluido (mas suave)
-> 	* 1 : Notas sin una Coleccion como padre, o una PARA note como padre
-> 		* Este filtro, muestra notas igual que pueden estar enlazadas a otras notas
-> 	* 2 : Notas sin un PARA note como padre
-> 	* 3 : TODAS las Notas (que cumplen con el primer filtro de dv)
-> * `null-date`
-> 	* Parámetro temporal
-> 	* Muestra notas, donde su átributo "timestamp" es null (sirve para hacer limpieza de fechas)
-> * `show-achive`
-> 	* Agrega notas que estan Archivadas
-> 	* También, se agrega columna "archived" (es arte)
 
 ```button
 name Refresh
@@ -78,11 +64,11 @@ const filterByNullDate = (p) => {
 const dateFilter = currentPage.frontmatter["null-date"] ? filterByNullDate : filterByDate;
 const noteFilter = (p) => currentPage.frontmatter["filter-grade"] === 3 ? true : (p.file.inlinks.length === 0 || filterValuesForInbox(p));
 const whereClause = (p) => {
-    return noteFilter(p) &&
-        dateFilter(p);
+    return dateFilter(p);
 }
 
-let query = '-#journal \
+let query = currentPage.frontmatter["filter-tag"];
+query = query + ' and -#journal \
 and -#dashboard \
 and -#type/resource \
 and -#type/goal \

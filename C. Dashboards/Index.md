@@ -9,7 +9,7 @@ cssclasses:
   - dashboard
 ---
 `button-daily` `button-weeklynote`
-`button-inboxnotenotitle` `button-fastnote` `button-inboxnote`
+`button-inboxnotenotitle` `button-fastnote`
 ## Dashboards
 * Journal
 	* [[Fast Notes]]
@@ -20,6 +20,16 @@ cssclasses:
 	* [[Collection Inbox]]
 	* [[Notes and Tags by Recent]]
 	* [[Notes by Size]]
+* NoteType
+	* [[Contacts|👥 Contacts]]
+	* [[Checklists|✔️ Checklists]]
+	* [[Brainstorms|🧠 Brainstorms]]
+	* [[Documentations|💡 Documentations]]
+	* [[Lists|🗒 Lists]]
+	* [[Researchs|🔍 Researchs]]
+	* [[Studies|📐 Studies]]
+	* [[Summaries|🧾 Summaries]]
+	* [[Thoughts|🤔 Thoughts]]
 ## PARA Notes
 ````tabs
 tab: ✍🏼 Projects

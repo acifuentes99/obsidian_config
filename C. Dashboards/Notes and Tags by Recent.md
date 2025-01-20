@@ -13,6 +13,7 @@ cssclasses:
   - testclass
 obsidianUIMode: preview
 sticker: emoji//1f4e5
+query: "#type/resource and #book"
 ---
 ```button
 name Refresh
@@ -108,6 +109,34 @@ const getFileNameAndLinkedStatus = (p) => {
     else if (p.file.tags.includes('#type/resource')) {
         l = '📚';
     }
+    else if (p.file.tags.includes('#type/note/contact')) {
+        l = '💁‍♂️';
+    }
+    else if (p.file.tags.includes('#type/note/checklist')) {
+        l = '✔️';
+    }
+    else if (p.file.tags.includes('#type/note/brainstorm')) {
+        l = '🧠';
+    }
+    else if (p.file.tags.includes('#type/note/documentation')) {
+        l = '💡';
+    }
+    else if (p.file.tags.includes('#type/note/list')) {
+        l = '🗒';
+    }
+    else if (p.file.tags.includes('#type/note/research')) {
+        l = '🔍';
+    }
+    else if (p.file.tags.includes('#type/note/study')) {
+        l = '📐';
+    }
+    else if (p.file.tags.includes('#type/note/summary')) {
+        l = '🧾';
+    }
+    else if (p.file.tags.includes('#type/note/thoughts')) {
+        l = '🤔';
+    }
+
     else {
         l = hasLinks ? '✅' : '❌';
     }

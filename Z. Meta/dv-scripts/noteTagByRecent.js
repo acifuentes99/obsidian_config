@@ -1,11 +1,9 @@
-console.log('asdf');
 let query = '-#journal and -#archive and -#dashboard and -#type/resource and -#type/goals and -#type/area and -#type/project and -#template';
 let headers = ["File", "Linked Section"];
 let tableValues = [];
 let currentPage = dv.current();
 let result_limit = 0;
 let tbl;
-//console.log(input); // Incluye los parametros pasados desde arriba
 
 
 let loadDv = async (event) => {
