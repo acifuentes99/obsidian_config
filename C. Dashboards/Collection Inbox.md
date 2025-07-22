@@ -8,6 +8,7 @@ show-archive: false
 obsidianUIMode: preview
 sticker: emoji//1f4e5
 ---
+![[Dashboards Navigation]]
 [[#Notes not linked]]
 [[#Collections]]
 

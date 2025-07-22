@@ -3,6 +3,7 @@ tags: type/dashboard
 obsidianUIMode: preview
 sticker: 1f331
 ---
+![[Dashboards Navigation]]
 ```button
 name New Goal
 type command

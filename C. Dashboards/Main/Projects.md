@@ -11,6 +11,7 @@ typeToHide:
   - obsidian
   - nvim
 ---
+![[Dashboards Navigation]]
 
 `button-lqz2`
 

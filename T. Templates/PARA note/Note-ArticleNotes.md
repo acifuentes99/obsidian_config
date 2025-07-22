@@ -1,5 +1,5 @@
 ---
-tags : type/note/checklist
+tags : type/note/articlenote
 timestamp: {{timeStamp}}
 ---
 {{fileContent}}

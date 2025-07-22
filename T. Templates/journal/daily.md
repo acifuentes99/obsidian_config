@@ -16,3 +16,5 @@ noteUtils.getDailyNoteHeader(dv);
 ## Workout log 
 
 ## Fast notes
+
+## Eurotrip 2025

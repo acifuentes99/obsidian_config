@@ -1,0 +1,18 @@
+{
+  "showLineNumber": false,
+  "tabSize": 2,
+  "promptDelete": false,
+  "autoPairBrackets": false,
+  "autoPairMarkdown": false,
+  "alwaysUpdateLinks": true,
+  "defaultViewMode": "source",
+  "showInlineTitle": false,
+  "propertiesInDocument": "visible",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "B. Note Box/Inbox",
+  "attachmentFolderPath": "W. Media/img",
+  "vimMode": true,
+  "readableLineLength": false,
+  "showIndentGuide": true,
+  "strictLineBreaks": false
+}

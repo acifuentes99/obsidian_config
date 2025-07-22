@@ -3,6 +3,7 @@ tags: type/dashboard graphstart
 obsidianUIMode: preview
 sticker: 1f631
 ---
+![[Dashboards Navigation]]
 ```button
 name New Area
 type command

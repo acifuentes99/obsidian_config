@@ -11,7 +11,7 @@ null-date: false
 obsidianUIMode: preview
 sticker: emoji//1f4e5
 ---
-
+![[Dashboards Navigation]]
 > [!NOTE]- Uso de dashboard
 > * `filter-grade`
 > 	* 0 : Notas sin un type/ incluido (mas suave)

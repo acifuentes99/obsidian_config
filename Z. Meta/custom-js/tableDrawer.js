@@ -10,6 +10,7 @@ class tableDrawer {
 
     buttonMaker(args) {
         return '';
+    }
     //    const { params, file, app, instance, dv } = args;
     //    const btn = instance.container.createEl('button', {"text": "Done!"});
     //    const file = app.vault.getAbstractFileByPath(fpath)
@@ -19,7 +20,6 @@ class tableDrawer {
     //        await this.updateTag(params[0], params[1], params[2], params[3]);
     //    });
     //    return btn;
-    }
 
     async updateTag(propertyName, propertyValue, file, app) {
         const { update, createYamlProperty } = app.plugins.plugins["metaedit"].api;
@@ -89,10 +89,10 @@ class tableDrawer {
             return '[[' + file.file.path + '|' + file.file.name + ']]' + '\n' + this.eTagsToString(file.file.etags.values);
         }
         else if (func.type === 'date') {
-            // let dateString = func.code(file) ?? '';
             let dateString = func.code(file);
+            let dateStringFormat = func.args?.dateFormat ? func.args.dateFormat : 'DDD';
             const parsedDate = this.parseDate(dateString, dv) ?? '';
-            return parsedDate !== '' ? parsedDate.toFormat('DDD') : '';
+            return parsedDate !== '' ? parsedDate.toFormat(dateStringFormat) : '';
         }
         else if (func.type === 'select') {
             const { fieldModifier : f } = instance.app.plugins.plugins["metadata-menu"].api;
@@ -143,5 +143,61 @@ class tableDrawer {
 //     if (dummyFiles.some(x => a.file.name === x) ){
 //     }
 // }
+
+    getEmojiPrefix(pFile, hasLinks) {
+        let l = '';
+        if (pFile.tags.includes('#type/project')) {
+            l = '🧮🎲';
+        }
+        else if (pFile.tags.includes('#type/resource')) {
+            l = '🧮📚';
+        }
+        else if (pFile.tags.includes('#type/area')) {
+            l = '🧮🤩';
+        }
+        else if (pFile.tags.includes('#type/note/contact')) {
+            l = '💁‍♂️';
+        }
+        else if (pFile.tags.includes('#type/note/checklist')) {
+            l = '✔️';
+        }
+        else if (pFile.tags.includes('#type/note/brainstorm')) {
+            l = '🧠';
+        }
+        else if (pFile.tags.includes('#type/note/documentation')) {
+            l = '💡';
+        }
+        else if (pFile.tags.includes('#type/note/list')) {
+            l = '🗒';
+        }
+        else if (pFile.tags.includes('#type/note/research')) {
+            l = '🔍';
+        }
+        else if (pFile.tags.includes('#type/note/study')) {
+            l = '📐';
+        }
+        else if (pFile.tags.includes('#type/note/summary')) {
+            l = '🧾';
+        }
+        else if (pFile.tags.includes('#type/note/thoughts')) {
+            l = '🤔';
+        }
+        else if (pFile.tags.includes('#type/note/articlenote')) {
+            l = '📝';
+        }
+        else if (pFile.tags.includes('#type/note/book')) {
+            l = '📗';
+        }
+        else if (pFile.tags.includes('#type/note/experience')) {
+            l = '🧾';
+        }
+        else {
+            l = '❓';
+        }
+        if (pFile.tags.includes('#type/note')) {
+          l = hasLinks ? '✅' + l : '❌' + l;
+        }
+        return l;
+    }
 }
 

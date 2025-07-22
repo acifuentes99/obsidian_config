@@ -32,6 +32,31 @@ nmap <C-i> :forward
 
 " exmap jumpWeekHeader jsfile Z. Meta/vimrc/mdHelpers.js {jumpToDayHeading()}
 
+imap [a á
+imap [e é
+imap [i í
+imap [o ó
+imap [u ú
+imap [A Á
+imap [E É
+imap [I Í
+imap [O Ó
+imap [U Ú
+imap a; añ
+imap e; eñ
+imap i; iñ
+imap o; oñ
+imap u; uñ
+imap A: AÑ
+imap E: EÑ
+imap I: IÑ
+imap O: OÑ
+imap U: UÑ
+
+set timeoutlen=2000
+
+
+
 " imap [a :accentA
 " imap [e :accentE
 " imap [i :accentI

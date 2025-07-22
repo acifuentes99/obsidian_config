@@ -1,0 +1,34 @@
+/* Voor leesmodus */
+.workspace-leaf-content[data-type=markdown] .metadata-container:hover .metadata-content,
+.workspace-leaf-content[data-type=markdown] .frontmatter-container:hover .metadata-content {
+	display: block;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.workspace-leaf-content[data-type=markdown] .metadata-container .metadata-content,
+.workspace-leaf-content[data-type=markdown] .frontmatter-container .metadata-content {
+	display: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Voor bewerkmodus */
+.cm-s-obsidian .HyperMD-frontmatter:hover,
+.cm-s-obsidian .frontmatter-container:hover {
+	display: block;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.cm-s-obsidian .HyperMD-frontmatter,
+.cm-s-obsidian .frontmatter-container {
+	display: none;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.metadata-container {
+  margin-block-end: 0px !important;
+  padding: 0px !important;
+}
+
+.metadata-properties-title {
+	display: none;
+}

@@ -6,6 +6,7 @@ sticker: 1f4be
 cssclasses:
   - dashboard
 ---
+![[Dashboards Navigation]]
 `button-lqz2`
 # Recent Resources
 

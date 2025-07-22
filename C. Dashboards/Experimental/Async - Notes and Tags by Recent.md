@@ -2,7 +2,7 @@
 tags:
   - type/dashboard
 number-results: 100
-startdate: 2024-10-01
+startdate: 2023-07-04
 enddate: ""
 show-archive: false
 null-date: false
@@ -10,7 +10,7 @@ show_unlinked_notes: true
 show_references: true
 weekly-group: true
 cssclasses:
-  - dashboard
+  - testclass
 obsidianUIMode: preview
 sticker: emoji//1f4e5
 query: "#type/resource and #book"
@@ -20,26 +20,11 @@ name Refresh
 type command
 action Dataview: Force Refresh All Views and Blocks
 ```
-![[Dashboards Navigation]]
-
-> [!NOTE]- Other Periods
->
-> * 2025
-> 	* [[Notes and Tags by Recent]]
-> * 2024
-> 	* [[2024-S2]]
-> 	* [[2024-S1]]
-> * 2023
-> 	* [[2023-S2]]
-> 	* [[2023-S1]]
-> * 2022 - old
-> 	* [[2022-S2]]
-> 	* [[2022-S1]]
-> 	* [[2021-Older]]
+^button-q0fh
 
 ```dataviewjs
 const currentPage = dv.current().file;
-const { tableDrawer, noteUtils, testClass } = customJS;
+const { tableDrawer } = customJS;
 const startDate = tableDrawer.parseDate(currentPage.frontmatter["startdate"], dv);
 const endDate = tableDrawer.parseDate(currentPage.frontmatter["enddate"], dv);
 const dummyFiles = ["Trailhead Enterprise Patterns", "Ideas cambio de mindset", "El Cuerpo - Una celula de trabajo"];
@@ -88,6 +73,7 @@ let query = '-#journal \
 and -#dashboard \
 and -"template" \
 and -"X-Plugins" \
+and -"A. PARA Notes/Projects" \
 and -"Z. Meta"'
 if (!currentPage.frontmatter["show-archive"]) {
     query = query + ' and -#archive';
@@ -116,33 +102,60 @@ const getFileNameAndLinkedStatus = (p) => {
             hasLinks |= !value.path.includes("Y. Journal");
         }
     }
-    const emojiPrefix = tableDrawer.getEmojiPrefix(p.file, hasLinks);
-    return emojiPrefix + ' ' + '[[' + p.file.path + '|' + p.file.name + ']]';
+    let l = '';
+    if (p.file.tags.includes('#type/project')) {
+        l = '✍️';
+    }
+    else if (p.file.tags.includes('#type/resource')) {
+        l = '📚';
+    }
+    else if (p.file.tags.includes('#type/note/contact')) {
+        l = '💁‍♂️';
+    }
+    else if (p.file.tags.includes('#type/note/checklist')) {
+        l = '✔️';
+    }
+    else if (p.file.tags.includes('#type/note/brainstorm')) {
+        l = '🧠';
+    }
+    else if (p.file.tags.includes('#type/note/documentation')) {
+        l = '💡';
+    }
+    else if (p.file.tags.includes('#type/note/list')) {
+        l = '🗒';
+    }
+    else if (p.file.tags.includes('#type/note/research')) {
+        l = '🔍';
+    }
+    else if (p.file.tags.includes('#type/note/study')) {
+        l = '📐';
+    }
+    else if (p.file.tags.includes('#type/note/summary')) {
+        l = '🧾';
+    }
+    else if (p.file.tags.includes('#type/note/thoughts')) {
+        l = '🤔';
+    }
+    else if (p.file.tags.includes('#type/note/articlenote')) {
+        l = '📝';
+    }
+
+    else {
+        l = hasLinks ? '✅' : '❌';
+    }
+    return l + ' ' + '[[' + p.file.path + '|' + p.file.name + ']]';
 }
 
 let NOTE_INBOX_TABLE = [
     { name : 'File', type : 'text', code : (f) => getFileNameAndLinkedStatus(f) },
-    // { name : 'Type', type : 'text', code : (f) => getType(f.file.tags.values) },
+    { name : 'Type', type : 'text', code : (f) => getType(f.file.tags.values) },
 ];
 if (currentPage.frontmatter["weekly-group"]) {
-    NOTE_INBOX_TABLE.push(
-        { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp, args: { dateFormat: 'ccc, LLL d' } }
-    );
+    NOTE_INBOX_TABLE.push({ name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp });
     }
 
 
 for (const value of queryResults) {
-    if (value.key != null) {
-        if (currentPage.frontmatter["weekly-group"]) {
-            dv.span(tableDrawer.parseDate(value.rows[0].file.frontmatter.timestamp, dv).toFormat("y-WW"));
-        }
-        else{
-            dv.span(tableDrawer.parseDate(value.rows[0].file.frontmatter.timestamp, dv).toFormat("ccc dd LLL yyyy"));
-        }
-    }
-    else {
-        dv.span('null');
-    }
-    await tableDrawer.drawTable(NOTE_INBOX_TABLE, value.rows, {dv:dv,app:this.app,instance:this});
+    tableDrawer.drawTable(NOTE_INBOX_TABLE, value.rows, {dv:dv, app:this.app, instance:this});
 }
 ```

@@ -1,7 +1,7 @@
 ---
 tags:
   - type/dashboard
-filter-tag: "#type/note/summary"
+filter-tag: "#type/note/articlenote"
 number-results: 50
 filter-grade: 1
 startdate: ""
