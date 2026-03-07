@@ -4,7 +4,7 @@
  * Keep in mind, that are some comments. They can be useful in ohter contexts, so
  * maintain them for only this component.
  */
-const commons = await dc.require("Z. Meta/datacore/commons.js");
+const commons = await dc.require("Z. Meta/datacore/utils/commons.js");
 let somestring = '';
 
 const COLUMNS = [
