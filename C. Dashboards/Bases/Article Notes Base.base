@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.hasTag("type/note/articlenote")
+formulas:
+  Timestamp: timestamp.format("HH:mm - DD MMM yyyy")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - file.size
+      - formula.Timestamp
+      - tags
+    sort:
+      - property: timestamp
+        direction: DESC
+    columnSize:
+      file.name: 457
+      file.size: 128
+  - type: table
+    name: View

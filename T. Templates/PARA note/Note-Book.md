@@ -1,8 +1,7 @@
 ---
 tags:
   - type/note/book
-timestamp:
-  "{ timeStamp }": 
+timestamp: <% tp.frontmatter.timestamp %>
 bookStatus: toRead
 ---
 # Idea Lectura

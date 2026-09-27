@@ -8,266 +8,205 @@ cssclasses:
 ---
 ![[Dashboards Navigation]]
 `button-lqz2`
-# Recent Resources
 
-```dataviewjs
-// Get all notes with the tag "resource"
-let pages = dv.pages('-"T. Templates" and #type/resource');
-const { tableDrawer } = customJS;
-
-// Sort the pages by the "timestamp" property in ascending order
-pages = pages.sort(p => tableDrawer.getTimestamp(p, dv), 'desc').limit(20);
-
-// Render the table
-dv.table(
-    ["File Name", "Timestamp"],
-    pages.map(p => [p.file.link, tableDrawer.getTimestamp(p, dv)])
-);
-```
-
-```dataviewjs
-let prefixMap = {};
-let graphs = {}; // Idea : { seccion: notas }
-
-const getFileInfo = (file) => {
-    let isArchived = true;
-    let inlinks = [];
-    let parents = [];
-    let category = 'Otros';
-
-    if (file.inlinks.values.length > 0) {
-        for (let link of file.inlinks.values) {
-            let p = dv.page(link.path);
-            if (!p.tags) {
-                continue;
-            }
-            if (p.tags.contains("archive")) {
-                isArchived = isArchived && true;
-            }
-            else {
-                isArchived = isArchived && false;
-            }
-            inlinks.push('[[' + p.file.path + ']]');
-
-            if (p.tags.contains("type/resource")) {
-                parents.push(p.file.name);
-            }
-        }
-    }
-    if (inlinks.length === 0) {
-        isArchived = true;
-    }
-    if (file.tags.values.includes("#archive")) {
-        prefixMap[file.name] = '📁';
-    }
-    if ('category' in file.frontmatter) {
-        category = file.frontmatter.category;
-    }
-    let object = {
-        link : '[[' + file.path + '|' + file.name + ']]',
-        file : file,
-        category : category,
-        inlinks : inlinks,
-        archived : isArchived,
-        parents : parents
-        //archivedInlinks
-        //activeInlinks
-    };
-    return object;
-}
-
-
-const drawList = (resources, showArchive) => {
-    let text = [];
-    let title = showArchive ? 'Archived Resources' : 'Active Resources';
-    //let emoji = showArchive ? '📁' : '✅';
-    dv.header(1, title + ' (' + resources.length + ')');
-    for (let p of resources) {
-        let displayText = '';
-        let emoji = p.file.frontmatter?.emoji == null ? '' : p.file.frontmatter?.emoji;
-        displayText = displayText + emoji + ' ' + p.link + '<ul>';
-        if (!(p.inlinks)) {
-            continue;
-        }
-        if (p.inlinks.length > 0) {
-            for (let link of p.inlinks) {
-                displayText = displayText + '<li\>' + link + '</li>';
-            }
-        }
-        displayText = displayText + '</ul>';
-        p.displayText = displayText;
-        text.push(p);
-    }
-    dv.table(['name','notes'], text.map(p => [p.displayText, p.file.outlinks.length]));
-}
-
-//dv.list(['Asd<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>','<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>','<ul> <li>Coffee <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Tea <ul> <li>Black tea</li> <li>Green tea</li> </ul> </li> <li>Milk</li></ul>'])
-
-
-let resources = [];
-let parentByChildNoteTree = {};
-let queryAsd = '-"T. Templates" and #type/resource';
-let resultsResources = dv.pages(queryAsd).sort(p => p.file.mday, 'desc');
-
-let temportalParentGraph = {};
-let categoryByNoteName = {};
-
-for (let result of resultsResources) {
-    let fileInfo = getFileInfo(result.file);
-    resources.push(fileInfo);
-    parentByChildNoteTree[fileInfo.file.name] = fileInfo.parents;
-
-    categoryByNoteName[fileInfo.file.name] = fileInfo.category;
-    if (!(fileInfo.category in temportalParentGraph)) {
-        temportalParentGraph[fileInfo.category] = {};
-    }
-}
-
-
-/*
-    * Crear el objeto de categorias de padre
-    * Actualmente lo hace HORRIBLE (Usa un Object.keys o Entries, para simplemente utilizar
-    * un array, para filtar a padres
-*/
-for (const [key, value] of Object.entries(parentByChildNoteTree)) {
-    /* el siguiente if... FILTRA A TODOS LOS PADRES (no tienen links dentro) */
-    if (value.length > 0) {
-        continue;
-    }
-    temportalParentGraph[categoryByNoteName[key]][key] = value;
-}
-
-
-const graphToLinks = (graph, searchTerm) => {
-    /*
-     * Dependiendo del termino de busqueda, filtra los links a mostrar
-     * graph : TODO
-     * searchTerm : <String> Valor a filtrar en graph
-    */
-
-    const newGraph = getNewGraphBySearchWord(graph, searchTerm);
-    const parentResources = getParentResources(newGraph);
-
-    let text = '';
-    for (const [key, value] of Object.entries(temportalParentGraph)) {
-        //for (const [key2, value2] of Object.entries(value)) {
-        //}
-        text += getHtmlText(Object.keys(value), newGraph, key);
-    }
-    return text;
-    <!-- return getHtmlText(parentResources, newGraph, 'Otros'); -->
-}
-
-const getHtmlText = (parentResources, newGraph, section) => {
-    /*
-     * Obtiene el HTML a mostrar, dependiendo de los recursos Padre, y que tiene de
-     * valores en newGraph
-     * parentResources: [] de String, de recursos Padre
-     * newGraph: {<recurso padre> : [<recursos hijos>]}
-     * section: <String> El titulo de la sección (categoria cuando este implmentado)
-    */
-
-    let text = '<h2>' + section + '</h2><ul>';
-    parentResources.forEach(keyString => {
-        text += '<li>' + returnLink(keyString);
-        if (newGraph[keyString] && newGraph[keyString].length > 0) {
-            text += '<ul>';
-            newGraph[keyString].sort().forEach(sublink => {
-                text += '<li>' + returnLink(sublink) + '</li>';
-            });
-            text += '</ul>';
-        }
-        text += '</li>';
-    });
-    return text + '</ul>';
-}
-
-
-// No se que hace... pero al final limpia el grafo
-const getFinalGraph = (parentByChildNoteTree) => {
-    let finalGraph = {};
-    let currentChildren = new Set();
-    for (element in parentByChildNoteTree) {
-        if (finalGraph[element] == null) {
-            finalGraph[element] = [];
-        }
-        parentByChildNoteTree[element].forEach( (subelement) => {
-            currentChildren.add(element);
-            if (finalGraph[subelement] == null) {
-                finalGraph[subelement] = [element];
-            }
-            else {
-                finalGraph[subelement].push(element);
-            }
-        });
-    }
-    currentChildren.forEach((element) => {
-        delete finalGraph[element];
-    });
-    return finalGraph;
-}
-
-const returnLink = (noteName) => {
-    let prefix = '';
-    if (noteName in prefixMap) {
-        prefix = prefixMap[noteName];
-    }
-    return `<a data-href="${noteName}" href="${noteName}" class="internal-link data-link-icon data-link-icon-after data-link-text" target="_blank" rel="noopener" data-link-tags="#type/resource" data-link-path="Resources/${noteName}.md">${prefix}${noteName}</a>`;
+```datacorejsx
+const getTimestamp = (row) => {
+    const v = row.$frontmatter?.timestamp?.value;
+    if (!v) return null;
+    const d = dc.coerce.date(v);
+    if (d) return d;
+    const s = v.toString();
+    return dc.coerce.date(`${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`);
 };
 
-let getNewGraphBySearchWord = (graph, searchTerm) => {
-    let newGraph = {};
-    if (!!searchTerm) {
-        Object.keys(graph).forEach(key => {
+const fmtDate = ts => ts ? ts.toFormat("LLL dd yyyy") : "—";
 
-            if (key.toLowerCase().includes(searchTerm.toLowerCase())) {
-                newGraph[key] = graph[key];
-                return;
-            }
+return function View() {
+    const allResources = dc.useQuery(
+        '@page and #type/resource and !path("T. Templates")',
+        { debounce: 2500 }
+    );
 
-            let elementArray = graph[key].filter(word => word.toLowerCase().includes(searchTerm.toLowerCase())).sort();
-            if (elementArray.length > 0) {
-                newGraph[key] = elementArray;
+    const resourcePathSet = dc.useMemo(() => {
+        const s = new Set();
+        allResources.forEach(p => s.add(p.$path));
+        return s;
+    }, [allResources]);
+
+    const resources = dc.useMemo(() => {
+        return allResources.map(page => {
+            const tags = page.$tags ?? [];
+            const isArchived = tags.includes('#archive');
+            const category = page.$frontmatter?.category?.value ?? 'Otros';
+            const timestamp = getTimestamp(page);
+            const outlinks = page.$links ?? [];
+            return {
+                name: page.$name,
+                path: page.$path,
+                link: page.$link,
+                category,
+                timestamp,
+                isArchived,
+                outlinks,
+                outlinksCount: outlinks.length,
+            };
+        });
+    }, [allResources]);
+
+    const recentResources = dc.useMemo(() => {
+        return [...resources]
+            .sort((a, b) => (b.timestamp?.valueOf() ?? 0) - (a.timestamp?.valueOf() ?? 0))
+            .slice(0, 20);
+    }, [resources]);
+
+    const { finalGraph, categoryGroups } = dc.useMemo(() => {
+        // parentByChild[name] = names of resources that link TO this resource
+        const parentByChild = {};
+        resources.forEach(r => { parentByChild[r.name] = []; });
+
+        resources.forEach(r => {
+            r.outlinks.forEach(link => {
+                if (!resourcePathSet.has(link.path)) return;
+                const targetName = link.path.split('/').pop().replace(/\.md$/, '');
+                if (parentByChild[targetName] !== undefined) {
+                    parentByChild[targetName].push(r.name);
+                }
+            });
+        });
+
+        // finalGraph[parent] = [children] — only root resources (no resource links to them)
+        const finalGraph = {};
+        const currentChildren = new Set();
+
+        Object.keys(parentByChild).forEach(name => {
+            if (!finalGraph[name]) finalGraph[name] = [];
+            parentByChild[name].forEach(parent => {
+                currentChildren.add(name);
+                if (!finalGraph[parent]) finalGraph[parent] = [name];
+                else if (!finalGraph[parent].includes(name)) finalGraph[parent].push(name);
+            });
+        });
+        currentChildren.forEach(name => { delete finalGraph[name]; });
+
+        const categoryByName = {};
+        resources.forEach(r => { categoryByName[r.name] = r.category; });
+
+        const categoryGroups = {};
+        Object.keys(parentByChild).forEach(name => {
+            if (parentByChild[name].length > 0) return;
+            const cat = categoryByName[name] ?? 'Otros';
+            if (!categoryGroups[cat]) categoryGroups[cat] = [];
+            categoryGroups[cat].push(name);
+        });
+
+        return { finalGraph, categoryGroups };
+    }, [resources, resourcePathSet]);
+
+    const [searchTerm, setSearchTerm] = dc.useState('');
+
+    const filteredTree = dc.useMemo(() => {
+        const q = searchTerm.trim().toLowerCase();
+        if (!q) return { graph: finalGraph, cats: categoryGroups };
+
+        const graph = {};
+        Object.entries(finalGraph).forEach(([parent, children]) => {
+            if (parent.toLowerCase().includes(q)) {
+                graph[parent] = children;
+            } else {
+                const matching = children.filter(c => c.toLowerCase().includes(q));
+                if (matching.length > 0) graph[parent] = matching;
             }
         });
-        return newGraph;
-    }
-    return graph;
-}
 
-let getParentResources = (graph, searchTerm) => {
-    if (!!searchTerm) {
-        return Object.keys(graph).filter(word => word.toLowerCase()).sort();
-    }
-    return Object.keys(graph).sort();
-}
+        const cats = {};
+        Object.entries(categoryGroups).forEach(([cat, roots]) => {
+            const visible = roots.filter(r => graph[r] != null || r.toLowerCase().includes(q));
+            if (visible.length > 0) cats[cat] = visible;
+        });
 
+        return { graph, cats };
+    }, [finalGraph, categoryGroups, searchTerm]);
 
-dv.header(1, 'List of resources, and their subresources (needs imporvement)');
+    const activeResources = dc.useMemo(() => resources.filter(r => !r.isArchived), [resources]);
+    const archivedList = dc.useMemo(() => resources.filter(r => r.isArchived), [resources]);
 
-let filterElement = this.container.createEl('input', {id : "asd", value: localStorage.getItem("searchWord"), cls: []});
-let textContainer = this.container.createEl('div', {innerHTML : graphToLinks(getFinalGraph(parentByChildNoteTree), '') });
+    const nameToPath = dc.useMemo(() => {
+        const m = new Map();
+        resources.forEach(r => m.set(r.name, r.path));
+        return m;
+    }, [resources]);
 
-textContainer.innerHTML = graphToLinks(getFinalGraph(parentByChildNoteTree), localStorage.getItem("searchWord"));
-filterElement.addEventListener("input", (event) => {
-    localStorage.setItem("searchWord", event.target.value);
-    textContainer.innerHTML = graphToLinks(getFinalGraph(parentByChildNoteTree), event.target.value);
-});
+    const mkLink = (name) => {
+        const path = nameToPath.get(name) ?? `Resources/${name}.md`;
+        return (
+            <a data-href={path} href={path} className="internal-link" target="_blank" rel="noopener">
+                {name}
+            </a>
+        );
+    };
 
+    const inputStyle = {
+        width: "100%", marginBottom: "0.5rem", padding: "4px 8px",
+        background: "var(--background-secondary)", border: "1px solid var(--background-modifier-border)",
+        borderRadius: "4px", color: "var(--text-normal)"
+    };
+    const nowrap = { whiteSpace: "nowrap" };
 
-drawList(resources.filter(p => { return !p.archived}), false);
-drawList(resources.filter(p => { return p.archived}), true);
+    const RECENT_COLS = [
+        { id: "File Name", value: r => r.link },
+        { id: "Timestamp", value: r => fmtDate(r.timestamp), render: v => <span style={nowrap}>{v}</span>, width: "minimum" },
+    ];
 
+    const RESOURCE_COLS = [
+        { id: "Name", value: r => r.link },
+        { id: "Notes", value: r => r.outlinksCount, render: v => <span style={nowrap}>{v}</span>, width: "minimum" },
+    ];
 
-//let mindmap = `
-//\`\`\`markmap
-//- asdfsdaf
-//    - aaa
-//\`\`\`
-//`;
-//dv.span(mindmap);
+    return (
+        <div>
+            <h1>Recent Resources</h1>
+            <dc.Table rows={recentResources} columns={RECENT_COLS} paging={20} />
+
+            <h1>List of resources, and their subresources</h1>
+            <input
+                type="text"
+                placeholder="Filter..."
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                style={inputStyle}
+            />
+            {Object.entries(filteredTree.cats)
+                .sort(([a], [b]) => a.localeCompare(b))
+                .map(([cat, roots]) => (
+                    <div key={cat}>
+                        <h2>{cat}</h2>
+                        <ul>
+                            {[...roots].sort().map(root => (
+                                <li key={root}>
+                                    {mkLink(root)}
+                                    {filteredTree.graph[root]?.length > 0 && (
+                                        <ul>
+                                            {[...filteredTree.graph[root]].sort().map(child => (
+                                                <li key={child}>{mkLink(child)}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+
+            <h1>Active Resources ({activeResources.length})</h1>
+            <dc.Table rows={activeResources} columns={RESOURCE_COLS} paging={50} />
+
+            <h1>Archived Resources ({archivedList.length})</h1>
+            <dc.Table rows={archivedList} columns={RESOURCE_COLS} paging={50} />
+        </div>
+    );
+};
 ```
 
 # How to Use
-* In the list inside of every entry, it's the note that references the following resource
-
+* Resources with sub-resources are shown nested under their parent in the tree
+* Archived = resource has `#archive` tag

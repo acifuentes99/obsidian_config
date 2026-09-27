@@ -2,7 +2,7 @@
 tags:
   - gpt-repsonse
   - type/note/default
-timestamp: {{timeStamp}}
+timestamp: <% tp.frontmatter.timestamp %>
 ---
 
 ### Extracted content

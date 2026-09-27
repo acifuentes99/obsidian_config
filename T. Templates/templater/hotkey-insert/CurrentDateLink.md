@@ -1,0 +1,1 @@
+<% moment.locale("es") && "[[Y. Journal/Daily/" + tp.date.now("YYYY-MM-DD") + "|" + moment().format("ddd DD MMM YYYY") + "]]" %>

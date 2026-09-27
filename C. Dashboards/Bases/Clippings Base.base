@@ -1,0 +1,18 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.tags.contains("clippings")
+    order:
+      - file.name
+      - created
+    columnSize:
+      file.name: 560
+  - type: cards
+    name: View
+    filters:
+      and:
+        - file.tags.contains("clippings")
+    cardSize: 200
+    imageAspectRatio: 1

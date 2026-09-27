@@ -1,0 +1,23 @@
+filters:
+  and:
+    - file.hasTag("type/note/book")
+formulas:
+  Timestamp: timestamp.format("HH:mm - DD MMM yyyy")
+views:
+  - type: table
+    name: Table
+    order:
+      - file.name
+      - author
+      - file.size
+      - formula.Timestamp
+    sort:
+      - property: author
+        direction: ASC
+      - property: timestamp
+        direction: DESC
+    columnSize:
+      file.name: 457
+      file.size: 128
+  - type: table
+    name: View

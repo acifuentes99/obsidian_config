@@ -8,21 +8,29 @@ Soon, I'll write about how to use this configuration in Obsidian. For now, the r
 
 * The following plugins are needed to make Dashboards on the vault to work. This can be installed on Desktop and Mobile.
 
-* [Dataview](https://github.com/blacksmithgu/obsidian-dataview "GitHub - blacksmithgu/obsidian-dataview: A high-performance data index and query language over Markdown files, for https://obsidian.md/.") : Querying notes by frontmatter
-* [Custom JS](https://github.com/saml-dev/obsidian-custom-js "GitHub - saml-dev/obsidian-custom-js: An Obsidian plugin to allow users to reuse code blocks across all devices and OSes") : Make code used by Dataview in Script more reusable
+* [Datacore](https://github.com/blacksmithgu/datacore "GitHub - blacksmithgu/datacore: Next dataview plugin generation") : Making components to filter notes, querying notes, create tables, dashboards, and other specs (powered by React.js)
 * [Quickadd](https://github.com/chhoumann/quickadd "GitHub - chhoumann/quickadd: QuickAdd for Obsidian") : Register custom obsidian commands (por inbox notes)
 * [Templater](https://github.com/SilentVoid13/Templater "GitHub - SilentVoid13/Templater: A template plugin for obsidian") - Templates for weekly notes, daily notes, inbox notes
 * [Periodic Notes](https://github.com/liamcain/obsidian-periodic-notes "GitHub - liamcain/obsidian-periodic-notes: Create/manage your daily, weekly, and monthly notes in Obsidian") : Add weekly notes
 * [Buttons](https://github.com/shabegom/buttons "GitHub - shabegom/buttons: Buttons in Obsidian") - For dashboards, add custom actions
 * [Metaedit](https://github.com/chhoumann/MetaEdit "GitHub - chhoumann/MetaEdit: MetaEdit for Obsidian") : Edit metadata with scripts (dashboards)
 
+## Claude Code Integration
+
+The `claude/` directory versions the Claude Code ↔ Obsidian integration:
+
+| File | Deploy to |
+|---|---|
+| `claude/CLAUDE.md-addon.md` | Append the contents to `~/.claude/CLAUDE.md` |
+| `claude/commands/obsidian-helper.md` | `~/.claude/commands/obsidian-helper.md` |
+| `claude/vault-notes/Claude Skills Extension.md` | `<vault>/B. Note Box/Notes/Claude Skills Extension.md` |
+| `claude/vault-notes/Claude Code - Obsidian Integration Guide.md` | `<vault>/A. PARA Notes/Resources/Claude Code - Obsidian Integration Guide.md` |
+
 ## All Required Plugins
 * Auto Note Mover
-* BRAT
 * Buttons
-* Calednar
-* CustomJS
-* Dataview
+* Calendar
+* Datacore
 * Default New Tab Page
 * Excalibrain
 * Excalidraw

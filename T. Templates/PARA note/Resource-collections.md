@@ -2,7 +2,7 @@
 tags:
   - type/resource
   - type/collection
-timestamp: {{timeStamp}}
+timestamp: <% tp.frontmatter.timestamp %>
 ---
 # Idea
 * 

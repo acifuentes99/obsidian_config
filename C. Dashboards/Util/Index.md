@@ -11,7 +11,16 @@ cssclasses:
 `button-daily` `button-weeklynote`
 `button-inboxnotenotitle` `button-fastnote`
 
-> [!EXAMPLE] Dashboards
+> [!TIP]- 🎲 Random note to explore
+> ```datacorejsx
+> const RandomNote = await dc.require("Z. Meta/datacore/randomNote.jsx");
+> return function View() {
+>     return <RandomNote />;
+> }
+> ```
+
+
+> [!EXAMPLE]- Dashboards
 > * Dataview
 > 	* [[Note Inbox]]
 > 	* [[Collection Inbox]]
@@ -23,8 +32,9 @@ cssclasses:
 > * Journal
 > 	* [[Fast Notes]]
 > 	* [[Notes from Daily Notes]]
-> 	* [[Journal]]
+> 	* [[C. Dashboards/From Daily Note/Journal]]
 > * NoteType
+> 	* [[Book]]
 > 	* [[Contacts|👥 Contacts]]
 > 	* [[Checklists|✔️ Checklists]]
 > 	* [[Brainstorms|🧠 Brainstorms]]
@@ -34,67 +44,41 @@ cssclasses:
 > 	* [[Studies|📐 Studies]]
 > 	* [[Summaries|🧾 Summaries]]
 > 	* [[Thoughts|🤔 Thoughts]]
+> 	* [[C. Dashboards/NoteType/Journal|😵‍💫Journal]]
 > 	* [[Article Notes|📝 Article notes]]
 
-> [!TLDR] PARA Notes
-> ````tabs
-> tab: ✍🏼 Projects
+> [!TLDR]+ ✍🏼 Projects
 > [[C. Dashboards/Main/Projects|✍ All Projects]]
-> 
-> ```dataviewjs
-> const { tableDrawer, projectUtils } = customJS;
-> const currentFile = dv.current().file;
-> 
-> const queryProjects = '-"T. Templates" and #type/project';
-> const resultsResources = dv.pages(queryProjects);
-> const args = {
->     typeToHide: currentFile.frontmatter.typeToHide
+> ```datacorejsx
+> const ProjectsTable = await dc.require("Z. Meta/datacore/projectsTable.jsx");
+> return function View() {
+>     return <ProjectsTable />;
 > }
-> 
-> const resources = projectUtils.getProjectNotes(resultsResources, dv, args);
-> tableDrawer.setState('projectResources', resources);
-> 
-> const ACTIVE_PROJECTS_TABLE = [
->     { name : 'File', type : 'link', code : (f) => f.file.path },
->     { name : 'Date', type : 'date', code : (f) => f.file.frontmatter.timestamp },
->     { name : 'Type', type : 'select', args : { fieldName : 'projectType' } }
-> ];
-> 
-> const activeProjects = resources.filter(p => { return (!p.archived && !p.done && !p.backlog && !p.coldtask)});
-> const coldtaskProjects = resources.filter(p => { return (p.coldtask)});
-> tableDrawer.setState('activeProjects', activeProjects);
-> dv.header(3, 'Active');
-> await tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, activeProjects, { dv, app: this.app, instance : this });
-> dv.header(3, 'Cold');
-> await tableDrawer.drawTable(ACTIVE_PROJECTS_TABLE, coldtaskProjects, { dv, app: this.app, instance : this });
 > ```
-> 
-> 
-> tab: 📚 Resources
+
+> [!TLDR]- 📚 Resources
 > [[C. Dashboards/Main/Resources|📚 All Resources]]
-> 
 > ```dataviewjs
 > // Get all notes with the tag "resource"
 > let pages = dv.pages("#type/resource");
 > const { tableDrawer } = customJS;
-> 
+>
 > // Sort the pages by the "timestamp" property in ascending order
 > pages = pages.sort(p => tableDrawer.getTimestamp(p, dv), 'desc').limit(20);
-> 
+>
 > // Render the table
 > dv.table(
 >     ["File Name", "Timestamp"],
 >     pages.map(p => [p.file.link, tableDrawer.getTimestamp(p, dv)])
 > );
 > ```
-> 
-> tab: 😅 Areas
+
+> [!TLDR]- 😅 Areas
 > [[C. Dashboards/Main/Areas|😅 All Areas]]
-> 
+>
 > ```dataview
 > TABLE WITHOUT ID file.frontmatter.emoji + "[[" + file.name + "]]" AS "name", filter(file.etags, (x) => contains(x, "#type/topic")) AS "Tags" FROM #type/area AND !#archive WHERE !contains(file.folder, "template")
 > ```
-> ````
 
 > [!HINT] Vault Info
 > - 🗄️ Recent file updates

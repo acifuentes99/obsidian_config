@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasTag("type/note/journal")
+    order:
+      - file.name
+      - context
+      - timestamp
+    sort:
+      - property: timestamp
+        direction: ASC
