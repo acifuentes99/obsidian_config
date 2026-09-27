@@ -169,7 +169,9 @@ If a project already has a note there, update it — don't create a duplicate.
 - Append new dated sections — never edit past entries.
 - Bullets: decisions and outcomes only, not step-by-step narration.
 - Update the `[!info] About` callout only if scope or key facts changed.
-- On session start: read the `[!info] About` callout content to recover project context.
+- On session start: read the `[!info] About` callout and check `status` in frontmatter:
+  - `status: active` / `status: coldtask` / `status: backlog` → use normally as the active session note
+  - `status: done` / `status: archive` → **do not append to this note**. Use it as reference only. Tell the user: *"This project is marked as done/archived. Create a new session note or change the status tag to reactivate it."*
 
 ---
 
