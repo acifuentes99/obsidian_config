@@ -51,13 +51,14 @@ timestamp: YYYY-MM-DDTHH:MM:SS
 
 ## Note taxonomy (`type/note/*`)
 
-At a high level, notes fall into three categories:
+At a high level, notes fall into four categories:
 
 | Category | What it is | Key types |
 |---|---|---|
 | **Sessions / Projects** | Work logs, project tracking, Claude session notes | `session`, `type/project` |
 | **Insights / Reflection** | Personal thoughts, journaling, ideas, mind-dumps | `thoughts`, `journal`, `idea`, `brainstorm`, `summary` |
 | **Resources / Researching** | Compiled knowledge, learning notes, books, articles | `research`, `documentation`, `book`, `articlenote` |
+| **Experiences** | A lived period — a crisis, discovery, or journey. Has start/end dates; viewable on a calendar. | `experience` |
 
 Detailed subtypes:
 
@@ -76,7 +77,49 @@ Detailed subtypes:
 | `checklist` | Task list | `B. Note Box/Inbox/` |
 | `summary` | Summary of articles, book, or ideas | `B. Note Box/Inbox/` |
 | `idea` | Single processed idea (more refined than brainstorm) | `B. Note Box/Inbox/` |
+| `experience` | A lived period with start/end dates — crises, discoveries, journeys | `B. Note Box/Notes/Experiences/` |
 | `session` | Claude Code session log. Dual-tagged `type/project`. | `A. PARA Notes/Projects/` |
+
+### Experience notes
+
+A `type/note/experience` captures a lived period — something you went through, discovered, or navigated. Unlike a journal entry (a single moment) or a project (actionable work), an experience is a named arc with a beginning, middle, and end.
+
+**Frontmatter:**
+```yaml
+---
+tags:
+  - type/note/experience
+  - topic/<topic>
+startDate: YYYY-MM-DD
+endDate: YYYY-MM-DD     # omit if still active
+status: active | resolved
+---
+```
+
+**Structure:**
+```markdown
+# 🌱 <Experience title>
+
+<2-3 sentences: what this experience is and why it matters.>
+
+## 📖 Story
+
+<Narrative: how it started, how it evolved, key moments.>
+
+## 💡 Insights
+
+- <Key insight or pattern you observed>
+
+## 🔗 Related
+
+- [[A. PARA Notes/Projects/<Project> - Claude Session|<Project>]]
+- [[A. PARA Notes/Resources/<Resource>|<Resource>]]
+```
+
+**Rules:**
+- `startDate` / `endDate` are plain `YYYY-MM-DD` strings (not timestamps) so they work with calendar queries.
+- Link to all related Projects and Resources under `## 🔗 Related`.
+- Keep the story narrative — don't reduce it to bullets. The texture matters for future recall.
 
 ---
 

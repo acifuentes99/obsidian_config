@@ -147,32 +147,70 @@ Pages without the `wiki` tag are older reference notes — valid, but not yet pa
 
 ## Note taxonomy
 
-At a high level, notes fall into three categories:
+At a high level, notes fall into four categories:
 
 | Category | What it is | Key types |
 |---|---|---|
 | **Sessions / Projects** | Work logs, project tracking, Claude session notes | `type/note/session`, `type/project` |
 | **Insights / Reflection** | Personal thoughts, journaling, ideas, mind-dumps | `thoughts`, `journal`, `idea`, `brainstorm`, `summary` |
 | **Resources / Researching** | Compiled knowledge, learning notes, books, articles | `research`, `documentation`, `book`, `articlenote` |
+| **Experiences** | A lived period — a crisis, discovery, or journey. Has start/end dates; viewable on a calendar. | `experience` |
 
 Full subtype reference:
 
-| Tag | Type | Default folder |
-|---|---|---|
-| `type/note/default` | Unprocessed / general | `B. Note Box/Inbox/` |
-| `type/note/thoughts` | Personal reflections | `B. Note Box/Inbox/` |
-| `type/note/research` | Learning notes, links, synthesis | `A. PARA Notes/Resources/` |
-| `type/note/documentation` | How-to guides, technical docs | `A. PARA Notes/Resources/` |
-| `type/note/session` | Claude Code session log | `A. PARA Notes/Projects/` |
-| `type/note/journal` | Journaling | `Y. Journal/` |
-| `type/note/idea` | Single refined idea | `B. Note Box/Inbox/` |
-| `type/note/brainstorm` | Mind-dump, many unordered ideas | `B. Note Box/Inbox/` |
-| `type/note/checklist` | Task list | `B. Note Box/Inbox/` |
-| `type/note/summary` | Summary of articles, books, ideas | `B. Note Box/Inbox/` |
-| `type/note/list` | Any list (add `shopping-list` tag for shopping) | `B. Note Box/Inbox/` |
-| `type/note/book` | Book notes by chapter | `B. Note Box/Inbox/` |
-| `type/note/articlenote` | Article clipped via Obsidian Clipper | `B. Note Box/Inbox/` |
-| `type/note/contact` | A person — other notes link to this | `B. Note Box/Inbox/` |
+| Tag                       | Type                                            | Default folder                       |
+| ------------------------- | ----------------------------------------------- | ------------------------------------ |
+| `type/note/default`       | Unprocessed / general                           | `B. Note Box/Inbox/`                 |
+| `type/note/thoughts`      | Personal reflections                            | `B. Note Box/Inbox/`                 |
+| `type/note/research`      | Learning notes, links, synthesis                | `A. PARA Notes/Resources/`           |
+| `type/note/documentation` | How-to guides, technical docs                   | `A. PARA Notes/Resources/`           |
+| `type/note/session`       | Claude Code session log                         | `A. PARA Notes/Projects/`            |
+| `type/note/journal`       | Journaling                                      | `Y. Journal/`                        |
+| `type/note/idea`          | Single refined idea                             | `B. Note Box/Inbox/`                 |
+| `type/note/brainstorm`    | Mind-dump, many unordered ideas                 | `B. Note Box/Inbox/`                 |
+| `type/note/checklist`     | Task list                                       | `B. Note Box/Inbox/`                 |
+| `type/note/summary`       | Summary of articles, books, ideas               | `B. Note Box/Inbox/`                 |
+| `type/note/list`          | Any list (add `shopping-list` tag for shopping) | `B. Note Box/Inbox/`                 |
+| `type/note/book`          | Book notes by chapter                           | `B. Note Box/Inbox/`                 |
+| `type/note/articlenote`   | Article clipped via Obsidian Clipper            | `B. Note Box/Inbox/`                 |
+| `type/note/contact`       | A person — other notes link to this             | `B. Note Box/Inbox/`                 |
+| `type/note/experience`    | A lived period with start/end dates             | `B. Note Box/Notes/Experiences/`     |
+
+### Experience notes
+
+A `type/note/experience` captures a lived period — something you went through, discovered, or navigated. Unlike a journal entry (a single moment) or a project (actionable work), an experience is a named arc with a beginning, middle, and end. The `startDate` / `endDate` fields make them queryable for calendar views.
+
+**Frontmatter:**
+```yaml
+---
+tags:
+  - type/note/experience
+  - topic/<topic>
+startDate: YYYY-MM-DD
+endDate: YYYY-MM-DD     # omit if still active
+status: active | resolved
+---
+```
+
+**Structure:**
+```markdown
+# 🌱 <Experience title>
+
+<2-3 sentences: what this experience is and why it matters.>
+
+## 📖 Story
+
+<Narrative: how it started, how it evolved, key moments.>
+
+## 💡 Insights
+
+- <Key insight or pattern you observed>
+
+## 🔗 Related
+
+- [[A. PARA Notes/Projects/<Project> - Claude Session|<Project>]]
+- [[A. PARA Notes/Resources/<Resource>|<Resource>]]
+```
 
 ---
 
