@@ -57,8 +57,24 @@ Output a structured report with four sections:
 
 End the report with a suggested priority order: what to tackle first for maximum compounding effect.
 
+## 7. Log the lint run
+
+Log in **two places**:
+
+**Daily note** (`Y. Journal/Daily/YYYY-MM-DD.md`) — append under a `### Lint / Ingest log` subheading (create it if it doesn't exist):
+
+```
+### Lint / Ingest log
+- [lint] /lint run — <N> unprocessed inbox, <N> orphan Resources, <N> missing pages — priority: <top item>
+```
+
+**Session note** — append a bullet:
+
+```
+* Ran /lint — <N> unprocessed inbox notes, <N> orphans, <N> missing pages
+```
+
 ## Notes
 
 - Don't auto-fix. The lint operation is advisory — report findings and let the user decide what to act on.
 - After a lint run, the user may ask you to ingest a specific Inbox note (`/ingest`) or to create a missing wiki page. Execute those as separate operations.
-- Log the lint run in the session note: `* Ran /lint — <N> unprocessed inbox notes, <N> orphans, <N> missing pages`

@@ -72,7 +72,17 @@ The `wiki` tag distinguishes LLM-maintained pages from other resource notes.
 
 ## 5. Log the ingest
 
-Append a bullet to the current session note (identify it via the current project context):
+Log in **two places**:
+
+**Daily note** (`Y. Journal/Daily/YYYY-MM-DD.md`) — append under a `### Lint / Ingest log` subheading (create it if it doesn't exist):
+
+```
+### Lint / Ingest log
+- [ingest] <source title or description> → [[A. PARA Notes/Resources/<Page>|Page]]
+- [wiki] <any structural change made, e.g. "Added ## Related to X">
+```
+
+**Session note** — append a bullet to the current project's session note:
 
 ```
 * Ingested: <source title> → updated [[A. PARA Notes/Resources/<Page>|<Page>]]

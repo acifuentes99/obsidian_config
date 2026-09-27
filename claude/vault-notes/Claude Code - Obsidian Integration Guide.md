@@ -44,6 +44,19 @@ Claude reads the source, synthesizes key claims (not a copy), then writes or upd
 - After a learning session you want to compile into a topic page
 - When a daily-note subheading has grown enough to deserve a Resources page ("promoting" an idea)
 
+### Daily note log convention
+
+Both `/ingest` and `/lint` write a log entry to the **current day's daily note** under a `### Lint / Ingest log` subheading, in addition to the session note. This keeps an operational trail in the journal alongside the day's other notes.
+
+Format:
+```
+### Lint / Ingest log
+- [lint] /lint run — <N> unprocessed inbox, <N> orphans, <N> missing pages
+- [ingest] <source> → [[A. PARA Notes/Resources/<Page>|Page]]
+- [wiki] <structural change, e.g. "Added ## Related to X cluster">
+- [triage] Inbox: <N> reviewed, <N> integrated, <N> discarded
+```
+
 ### `/lint`
 
 Periodic health-check of the wiki layer. Reports:
