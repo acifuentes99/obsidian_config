@@ -4,6 +4,7 @@ tags:
   - topic/dev
   - topic/obsidian
   - purpose/reference
+  - wiki
 timestamp: 2026-09-26T00:00:00
 ---
 
@@ -145,6 +146,16 @@ Pages without the `wiki` tag are older reference notes — valid, but not yet pa
 ---
 
 ## Note taxonomy
+
+At a high level, notes fall into three categories:
+
+| Category | What it is | Key types |
+|---|---|---|
+| **Sessions / Projects** | Work logs, project tracking, Claude session notes | `type/note/session`, `type/project` |
+| **Insights / Reflection** | Personal thoughts, journaling, ideas, mind-dumps | `thoughts`, `journal`, `idea`, `brainstorm`, `summary` |
+| **Resources / Researching** | Compiled knowledge, learning notes, books, articles | `research`, `documentation`, `book`, `articlenote` |
+
+Full subtype reference:
 
 | Tag | Type | Default folder |
 |---|---|---|

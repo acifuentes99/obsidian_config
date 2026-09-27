@@ -35,6 +35,10 @@ Scan recent daily notes (`A. PARA Notes/Daily/` or `Y. Journal/Daily/`) and Inbo
 
 For Resources pages tagged `wiki`: check whether the `## Sources` list has entries. If a page has no sources, flag it — it may have been created manually and never properly ingested.
 
+**Exception — self-sourcing pages:** the following are never stale by definition:
+- Pages tagged `type/note/book` or with a `bookStatus` frontmatter field — the book is the source
+- Pages tagged `course` — the course itself is the source; treat type as `type/note/research`
+
 ## 6. Report
 
 Output a structured report with four sections:

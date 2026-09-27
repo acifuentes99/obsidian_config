@@ -51,6 +51,16 @@ timestamp: YYYY-MM-DDTHH:MM:SS
 
 ## Note taxonomy (`type/note/*`)
 
+At a high level, notes fall into three categories:
+
+| Category | What it is | Key types |
+|---|---|---|
+| **Sessions / Projects** | Work logs, project tracking, Claude session notes | `session`, `type/project` |
+| **Insights / Reflection** | Personal thoughts, journaling, ideas, mind-dumps | `thoughts`, `journal`, `idea`, `brainstorm`, `summary` |
+| **Resources / Researching** | Compiled knowledge, learning notes, books, articles | `research`, `documentation`, `book`, `articlenote` |
+
+Detailed subtypes:
+
 | Subtype | Description | Folder |
 |---|---|---|
 | `default` | Unprocessed / general | `B. Note Box/Inbox/` |
