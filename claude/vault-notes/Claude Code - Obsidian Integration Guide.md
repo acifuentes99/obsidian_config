@@ -198,19 +198,39 @@ status: active | resolved
 
 <2-3 sentences: what this experience is and why it matters.>
 
-## 📖 Story
+---
 
-<Narrative: how it started, how it evolved, key moments.>
+## 📖 Historia
+
+> *Transcripción original — YYYY-MM-DD*
+
+* <raw bullet point — verbatim from daily note, exact indentation preserved>
+	* <nested bullet>
+
+---
 
 ## 💡 Insights
 
-- <Key insight or pattern you observed>
+### [[YYYY-MM-DD|Ddd DD Month YYYY]]
+
+- <synthesized insight>
+
+---
 
 ## 🔗 Related
 
 - [[A. PARA Notes/Projects/<Project> - Claude Session|<Project>]]
 - [[A. PARA Notes/Resources/<Resource>|<Resource>]]
 ```
+
+**Rules:**
+- `## 📖 Historia` is a **verbatim copy** of the daily note bullet points — do not convert to prose, preserve `*` bullets and tab indentation exactly. Keep short-form vault links (`[[Note name]]`) as-is.
+- Each Historia entry is prefixed with `> *Transcripción original — YYYY-MM-DD*`. Multiple entries accumulate over time, each with its own date label.
+- `## 💡 Insights` contains synthesized bullets under a dated `### [[YYYY-MM-DD|Ddd DD Month YYYY]]` subheading. New insights append as new dated subsections.
+
+**Daily note workflow — after converting to experience:**
+1. Tag the source heading `#proceced`
+2. Replace the raw bullets with a link to the insight section: `[[ExperienceName#YYYY-MM-DD Ddd DD Month YYYY]]`
 
 ---
 

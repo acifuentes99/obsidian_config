@@ -102,13 +102,24 @@ status: active | resolved
 
 <2-3 sentences: what this experience is and why it matters.>
 
-## 📖 Story
+---
 
-<Narrative: how it started, how it evolved, key moments.>
+## 📖 Historia
+
+> *Transcripción original — YYYY-MM-DD*
+
+* <raw bullet point — verbatim from daily note, exact indentation preserved>
+	* <nested bullet>
+
+---
 
 ## 💡 Insights
 
-- <Key insight or pattern you observed>
+### [[YYYY-MM-DD|Ddd DD Month YYYY]]
+
+- <synthesized insight>
+
+---
 
 ## 🔗 Related
 
@@ -118,8 +129,14 @@ status: active | resolved
 
 **Rules:**
 - `startDate` / `endDate` are plain `YYYY-MM-DD` strings (not timestamps) so they work with calendar queries.
-- Link to all related Projects and Resources under `## 🔗 Related`.
-- Keep the story narrative — don't reduce it to bullets. The texture matters for future recall.
+- `## 📖 Historia` is a **verbatim copy** of the daily note bullet points — do not convert to prose, do not reformat. Preserve `*` bullets and tab indentation exactly. Keep any existing short-form vault links (`[[Note name]]`) as-is.
+- Each Historia entry is prefixed with `> *Transcripción original — YYYY-MM-DD*` as a date label. Multiple entries accumulate over time under the same `## 📖 Historia` heading, each with its own blockquote date label.
+- `## 💡 Insights` contains Claude's synthesis under a dated `### [[YYYY-MM-DD|Ddd DD Month YYYY]]` subheading. New insights are appended as new dated subsections.
+- Link to related Projects and Resources under `## 🔗 Related`.
+
+**Daily note workflow — after converting to experience:**
+1. Tag the source heading `#proceced`
+2. Replace the raw bullet content with a link to the experience note's insight section: `[[ExperienceName#YYYY-MM-DD Ddd DD Month YYYY]]`
 
 ---
 
