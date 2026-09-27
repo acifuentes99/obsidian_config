@@ -39,9 +39,18 @@ For Resources pages tagged `wiki`: check whether the `## Sources` list has entri
 - Pages tagged `type/note/book` or with a `bookStatus` frontmatter field — the book is the source
 - Pages tagged `course` — the course itself is the source; treat type as `type/note/research`
 
-## 6. Report
+## 6. Experience notes health check
 
-Output a structured report with four sections:
+Scan `B. Note Box/Notes/Experiences/` for notes that:
+- Are missing `startDate` frontmatter
+- Have `status: active` but no `## 💡 Insights` section
+- Have `status: active` and a `startDate` older than 90 days with only one Insights entry (may be stale/forgotten)
+
+Report as a small table: note name, startDate, status, insights entry count.
+
+## 7. Report
+
+Output a structured report with five sections:
 
 ```
 ## Lint report — <date>
@@ -57,6 +66,10 @@ Output a structured report with four sections:
 
 ### Stale pages (no sources recorded)
 - <filename> — created <date>, no ## Sources
+
+### Experiences health
+| Note | startDate | status | issues |
+|---|---|---|---|
 ```
 
 End the report with a suggested priority order: what to tackle first for maximum compounding effect.
