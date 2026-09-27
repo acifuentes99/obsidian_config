@@ -17,14 +17,27 @@ Soon, I'll write about how to use this configuration in Obsidian. For now, the r
 
 ## Claude Code Integration
 
-The `claude/` directory versions the Claude Code ↔ Obsidian integration:
+The `claude/` directory versions the Claude Code ↔ Obsidian integration.
+
+### Deploy table
 
 | File | Deploy to |
 |---|---|
-| `claude/CLAUDE.md-addon.md` | Append the contents to `~/.claude/CLAUDE.md` |
+| `claude/CLAUDE.md-addon.md` | Append contents to `~/.claude/CLAUDE.md` |
 | `claude/commands/obsidian-helper.md` | `~/.claude/commands/obsidian-helper.md` |
+| `claude/skills/ingest/SKILL.md` | `~/.claude/skills/ingest/SKILL.md` |
+| `claude/skills/lint/SKILL.md` | `~/.claude/skills/lint/SKILL.md` |
 | `claude/vault-notes/Claude Skills Extension.md` | `<vault>/B. Note Box/Notes/Claude Skills Extension.md` |
 | `claude/vault-notes/Claude Code - Obsidian Integration Guide.md` | `<vault>/A. PARA Notes/Resources/Claude Code - Obsidian Integration Guide.md` |
+
+### LLM Wiki skills
+
+Two skills implement the [LLM Wiki pattern](https://github.com/tobi/llm-wiki) — turning `A. PARA Notes/Resources/` into a compounding, LLM-maintained knowledge base:
+
+- **`/ingest`** — process a new source (paste, file, or URL) into Resources topic pages. Claude reads the source, synthesizes key claims, and updates or creates wiki pages with `## Related` cross-links and a `## Sources` provenance list.
+- **`/lint`** — periodic health-check: finds unprocessed Inbox notes, orphan Resources pages, and topics mentioned repeatedly without their own page.
+
+Wiki-maintained Resources pages carry a `wiki` frontmatter tag and follow the convention: `## Related` (cross-links) + `## Sources` (what contributed, with dates).
 
 ## All Required Plugins
 * Auto Note Mover
