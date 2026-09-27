@@ -120,6 +120,7 @@ If a project already has a note there, update it — don't create a duplicate.
 - **External URLs** → `[Display text](url)` markdown hyperlink. Example: `[Claude Docs](https://docs.anthropic.com)`.
 - **Non-vault local paths and shell commands** → inline code.
 - **Language** → English. Exception: Spanish for Teddy Hug client-facing content.
+- **Emojis** → encouraged in vault notes — use them in headings and section titles to aid scannability. The global "no emojis" rule does not apply inside the vault.
 
 ---
 
