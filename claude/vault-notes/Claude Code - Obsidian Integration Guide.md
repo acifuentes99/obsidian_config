@@ -33,6 +33,26 @@ Without this command Claude can still read vault files on request, but won't app
 - Reorganising notes across PARA folders
 - Asking about the taxonomy or structure of the vault
 
+### `/ingest`
+
+Processes a new source into the vault's wiki layer (`A. PARA Notes/Resources/`). The source can be pasted text, a vault file path, or a URL.
+
+Claude reads the source, synthesizes key claims (not a copy), then writes or updates the relevant Resources topic pages — adding cross-links to `## Related` and logging the source in `## Sources`. One source can touch multiple pages.
+
+**When to use it:**
+- After clipping an article via Obsidian Web Clipper
+- After a learning session you want to compile into a topic page
+- When a daily-note subheading has grown enough to deserve a Resources page ("promoting" an idea)
+
+### `/lint`
+
+Periodic health-check of the wiki layer. Reports:
+- Inbox notes older than 14 days with no outlinks to Resources (unprocessed)
+- Resources pages with no `## Related` or `## Sources` (not yet wiki-maintained)
+- Topics mentioned repeatedly across notes without their own Resources page
+
+Advisory only — suggests actions, doesn't make changes.
+
 ### `/end`
 
 Ends the Claude Code session. Claude writes (or appends) a dated session entry to the project's session note, then exits.
@@ -87,6 +107,27 @@ Tell Claude (with `/obsidian-helper` active):
 > "Create a session note for project X. Folder is `/path/to/project`. It does Y."
 
 Claude will create the file with the correct frontmatter, callouts, and an initial dated entry.
+
+---
+
+## LLM Wiki layer
+
+`A. PARA Notes/Resources/` doubles as a **compounding wiki** — a structured, interlinked set of topic pages that Claude maintains. The idea: instead of re-deriving knowledge from raw notes every session, Claude compiles it once and keeps it current. Knowledge accumulates rather than scatters.
+
+**Three layers:**
+
+| Layer | Location | Who writes it |
+|---|---|---|
+| Raw sources | `B. Note Box/Inbox/`, daily notes | You |
+| Wiki (compiled knowledge) | `A. PARA Notes/Resources/` | Claude (via `/ingest`) |
+| Schema | `CLAUDE.md`, skills | Both |
+
+**Wiki page conventions** — a Resources page is "wiki-maintained" when it has:
+- `wiki` tag in frontmatter
+- `## Related` section with links to other Resources pages
+- `## Sources` section listing what contributed (with dates)
+
+Pages without the `wiki` tag are older reference notes — valid, but not yet part of the compounding layer. They get migrated during `/ingest` when a new source touches them.
 
 ---
 
